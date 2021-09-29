@@ -228,3 +228,14 @@ button.clear--secondary,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.gradient--secondary {
+  background: linear-gradient(
+    90deg,
+    var(--tertiaryCol) 0%,
+    var(--quaternaryCol) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

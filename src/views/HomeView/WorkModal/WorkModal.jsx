@@ -5,10 +5,10 @@ import React from 'react';
 import './WorkModal.scss';
 
 const WorkModal = ({
-  title, answers, img, setIsModalOpen,
+  title, answers, img, setIsModalOpen, isModalOpen,
 }) => (
   <div
-    className="work-modal__outside"
+    className={isModalOpen ? 'work-modal__container  work-modal__container--visible' : 'work-modal__container'}
     onClick={(e) => {
       e.preventDefault();
       setIsModalOpen(false);
@@ -31,21 +31,17 @@ const WorkModal = ({
       </div>
       <div className="work-modal__content">
         <h2 className="gradient">
-          What was your role for this project and what tasks did you face?
-        </h2>
-        {answers[0]}
-        <h2 className="gradient">
           What decisions did you take and why? What were the consequences?
         </h2>
-        {answers[1]}
+        {answers && answers[0]}
         <h2 className="gradient">
           If you could, what would you do differently?
         </h2>
-        {answers[2]}
+        {answers && answers[1]}
         <h2 className="gradient">
           What lessons did you learn during this project?
         </h2>
-        {answers[3]}
+        {answers && answers[2]}
       </div>
     </div>
   </div>

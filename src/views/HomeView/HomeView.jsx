@@ -12,7 +12,7 @@ import cfMyflixAngularImg from '../../assets/img/cf-myflix-angular.jpg';
 
 const HomeView = () => (
   <div className="home-view">
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero__container">
         <div className="hero__content">
           <h1 className="hero__title">
@@ -31,7 +31,7 @@ const HomeView = () => (
         <img src={portraitImg} alt="" className="hero__img" />
       </div>
     </section>
-    <section className="about">
+    <section className="about" id="about">
       <div className="about__container">
         <div className="about__content">
           <h1 className="about__title">About Me</h1>
@@ -49,7 +49,7 @@ const HomeView = () => (
         </div>
       </div>
     </section>
-    <section className="work">
+    <section className="work" id="work">
       <div className="work__container">
         <div className="work__content">
           <h1 className="work__title">Recent Work</h1>
@@ -205,7 +205,7 @@ const HomeView = () => (
         </div>
       </div>
     </section>
-    <section className="contact">
+    <section className="contact" id="contact">
       <div className="contact__container">
         <div className="contact__content">
           <h1 className="contact__title">Contact</h1>

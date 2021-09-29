@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { NavLink } from 'react-router-dom';
-
 import './NavBar.scss';
 
 const NavBar = () => (
@@ -12,37 +10,32 @@ const NavBar = () => (
     </h1>
     <ul className="navbar__nav-items">
       <li>
-        <NavLink
+        <a
           className="navbar__link"
-          activeClassName="navbar__link--active"
-          to="/"
-          exact
+          href="#home"
         >
           Home
-        </NavLink>
+        </a>
       </li>
       <li>
-        <NavLink
+        <a
           className="navbar__link"
-          activeClassName="navbar__link--active"
-          to="/about"
+          href="#about"
         >
           About
-        </NavLink>
-        <NavLink
+        </a>
+        <a
           className="navbar__link"
-          activeClassName="navbar__link--active"
-          to="/work"
+          href="#work"
         >
           Work
-        </NavLink>
-        <NavLink
+        </a>
+        <a
           className="navbar__link button"
-          activeClassName="navbar__link--active"
-          to="/contact"
+          href="#contact"
         >
           Contact
-        </NavLink>
+        </a>
       </li>
     </ul>
   </nav>

@@ -1,0 +1,93 @@
+.work-modal__outside {
+  align-items: center;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-items: center;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  z-index: 111;
+}
+
+.work-modal {
+  background: #252525;
+  border-radius: 16px;
+  margin: var(--s3) 0;
+  padding: var(--s3);
+  position: relative;
+  height: auto;
+  width: 800px;
+
+  * + * {
+    margin-top: var(--s3);
+  }
+  z-index: 999;
+}
+
+
+.work-modal__title {
+  font-size: 48px;
+}
+
+.work-modal__img {
+  border-radius: 16px;
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.work-modal__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-modal__close-button {
+  margin: 0;
+  position: absolute;
+  right: var(--s3);
+  top: var(--s3);
+}
+
+/*
+[
+          <p>
+            I was the project lead developer and I faced the task of realizing a
+            PWA by utilizing test-driven development techniques.
+          </p>,
+          <p>
+            Later in the project I decided to remove the hardcoded API endpoints
+            and use environment variables instead. This worked fine for
+            development but when deploying to gh-pages it was a lot more
+            involved to get the environment variables to work. In the end I had
+            to read up on and utilize Github Actions and Github Secrets to make
+            everything work which had more than one gotcha for me in store.
+          </p>,
+          <p>
+            Given more time, I&apos;d definitely redo the UI and the login
+            process. The automatic redirect to the production site after
+            obtaining the access token made everything a lot more annoying than
+            needs be. It didn&apos;t really help that for changes to be
+            reflected in the deployed page I had to hammer that reload button a
+            ton.
+            {' '}
+          </p>,
+          <>
+            <p>
+              The most valuable lesson learned here is that (at least for now),
+              purely functional components using React Hooks aren&apos;t fully
+              supported by Jest + Enzyme. You can make them work, but youll need
+              a lot of guess work at times and will be pasting tons of
+              {' '}
+            </p>
+            <code className="gradient--secondary">
+              {`await act(async () => {
+            await new Promise(setImmediate);
+          });
+          AppWrapper.update();`}
+            </code>
+            <p>just to get state and prop updates to propagate correctly.</p>
+          </>,
+        ]
+*&*/

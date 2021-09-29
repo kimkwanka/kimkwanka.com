@@ -52,8 +52,9 @@ header {
 
 body {
   background: black;
-  font-size: 18px;
   color: var(--textCol);
+  font-size: 18px;
+  min-height: 100vh;
 }
 
 #root {

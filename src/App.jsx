@@ -3,7 +3,7 @@ import React from 'react';
 import LoadingSpinner from './common/LoadingSpinner/LoadingSpinner';
 import NavBar from './common/NavBar/NavBar';
 
-import Routes from './Routes';
+import HomeView from './views/HomeView/HomeView';
 
 import 'modern-css-reset';
 
@@ -16,7 +16,7 @@ const App = () => (
     </header>
     <main>
       <LoadingSpinner isLoading={false} />
-      <Routes />
+      <HomeView />
     </main>
   </>
 );

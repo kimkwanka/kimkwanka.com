@@ -44,6 +44,7 @@
 
 .hero__button {
   padding: var(--s2) var(--s3);
+  text-decoration: none;
 }
 
 .hero__img {
@@ -122,11 +123,15 @@
 }
 
 .grid__item {
-  border-radius: 16px;
   background: #252525;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.grid__item__header {
+  cursor: pointer;
 }
 
 .grid__item__details {

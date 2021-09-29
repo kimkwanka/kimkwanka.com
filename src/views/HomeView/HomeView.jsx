@@ -209,17 +209,39 @@ const HomeView = () => (
       <div className="contact__container">
         <div className="contact__content">
           <h1 className="contact__title">Contact</h1>
-          <p className="contact__text">
-            I&apos;m a former executive officer of tax authorities and nurse who
-            took the plunge into the world of
+          <p>Feel free to reach out to me via:</p>
+          <div className="contact__info">
+            Github:
             {' '}
-            <span className="gradient">web development</span>
-            .
-          </p>
-          <p className="contact__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
-            sagittis viverra dolor nulla integer rhoncus, et mollis adipiscing.
-          </p>
+            <a
+              target="_blank"
+              href="https://github.com/kimkwanka/"
+              rel="noreferrer"
+            >
+              kimkwanka
+            </a>
+            <br />
+            Twitter:
+            {' '}
+            <a
+              target="_blank"
+              href="https://www.twitter.com/kimkwanka/"
+              rel="noreferrer"
+            >
+              @kimkwanka
+            </a>
+            <br />
+            LinkedIn:
+            {' '}
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/kimkwanka/"
+              rel="noreferrer"
+            >
+              kimkwanka
+            </a>
+            <br />
+          </div>
         </div>
       </div>
     </section>

@@ -9,8 +9,19 @@
   --textColDisabled: rgba(255, 255, 255, 0.4);
   --mutedText: rgba(255, 255, 255, 0.7);
   --mutedBlack: rgba(0, 0, 0, 0.1);
-  --primaryCol: #f97565;
-  --secondaryCol: #eb4985;
+
+  // --primaryCol: #f97565;
+  // --secondaryCol: #eb4985;
+  // --primaryCol: #00D1CA;
+  // --secondaryCol: #C8FFBE;
+  // --primaryCol: #29BFDA;
+  // --secondaryCol: #B04BBF;
+
+  --primaryCol: #00D1CA;
+  --secondaryCol: #C8FFBE;
+  --tertiaryCol: #f97565;
+  --quaternaryCol: #eb4985;
+
   --disabledCol: #43687c;
   --gradientCol1: #1c709d;
   --gradientCol2: #761d7d;
@@ -125,8 +136,8 @@ button,
 .button {
   background: linear-gradient(
     135deg,
-    var(--buttonGradientCol1),
-    var(--buttonGradientCol2),
+    var(--tertiaryCol),
+    var(--quaternaryCol),
     var(--gradientCol1),
     var(--gradientCol2)
   );

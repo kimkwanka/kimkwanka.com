@@ -472,36 +472,38 @@ const HomeView = () => {
                 </div>
               </div>
               <div className="grid__item">
-                <div className="grid__item__header" 
-                          onClick={handleGridItemClick({
-                            title: 'myFlix Angular',
-                            img: cfMyflixAngularImg,
-                            answers: [
-                              <>
-                                <p>
-                                  For this project, I decided to minimize the use of custom CSS and use Angular Material almost exclusively.
-                                </p>
-                                <p>
-                                  This sped up development quite a bit, but the resulting UI feels a bit "same-y".
-                                </p>
-                              </>,
-                              <>
-                                <p>
-                                  As I already mentioned in my project overview for the myFlix React client, I would probably use a third party API instead of my own just so that I wouldn't have to manually enter movie data again.
-                                </p>
-                              </>,
-                              <>
-                                <p>
-                                  The biggest lesson learned here is that Angular has come a long way since when I first tried it years ago and that I should have given it a try much earlier. 
-                                </p>
-                                <p>
-                                  I was always of the opinion that Angular was too opinionated for my taste and had too much boilerplate, but after using it for this project it didn't feel so bad at all.
-                                  Using the CLI and Angular Material I was able to rapidly churn out the different components with ease, at times even faster than with React to be honest.
-                                  This might be due the the relative simplicity of the project though.
-                                </p>
-                              </>,
-                            ],
-                          })}>
+                <div
+                  className="grid__item__header"
+                  onClick={handleGridItemClick({
+                    title: 'myFlix Angular',
+                    img: cfMyflixAngularImg,
+                    answers: [
+                      <>
+                        <p>
+                          For this project, I decided to minimize the use of custom CSS and use Angular Material almost exclusively.
+                        </p>
+                        <p>
+                          This sped up development quite a bit, but the resulting UI feels a bit "same-y".
+                        </p>
+                      </>,
+                      <>
+                        <p>
+                          As I already mentioned in my project overview for the myFlix React client, I would probably use a third party API instead of my own just so that I wouldn't have to manually enter movie data again.
+                        </p>
+                      </>,
+                      <>
+                        <p>
+                          The biggest lesson learned here is that Angular has come a long way since when I first tried it years ago and that I should have given it a try much earlier.
+                        </p>
+                        <p>
+                          I was always of the opinion that Angular was too opinionated for my taste and had too much boilerplate, but after using it for this project it didn't feel so bad at all.
+                          Using the CLI and Angular Material I was able to rapidly churn out the different components with ease, at times even faster than with React to be honest.
+                          This might be due the the relative simplicity of the project though.
+                        </p>
+                      </>,
+                    ],
+                  })}
+                >
                   <h2 className="gradient--secondary">myFlix Angular</h2>
                   <img src={cfMyflixAngularImg} alt="myFlix Angular" />
                 </div>
@@ -538,6 +540,16 @@ const HomeView = () => {
               <a
                 target="_blank"
                 href="https://github.com/kimkwanka/"
+                rel="noreferrer"
+              >
+                kimkwanka
+              </a>
+              <br />
+              Medium:
+              {' '}
+              <a
+                target="_blank"
+                href="https://medium.com/@kimkwanka"
                 rel="noreferrer"
               >
                 kimkwanka

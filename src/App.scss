@@ -9,8 +9,8 @@
   --textColDisabled: rgba(255, 255, 255, 0.4);
   --mutedText: rgba(255, 255, 255, 0.7);
   --mutedBlack: rgba(0, 0, 0, 0.1);
-  --primaryCol: #29bfda;
-  --secondaryCol: #b04bbf;
+  --primaryCol: #f97565;
+  --secondaryCol: #eb4985;
   --disabledCol: #43687c;
   --gradientCol1: #1c709d;
   --gradientCol2: #761d7d;
@@ -128,10 +128,10 @@ button,
     var(--buttonGradientCol1),
     var(--buttonGradientCol2),
     var(--gradientCol1),
-    var(--primaryCol)
+    var(--gradientCol2)
   );
   background-size: 300% 100%;
-  border-radius: var(--s1);
+  border-radius: 999px;
   border: none;
   color: var(--textCol);
   cursor: pointer;
@@ -144,6 +144,7 @@ button,
   transition: all var(--transitionSpeed) var(--transitionTiming);
 
   &:hover {
+    color: var(--textCol);
     background-position: 100% 0%;
   }
 

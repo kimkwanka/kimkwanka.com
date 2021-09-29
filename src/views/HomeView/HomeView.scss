@@ -17,6 +17,7 @@
 .hero__content {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-around;
   width: 100%;
 }
@@ -28,6 +29,10 @@
 
 .hero__span {
   display: inline-block;
+}
+
+.hero__button {
+  padding: var(--s2) var(--s3);
 }
 
 .hero__img {

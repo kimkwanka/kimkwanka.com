@@ -7,9 +7,10 @@ import './NavBar.scss';
 const NavBar = () => (
   <nav className="navbar">
     <h1 className="logo">
-      <span className="gradient">kimkwanka</span>
+      kim
+      <span className="gradient">kwanka</span>
     </h1>
-    <ul>
+    <ul className="navbar__nav-items">
       <li>
         <NavLink
           className="navbar__link"
@@ -36,7 +37,7 @@ const NavBar = () => (
           Work
         </NavLink>
         <NavLink
-          className="navbar__link"
+          className="navbar__link button"
           activeClassName="navbar__link--active"
           to="/contact"
         >

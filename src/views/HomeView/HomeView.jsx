@@ -19,7 +19,7 @@ const HomeView = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
             sagittis viverra dolor nulla integer rhoncus, et mollis adipiscing.
           </p>
-          <button type="button" className="hero__button">HOW I WORK</button>
+          <button className="hero__button" type="button">Recent Work</button>
         </div>
         <img src={portraitImg} alt="" className="hero__img" />
       </section>

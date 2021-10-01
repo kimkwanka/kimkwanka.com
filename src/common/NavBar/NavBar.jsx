@@ -13,6 +13,7 @@ const NavBar = () => (
     <h1 className="logo">
       kim
       <span className="gradient">kwanka</span>
+      .io
     </h1>
     <ul className="navbar__nav-items">
       <li>

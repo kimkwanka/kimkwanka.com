@@ -16,29 +16,21 @@ const NavBar = () => (
     </h1>
     <ul className="navbar__nav-items">
       <li>
-        <a
-          className="navbar__link"
-          href="#home"
-          onClick={scrollToTarget}
-        >
+        <a className="navbar__link" href="#home" onClick={scrollToTarget}>
           Home
         </a>
       </li>
       <li>
-        <a
-          className="navbar__link"
-          href="#about"
-          onClick={scrollToTarget}
-        >
-          About
-        </a>
-        <a
-          className="navbar__link"
-          href="#work"
-          onClick={scrollToTarget}
-        >
+        <a className="navbar__link" href="#work" onClick={scrollToTarget}>
           Work
         </a>
+      </li>
+      <li>
+        <a className="navbar__link" href="#about" onClick={scrollToTarget}>
+          About
+        </a>
+      </li>
+      <li>
         <a
           className="navbar__link button"
           href="#contact"

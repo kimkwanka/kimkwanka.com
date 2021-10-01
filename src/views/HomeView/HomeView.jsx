@@ -47,29 +47,10 @@ const HomeView = () => {
               adipiscing.
             </p>
             <a href="#work" className="button hero__button" type="button">
-              Recent Work
+              Check out my work
             </a>
           </div>
           <img src={portraitImg} alt="" className="hero__img" />
-        </div>
-      </section>
-      <section className="about" id="about">
-        <div className="about__container">
-          <div className="about__content">
-            <h1 className="about__title">About Me</h1>
-            <p className="about__text">
-              I&apos;m a former executive officer of tax authorities and nurse
-              who took the plunge into the world of
-              {' '}
-              <span className="gradient">web development</span>
-              .
-            </p>
-            <p className="about__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
-              sagittis viverra dolor nulla integer rhoncus, et mollis
-              adipiscing.
-            </p>
-          </div>
         </div>
       </section>
       <section className="work" id="work">
@@ -526,6 +507,25 @@ const HomeView = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="about" id="about">
+        <div className="about__container">
+          <div className="about__content">
+            <h1 className="about__title">About Me</h1>
+            <p className="about__text">
+              I&apos;m a former executive officer of tax authorities and nurse
+              who took the plunge into the world of
+              {' '}
+              <span className="gradient">web development</span>
+              .
+            </p>
+            <p className="about__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
+              sagittis viverra dolor nulla integer rhoncus, et mollis
+              adipiscing.
+            </p>
           </div>
         </div>
       </section>

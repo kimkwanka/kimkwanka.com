@@ -14,6 +14,13 @@ import cfMovieApiImg from '../../assets/img/cf-movie-api.jpg';
 import cfMyflixImg from '../../assets/img/cf-myflix.jpg';
 import cfMyflixAngularImg from '../../assets/img/cf-myflix-angular.jpg';
 
+const scrollToTarget = (e) => {
+  e.preventDefault();
+
+  const anchorTarget = document.querySelector(e.currentTarget.hash);
+  anchorTarget.scrollIntoView({ behavior: 'smooth' });
+};
+
 const HomeView = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState({});
@@ -46,7 +53,7 @@ const HomeView = () => {
               sagittis viverra dolor nulla integer rhoncus, et mollis
               adipiscing.
             </p>
-            <a href="#work" className="button hero__button" type="button">
+            <a href="#work" className="button hero__button" onClick={scrollToTarget}>
               Check out my work
             </a>
           </div>

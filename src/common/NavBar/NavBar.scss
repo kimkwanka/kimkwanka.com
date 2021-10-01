@@ -1,11 +1,10 @@
 .navbar {
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
   margin: 0 auto;
   max-width: var(--contentMaxWidth);
-  padding: var(--s2) var(--s3);
+  padding: 0 var(--s3);
+  height: 80px;
 
   ul {
     list-style-type: none;
@@ -21,8 +20,8 @@
 .navbar__link {
   color: var(--linkCol);
   font-size: 20px;
-  margin-left: var(--s3);
   text-decoration: none;
+  padding: var(--s3);
 
   &:hover {
     color: var(--primaryCol);
@@ -30,17 +29,41 @@
   }
 }
 
+.navbar__link.button {
+  margin-left: var(--s3)
+}
+
 .navbar__link--active {
   box-shadow: 0 1px var(--secondaryCol), 0 2px var(--primaryCol)
 }
 
+.navbar__left-side,
+.navbar__right-side {
+  display: flex;
+  flex-grow: 1;
+}
+
+.navbar__right-side {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo__link {
+  align-items: center;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  height: 100%;
+
+  &:hover {
+    color: var(--secondaryCol);
+  }
+}
+
 .logo {
   font-weight: normal;
-  flex-grow: 1;
   font-size: 24px;
-  span {
-    color: var(--primaryCol);
-  }
 }
 
 a.button.logout-button {

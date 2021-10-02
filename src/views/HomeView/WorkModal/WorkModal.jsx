@@ -8,10 +8,16 @@ const WorkModal = ({
   title, answers, img, setIsModalOpen, isModalOpen,
 }) => (
   <div
-    className={isModalOpen ? 'work-modal__container  work-modal__container--visible' : 'work-modal__container'}
+    className={
+      isModalOpen
+        ? 'work-modal__container  work-modal__container--visible'
+        : 'work-modal__container'
+    }
     onClick={(e) => {
       e.preventDefault();
-      setIsModalOpen(false);
+      if (e.target === e.currentTarget) {
+        setIsModalOpen(false);
+      }
     }}
   >
     <div className="work-modal">

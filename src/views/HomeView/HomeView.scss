@@ -18,7 +18,9 @@
 }
 
 .hero__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--s3);
   margin: 0 auto;
   max-width: var(--contentMaxWidth);
   padding: var(--s3);
@@ -48,9 +50,8 @@
 }
 
 .hero__img {
-  height: 600px;
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
+  height: 100%;
 }
 
 //================================================================

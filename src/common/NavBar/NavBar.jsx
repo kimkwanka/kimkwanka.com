@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './NavBar.scss';
+import styles from './NavBar.module.scss';
 
 const scrollToTarget = (e) => {
   e.preventDefault();
@@ -10,31 +10,31 @@ const scrollToTarget = (e) => {
 };
 
 const NavBar = () => (
-  <nav className="navbar">
-    <div className="navbar__left-side">
-      <a className="logo__link" href="#home" onClick={scrollToTarget}>
-        <h1 className="logo">
+  <nav className={styles.NavBar}>
+    <div className={styles['NavBar__left-side']}>
+      <a className={styles.logo__link} href="#home" onClick={scrollToTarget}>
+        <h1 className={styles.logo}>
           kim
           <span className="gradient">kwanka</span>
           .io
         </h1>
       </a>
     </div>
-    <div className="navbar__right-side">
-      <ul className="navbar__nav-items">
+    <div className={styles['NavBar__right-side']}>
+      <ul className={styles['NavBar__nav-items']}>
         <li>
-          <a className="navbar__link" href="#work" onClick={scrollToTarget}>
+          <a className={styles.NavBar__link} href="#work" onClick={scrollToTarget}>
             Work
           </a>
         </li>
         <li>
-          <a className="navbar__link" href="#about" onClick={scrollToTarget}>
+          <a className={styles.NavBar__link} href="#about" onClick={scrollToTarget}>
             About
           </a>
         </li>
         <li>
           <a
-            className="navbar__link button"
+            className={`${styles.NavBar__LinkButton} button`}
             href="#contact"
             onClick={scrollToTarget}
           >

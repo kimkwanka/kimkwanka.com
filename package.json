@@ -1,27 +1,27 @@
 {
-  "name": "kimkwanka.com",
-  "version": "1.0.0",
-  "license": "MIT",
+  "name": "kimkwanka.io",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
+    "babel-plugin-module-resolver": "^4.1.0",
     "modern-css-reset": "^1.4.0",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "redux": "^4.1.1"
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "^1.42.1"
   },
   "devDependencies": {
-    "@parcel/transformer-image": "2.0.0-rc.0",
-    "@parcel/transformer-sass": "^2.0.0-nightly.748",
-    "eslint": "^7.29.0",
+    "@babel/core": "^7.15.5",
+    "eslint": "7.32.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "parcel": "^2.0.0-rc.0"
-  },
-  "scripts": {
-    "dev": "parcel serve src/index.html",
-    "build": "parcel build src/index.html"
+    "eslint-config-next": "11.1.2",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-plugin-import": "^2.24.2"
   }
 }

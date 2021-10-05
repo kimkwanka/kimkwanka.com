@@ -4,15 +4,7 @@ import React, { useState } from 'react';
 
 import WorkModal from './WorkModal/WorkModal';
 
-import './HomeView.scss';
-
-import portraitImg from '../../assets/img/portrait.jpg';
-import cfChatImg from '../../assets/img/cf-chat.jpg';
-import cfJS1Img from '../../assets/img/cf-js1.jpg';
-import cfMeetImg from '../../assets/img/cf-meet.jpg';
-import cfMovieApiImg from '../../assets/img/cf-movie-api.jpg';
-import cfMyflixImg from '../../assets/img/cf-myflix.jpg';
-import cfMyflixAngularImg from '../../assets/img/cf-myflix-angular.jpg';
+import styles from './Home.module.scss';
 
 const scrollToTarget = (e) => {
   e.preventDefault();
@@ -32,20 +24,20 @@ const HomeView = () => {
   };
 
   return (
-    <div className="home-view">
+    <div className={styles['home-view']}>
       <WorkModal
         title={modalData.title}
-        img={modalData.img}
+        img="/img/cf-js1.jpg"
         answers={modalData.answers}
         setIsModalOpen={setIsModalOpen}
         isModalOpen={isModalOpen}
       />
-      <section className="hero" id="home">
-        <div className="hero__container">
-          <div className="hero__content">
-            <h1 className="hero__title">
+      <section className={styles.hero} id="home">
+        <div className={styles.hero__container}>
+          <div className={styles.hero__content}>
+            <h1 className={styles.hero__title}>
               Kim Kwanka,
-              <span className="hero__span gradient">Fullstack Web</span>
+              <span className={`${styles.hero__span} gradient`}>Fullstack Web</span>
               Developer
             </h1>
             <p>
@@ -53,24 +45,24 @@ const HomeView = () => {
               sagittis viverra dolor nulla integer rhoncus, et mollis
               adipiscing.
             </p>
-            <a href="#work" className="button hero__button" onClick={scrollToTarget}>
+            <a href="#work" className={`button ${styles[' hero__button']}`} onClick={scrollToTarget}>
               Check out my work
             </a>
           </div>
-          <img src={portraitImg} alt="" className="hero__img" />
+          <img src="img/portrait.jpg" alt="" className={styles.hero__img} />
         </div>
       </section>
-      <section className="work" id="work">
-        <div className="work__container">
-          <div className="work__content">
-            <h1 className="work__title">Recent Work</h1>
-            <div className="work__grid">
-              <div className="grid__item">
+      <section className={styles.work} id="work">
+        <div className={styles.work__container}>
+          <div className={styles.work__content}>
+            <h1 className={styles.work__title}>Recent Work</h1>
+            <div className={styles.work__grid}>
+              <div className={styles.grid__item}>
                 <div
-                  className="grid__item__header"
+                  className={styles.grid__item__header}
                   onClick={handleGridItemClick({
                     title: 'Pokédex App',
-                    img: cfJS1Img,
+                    img: "img/cf-js1.jpg",
                     answers: [
                       <>
                         <p>
@@ -139,9 +131,9 @@ const HomeView = () => {
                   })}
                 >
                   <h2 className="gradient--secondary">Pokédex App</h2>
-                  <img src={cfJS1Img} alt="Pokédex App" />
+                  <img src="img/cf-js1.jpg" alt="Pokédex App" />
                 </div>
-                <div className="grid__item__details">
+                <div className={styles.grid__item__details}>
                   <p>Pokédex app using HTML, CSS and vanilla JS.</p>
                   <a
                     target="_blank"
@@ -159,12 +151,12 @@ const HomeView = () => {
                   </a>
                 </div>
               </div>
-              <div className="grid__item">
+              <div className={styles.grid__item}>
                 <div
-                  className="grid__item__header"
+                  className={styles.grid__item__header}
                   onClick={handleGridItemClick({
                     title: 'Movie API',
-                    img: cfMovieApiImg,
+                    img: "img/cf-movie-api.jpg",
                     answers: [
                       <>
                         <p>
@@ -221,9 +213,9 @@ const HomeView = () => {
                   })}
                 >
                   <h2 className="gradient--secondary">Movie API</h2>
-                  <img src={cfMovieApiImg} alt="Movie API" />
+                  <img src="img/cf-movie-api.jpg" alt="Movie API" />
                 </div>
-                <div className="grid__item__details">
+                <div className={styles.grid__item__details}>
                   <p>A simple RESTful movie API.</p>
                   <a
                     target="_blank"
@@ -241,12 +233,12 @@ const HomeView = () => {
                   </a>
                 </div>
               </div>
-              <div className="grid__item">
+              <div className={styles.grid__item}>
                 <div
-                  className="grid__item__header"
+                  className={styles.grid__item__header}
                   onClick={handleGridItemClick({
                     title: 'myFlix',
-                    img: cfMyflixImg,
+                    img: "img/cf-myflix.jpg",
                     answers: [
                       <>
                         <p>
@@ -301,9 +293,9 @@ const HomeView = () => {
                   })}
                 >
                   <h2 className="gradient--secondary">myFlix</h2>
-                  <img src={cfMyflixImg} alt="myFlix" />
+                  <img src="img/cf-myflix.jpg" alt="myFlix" />
                 </div>
-                <div className="grid__item__details">
+                <div className={styles.grid__item__details}>
                   <p>Client written in React for the Movie API backend.</p>
                   <a
                     target="_blank"
@@ -321,12 +313,12 @@ const HomeView = () => {
                   </a>
                 </div>
               </div>
-              <div className="grid__item">
+              <div className={styles.grid__item}>
                 <div
-                  className="grid__item__header"
+                  className={styles.grid__item__header}
                   onClick={handleGridItemClick({
                     title: 'Meet App',
-                    img: cfMeetImg,
+                    img: "img/cf-meet.jpg",
                     answers: [
                       <p>
                         Later in the project I decided to remove the hardcoded
@@ -357,10 +349,7 @@ const HomeView = () => {
                           {' '}
                         </p>
                         <code className="gradient--secondary">
-                          {`await act(async () => {
-                      await new Promise(setImmediate);
-                    });
-                    AppWrapper.update();`}
+                          {'await act(async () => { await new Promise(setImmediate);  }); AppWrapper.update();'}
                         </code>
                         <p>
                           just to get state and prop updates to propagate
@@ -371,11 +360,11 @@ const HomeView = () => {
                   })}
                 >
                   <h2 className="gradient--secondary">Meet App</h2>
-                  <a className="img-link" href="cf-meet.html">
-                    <img src={cfMeetImg} alt="Meet App" />
+                  <a className={styles['img-link']} href="cf-meet.html">
+                    <img src="img/cf-meet.jpg" alt="Meet App" />
                   </a>
                 </div>
-                <div className="grid__item__details">
+                <div className={styles.grid__item__details}>
                   <p>
                     Serverless, progressive web application (PWA) with React
                     using a test-driven development (TDD) technique. The
@@ -398,12 +387,12 @@ const HomeView = () => {
                   </a>
                 </div>
               </div>
-              <div className="grid__item">
+              <div className={styles.grid__item}>
                 <div
-                  className="grid__item__header"
+                  className={styles.grid__item__header}
                   onClick={handleGridItemClick({
                     title: 'Native Chat App',
-                    img: cfChatImg,
+                    img: "img/cf-chat.jpg",
                     answers: [
                       <>
                         <p>
@@ -436,9 +425,9 @@ const HomeView = () => {
                   })}
                 >
                   <h2 className="gradient--secondary">Native Chat App</h2>
-                  <img src={cfChatImg} alt="Chat App" />
+                  <img src="img/cf-chat.jpg" alt="Chat App" />
                 </div>
-                <div className="grid__item__details">
+                <div className={styles.grid__item__details}>
                   <p>
                     A React Native messenger app inspired by the likes of
                     Whatsapp and Co.
@@ -459,12 +448,12 @@ const HomeView = () => {
                   </a>
                 </div>
               </div>
-              <div className="grid__item">
+              <div className={styles.grid__item}>
                 <div
-                  className="grid__item__header"
+                  className={styles.grid__item__header}
                   onClick={handleGridItemClick({
                     title: 'myFlix Angular',
-                    img: cfMyflixAngularImg,
+                    img: "img/cf-myflix-angular.jpg",
                     answers: [
                       <>
                         <p>
@@ -493,9 +482,9 @@ const HomeView = () => {
                   })}
                 >
                   <h2 className="gradient--secondary">myFlix Angular</h2>
-                  <img src={cfMyflixAngularImg} alt="myFlix Angular" />
+                  <img src="img/cf-myflix-angular.jpg" alt="myFlix Angular" />
                 </div>
-                <div className="grid__item__details">
+                <div className={styles.grid__item__details}>
                   <p>Client written in Angular for the Movie API backend.</p>
                   <a
                     target="_blank"
@@ -517,18 +506,18 @@ const HomeView = () => {
           </div>
         </div>
       </section>
-      <section className="about" id="about">
-        <div className="about__container">
-          <div className="about__content">
-            <h1 className="about__title">About Me</h1>
-            <p className="about__text">
+      <section className={styles.about} id="about">
+        <div className={styles.about__container}>
+          <div className={styles.about__content}>
+            <h1 className={styles.about__title}>About Me</h1>
+            <p className={styles.about__text}>
               I&apos;m a former executive officer of tax authorities and nurse
               who took the plunge into the world of
               {' '}
               <span className="gradient">web development</span>
               .
             </p>
-            <p className="about__text">
+            <p className={styles.about__text}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
               sagittis viverra dolor nulla integer rhoncus, et mollis
               adipiscing.
@@ -536,12 +525,12 @@ const HomeView = () => {
           </div>
         </div>
       </section>
-      <section className="contact" id="contact">
-        <div className="contact__container">
-          <div className="contact__content">
-            <h1 className="contact__title">Contact</h1>
+      <section className={styles.contact} id="contact">
+        <div className={styles.contact__container}>
+          <div className={styles.contact__content}>
+            <h1 className={styles.contact__title}>Contact</h1>
             <p>Feel free to reach out to me via:</p>
-            <div className="contact__info">
+            <div className={styles.contact__info}>
               Github:
               {' '}
               <a

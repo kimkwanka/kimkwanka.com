@@ -156,6 +156,7 @@ button,
   line-height: 1.6;
   outline: none;
   padding: var(--s1) var(--s3);
+  text-decoration: none;
   transition: all var(--transitionSpeed) var(--transitionTiming);
 
   &:hover {

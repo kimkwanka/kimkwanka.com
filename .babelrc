@@ -1,0 +1,13 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "^@common/(.+)": "./src/common/\\1/\\1",
+        "^@containers/(.+)": "./src/containers/\\1/\\1",
+        "@pages": "./pages"
+      }
+    }]
+  ]
+}

@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 
-import './WorkModal.scss';
+import styles from './WorkModal.module.scss';
 
 const WorkModal = ({
   title, answers, img, setIsModalOpen, isModalOpen,
@@ -10,8 +10,8 @@ const WorkModal = ({
   <div
     className={
       isModalOpen
-        ? 'work-modal__container  work-modal__container--visible'
-        : 'work-modal__container'
+        ? `${styles.WorkModal__container} ${styles['WorkModal__container--visible']}`
+        : `${styles.WorkModal__container}`
     }
     onClick={(e) => {
       e.preventDefault();
@@ -20,13 +20,13 @@ const WorkModal = ({
       }
     }}
   >
-    <div className="work-modal">
-      <div className="work-modal__header">
-        <h2 className="work-modal__title gradient--secondary">{title}</h2>
-        <img className="work-modal__img" src={img} alt={title} />
+    <div className={`${styles.WorkModal}`}>
+      <div className={`${styles.WorkModal__header}`}>
+        <h2 className={`${styles.WorkModal__title} gradient--secondary`}>{title}</h2>
+        <img className={`${styles.WorkModal__img}`} src={img} alt={title} />
         <button
           type="button"
-          className="work-modal__close-button"
+          className={`${styles['WorkModal__close-button']}`}
           onClick={(e) => {
             e.preventDefault();
             setIsModalOpen(false);
@@ -35,7 +35,7 @@ const WorkModal = ({
           X
         </button>
       </div>
-      <div className="work-modal__content">
+      <div className={`${styles.WorkModal__content}`}>
         <h2 className="gradient">
           What decisions did you take and why? What were the consequences?
         </h2>

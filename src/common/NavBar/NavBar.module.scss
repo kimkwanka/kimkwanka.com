@@ -1,4 +1,4 @@
-.navbar {
+.NavBar {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -17,7 +17,7 @@
   }
 }
 
-.navbar__link {
+.NavBar__link {
   color: var(--linkCol);
   font-size: 20px;
   text-decoration: none;
@@ -29,21 +29,21 @@
   }
 }
 
-.navbar__link.button {
+.NavBar__LinkButton {
   margin-left: var(--s3)
 }
 
-.navbar__link--active {
+.NavBar__link--active {
   box-shadow: 0 1px var(--secondaryCol), 0 2px var(--primaryCol)
 }
 
-.navbar__left-side,
-.navbar__right-side {
+.NavBar__left-side,
+.NavBar__right-side {
   display: flex;
   flex-grow: 1;
 }
 
-.navbar__right-side {
+.NavBar__right-side {
   align-items: center;
   justify-content: flex-end;
 }
@@ -64,9 +64,4 @@
 .logo {
   font-weight: normal;
   font-size: 24px;
-}
-
-a.button.logout-button {
-  margin-left: var(--s5);
-  text-decoration: none;
 }

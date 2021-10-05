@@ -27,7 +27,7 @@ const HomeView = () => {
     <div className={styles['home-view']}>
       <WorkModal
         title={modalData.title}
-        img="/img/cf-js1.jpg"
+        img={modalData.img}
         answers={modalData.answers}
         setIsModalOpen={setIsModalOpen}
         isModalOpen={isModalOpen}

@@ -2,7 +2,8 @@
 :root {
   --contentMaxWidth: 1280px;
   --textCol: #fff;
-  --linkCol: #fff;
+  --buttonTextCol: #fff;
+  --linkCol: #131313;
   --textColDisabled: rgba(255, 255, 255, 0.4);
   --mutedText: rgba(255, 255, 255, 0.7);
   --mutedBlack: rgba(0, 0, 0, 0.1);
@@ -42,19 +43,21 @@
 }
 
 header {
-  background: black;
+
+  //background: #fff;
+  color: red;
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 body {
-  background: black;
   color: var(--textCol);
   font-size: 18px;
   min-height: 100vh;
 }
 
-#root {
+#__next {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -81,6 +84,7 @@ main {
 }
 
 a {
+  color: var(--textCol);
   transition: all var(--transitionSpeed) var(--transitionTiming);
 }
 
@@ -106,7 +110,7 @@ input {
   border-radius: var(--s1);
   border: 1px solid transparent;
   caret-color: var(--mutedText);
-  color: var(--textCol);
+  color: var(--buttonTextCol);
   font-weight: normal;
   margin-bottom: var(--s2);
   margin-top: var(--s1);
@@ -147,8 +151,8 @@ button,
   );
   background-size: 300% 100%;
   border-radius: 999px;
-  border: none;
-  color: var(--textCol);
+  border: 1px solid transparent;
+  color: var(--buttonTextCol);
   cursor: pointer;
   display: inline-block;
   font-size: 20px;
@@ -160,8 +164,9 @@ button,
   transition: all var(--transitionSpeed) var(--transitionTiming);
 
   &:hover {
-    color: var(--textCol);
     background-position: 100% 0%;
+    border: 1px solid #fff;
+    color: var(--buttonTextCol);
   }
 
   &:disabled {

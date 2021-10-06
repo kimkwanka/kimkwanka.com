@@ -1,0 +1,60 @@
+.Project {
+  display: flex;
+  text-decoration: none;
+  margin-bottom: var(--s6);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ProjectImageContainer {
+  height: 500px;
+  position: relative;
+  flex-grow: 1;
+}
+
+.ProjectImage {
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+}
+
+.Project:hover .ProjectImage {
+  transform: scale(1.05);
+}
+
+.ProjectDetails,
+.ProjectDetailsLeft {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 430px;
+}
+
+.ProjectDetails {
+  background: #2E576B;
+  padding: var(--s6) var(--s6) var(--s6) var(--s5);
+}
+
+.ProjectDetailsLeft {
+  background: #79C4D2;
+  padding: var(--s6) var(--s5) var(--s6) var(--s6);
+}
+
+.Project button {
+  border: 1px solid transparent;
+}
+
+.Project:hover button {
+  border: 1px solid white;
+}
+
+.ProjectTitle {
+  opacity: 0.9;
+  font-size: 36px;
+  margin-bottom: var(--s3);
+}
+
+.ProjectDescription {
+  opacity: 0.9;
+  margin-bottom: var(--s5);
+}

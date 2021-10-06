@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Home from '@containers/Home';
 import NavBar from '@common/NavBar';
+import Home from '@containers/Home';
 
 export default function IndexPage() {
   return (

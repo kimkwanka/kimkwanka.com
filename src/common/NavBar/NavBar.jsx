@@ -15,7 +15,7 @@ const NavBar = () => (
       <a className={styles.logo__link} href="#home" onClick={scrollToTarget}>
         <h1 className={styles.logo}>
           kim
-          <span className="gradient">kwanka</span>
+          <span className="gradient--secondary">kwanka</span>
           .io
         </h1>
       </a>

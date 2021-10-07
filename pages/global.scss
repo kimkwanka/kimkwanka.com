@@ -1,7 +1,7 @@
 // Use CSS variables instead of SCSS variables so we can use them in other files without the need to export/import
 :root {
   --contentMaxWidth: 1280px;
-  --textCol: #fff;
+  --textCol: #131313;
   --buttonTextCol: #fff;
   --linkCol: #131313;
   --textColDisabled: rgba(255, 255, 255, 0.4);
@@ -31,6 +31,8 @@
   --s4: 32px;
   --s5: 48px;
   --s6: 64px;
+  --s7: 72px;
+  --s8: 80px;
   --transitionSpeed: 0.3s;
   --transitionTiming: ease-out;
 }
@@ -43,9 +45,7 @@
 }
 
 header {
-
-  //background: #fff;
-  color: red;
+  background: #fff;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -85,14 +85,14 @@ main {
 
 a {
   color: var(--textCol);
+  font-weight: bold;
   transition: all var(--transitionSpeed) var(--transitionTiming);
 }
 
 a:not([class]) {
   color: var(--primaryCol);
   text-decoration: none;
-  font-weight: bold;
-
+  
   &:hover {
     color: var(--buttonGradientCol1);
   }
@@ -150,6 +150,7 @@ button,
     var(--gradientCol2)
   );
   background-size: 300% 100%;
+  background-position-x: -1px;
   border-radius: 999px;
   border: 1px solid transparent;
   color: var(--buttonTextCol);

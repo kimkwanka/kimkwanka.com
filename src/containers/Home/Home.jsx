@@ -33,14 +33,14 @@ const HomeView = () => (
           </p>
           <a
             href="#work"
-            className={`button ${styles[' hero__button']}`}
+            className="button"
             onClick={scrollToTarget}
           >
             Check out my work
           </a>
         </div>
         <div className={styles.PortraitImageContainer}>
-          <Image src="/img/portrait.png" alt="Kim Kwanka" className={styles.PortraitImage} layout="fill" />
+          <Image src="/img/portrait_round.png" alt="Kim Kwanka" className={styles.PortraitImage} layout="fill" />
         </div>
       </div>
     </section>

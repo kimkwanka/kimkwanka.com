@@ -10,18 +10,12 @@
 //================================================================
 
 .hero {
-  //background: #656C64;
-  //background: url('/img/portrait.png');
-  //background-size: cover;
-  background: linear-gradient(
-    135deg,
-    #c4bda5d3,
-    #656c64e5
-  ), url('/img/portrait.png');
-  background-size: cover;
+  background: linear-gradient(270deg, #473b47, #596666 );
+  color: rgba(255, 255, 255, 0.87);
   display: flex;
+  margin-top: var(--s8);
   margin-bottom: var(--s6);
-  padding: var(--s6) 0;
+  padding: var(--s8) 0;
   width: 100%;
 }
 
@@ -72,7 +66,7 @@
 }
 
 .PortraitImage {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 //================================================================
@@ -131,7 +125,8 @@
 }
 
 .work__title {
-  color: #484554;
+  //color: #484554;
+  color: #131313;
   font-size: 64px;
   line-height: 1.3;
   margin-bottom: var(--s5);

@@ -1,8 +1,12 @@
 import React from 'react';
+import Link from 'next/link';
 
 import styles from './NavBar.module.scss';
 
 const scrollToTarget = (e) => {
+  if (window.location.pathname !== '/') {
+    return;
+  }
   e.preventDefault();
 
   const anchorTarget = document.querySelector(e.currentTarget.hash);
@@ -12,34 +16,42 @@ const scrollToTarget = (e) => {
 const NavBar = () => (
   <nav className={styles.NavBar}>
     <div className={styles['NavBar__left-side']}>
-      <a className={styles.logo__link} href="#home" onClick={scrollToTarget}>
-        <h1 className={styles.logo}>
-          kim
-          <span className="gradient--secondary">kwanka</span>
-          .io
-        </h1>
-      </a>
+      <Link href="/#home">
+        <a className={styles.logo__link} href="#work" onClick={scrollToTarget}>
+          <h1 className={styles.logo}>
+            kim
+            <span className="gradient--secondary">kwanka</span>
+            .io
+          </h1>
+        </a>
+      </Link>
     </div>
     <div className={styles['NavBar__right-side']}>
       <ul className={styles['NavBar__nav-items']}>
         <li>
-          <a className={styles.NavBar__link} href="#work" onClick={scrollToTarget}>
-            Work
-          </a>
+          <Link href="/#work">
+            <a className={styles.NavBar__link} href="#work" onClick={scrollToTarget}>
+              Work
+            </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.NavBar__link} href="#about" onClick={scrollToTarget}>
-            About
-          </a>
+          <Link href="/#about">
+            <a className={styles.NavBar__link} href="#about" onClick={scrollToTarget}>
+              About
+            </a>
+          </Link>
         </li>
         <li>
-          <a
-            className={`${styles.NavBar__LinkButton} button`}
-            href="#contact"
-            onClick={scrollToTarget}
-          >
-            Contact Me
-          </a>
+          <Link href="/#contact">
+            <a
+              className={`${styles.NavBar__LinkButton} button`}
+              href="#contact"
+              onClick={scrollToTarget}
+            >
+              Contact Me
+            </a>
+          </Link>
         </li>
       </ul>
     </div>

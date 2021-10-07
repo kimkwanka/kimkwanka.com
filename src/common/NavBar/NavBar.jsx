@@ -17,7 +17,7 @@ const NavBar = () => (
   <nav className={styles.NavBar}>
     <div className={styles['NavBar__left-side']}>
       <Link href="/#home">
-        <a className={styles.logo__link} href="#work" onClick={scrollToTarget}>
+        <a className={styles.logo__link} href="#home" onClick={scrollToTarget}>
           <h1 className={styles.logo}>
             kim
             <span className="gradient--secondary">kwanka</span>

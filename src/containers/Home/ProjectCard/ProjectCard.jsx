@@ -26,7 +26,7 @@ const ProjectCard = ({
         />
       </div>
       )}
-      <div className={mirrored ? styles.ProjectDetailsLeft : styles.ProjectDetails}>
+      <div className={mirrored ? `${styles.ProjectDetailsLeft} ${styles[title]}` : `${styles.ProjectDetails} ${styles[title]}`}>
         <h2 className={styles.ProjectTitle}>{title}</h2>
         <p className={styles.ProjectDescription}>
           {description}

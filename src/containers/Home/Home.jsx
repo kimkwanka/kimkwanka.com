@@ -58,14 +58,14 @@ const HomeView = () => (
           <ProjectCard
             title="myFlix"
             href="/myflix"
-            imgSrc="/img/devgaido.png"
+            imgSrc="/img/myflix.png"
             description="A movie database frontend"
             mirrored
           />
           <ProjectCard
             title="Pokédex"
             href="/pokedex"
-            imgSrc="/img/devgaido.png"
+            imgSrc="/img/pokedex.png"
             description="An app that allows you to learn more about Pokémon"
           />
         </div>

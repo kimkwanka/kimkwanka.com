@@ -23,6 +23,7 @@
 
 .ProjectDetails,
 .ProjectDetailsLeft {
+  background: var(--backCol);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -31,13 +32,23 @@
 }
 
 .ProjectDetails {
-  background: #2E576B;
   padding: var(--s6) var(--s6) var(--s6) var(--s5);
 }
 
 .ProjectDetailsLeft {
-  background: #79C4D2;
   padding: var(--s6) var(--s5) var(--s6) var(--s6);
+}
+
+.devGaido {
+  --backCol: #2E576B;
+}
+
+.myFlix {
+  --backCol: #5D2E6B;
+}
+
+.Pokédex {
+  --backCol: #6B302E;
 }
 
 .Project button {

@@ -1,5 +1,5 @@
 .CaseStudy {
-  color: #131313;
+  color: #212121;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -8,10 +8,33 @@
   max-width: var(--contentMaxWidth);
   padding: var(--s3);
   width: 100%;
+
+  p {
+    color: #666;
+    width: 50%;
+  }
+  * + p {
+    margin-top: var(--s3);
+  }
+  h1, h2 {
+    margin-top: var(--s5);
+  }
+
+  h3 {
+    margin-top: var(--s3);
+  }
 }
 
 .CaseStudyTitle {
   font-size: 48px;
+}
+
+.CaseStudySubtitle {
+  color: #666;
+}
+
+.CaseStudySectionTitle {
+  font-size: 42px;
 }
 
 .CaseStudyImageContainer {
@@ -28,6 +51,7 @@
 
 .CaseStudyLinks {
   text-align: right;
+
   * + a {
     margin-left: var(--s3);
   }

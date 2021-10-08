@@ -44,6 +44,9 @@ const addSectionRef = (sectionHash) => (el) => {
 };
 
 const scrollToTarget = (e) => {
+  if (window.location.pathname !== '/') {
+    return;
+  }
   e.preventDefault();
 
   scrollSectionRefs.current[e.currentTarget.hash].scrollIntoView({ behavior: 'smooth' });

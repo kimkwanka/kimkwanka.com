@@ -25,7 +25,6 @@
 
   &:hover {
     color: var(--primaryCol);
-    text-decoration: none;
   }
 }
 
@@ -33,8 +32,8 @@
   margin-left: var(--s3)
 }
 
-.NavBar__link--active {
-  box-shadow: 0 1px var(--secondaryCol), 0 2px var(--primaryCol)
+.active {
+  box-shadow: 0 3px var(--primaryCol)
 }
 
 .NavBar__left-side,

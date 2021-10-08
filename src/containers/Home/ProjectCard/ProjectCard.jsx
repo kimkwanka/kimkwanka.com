@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+import React from 'react';
+
 import Link from 'next/link';
 import Image from 'next/image';
 

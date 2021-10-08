@@ -15,12 +15,12 @@ const CaseStudy = () => (
     </div> */}
     <p className={styles.CaseStudyDescription}>
       devGaido is a platform that tries to streamline the learning experience by
-      combining &quot;lessons&quot; (free learning resources) into &quot;paths&quot; that follow
-      different learning goals.
+      combining &quot;lessons&quot; (free learning resources) into
+      &quot;paths&quot; that follow different learning goals.
     </p>
     <p>
       Lessons and paths can each be bookmarked, progress towards completion is
-      tracked and paths tangental to your completed lessons are recommended
+      tracked and paths tangential to your completed lessons are recommended
       automatically.
     </p>
     <p>
@@ -49,17 +49,20 @@ const CaseStudy = () => (
     <p>
       The tried and true MERN stack and Redux were obvious choices because of
       their ease of use and reliability. Stylus was chosen so we could use the
-      much terser indented syntax, but still paste in snippets in regular syntax.
+      much terser indented syntax, but still paste in snippets in regular
+      syntax.
     </p>
     <p>
-      Even though we had a database, we didn&apos;t want to risk to leak private data so
-      we let Auth0 handle authentication and only saved the user id for identification.
+      Even though we had a database, we didn&apos;t want to risk leaking private
+      data so we let Auth0 handle authentication and only saved the user id for
+      identification.
     </p>
     <p>
-      On the Dev Ops side we of course used Docker to orchestrate the server deployment.
-      NGINX was utilized here as a reverse proxy to lessen the load on the server and allowing
-      it to scale in the future. As the difference in performance was negible for our use case and
-      we couldn&apos;t afford the memory required on our VPS we decided against adding Redis.
+      On the Dev Ops side we of course used Docker to orchestrate the server
+      deployment. NGINX was utilized here as a reverse proxy to lessen the load
+      on the server and allowing it to scale in the future. As the difference in
+      performance was negligible for our use case and we couldn&apos;t afford
+      the memory required on our VPS we decided against adding Redis.
     </p>
     <div className={styles.CaseStudyLinks}>
       <a

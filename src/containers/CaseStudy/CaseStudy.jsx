@@ -96,7 +96,130 @@ const CaseStudy = () => (
     <h2 className={styles.CaseStudySectionTitle}>
       Problems and Thought Process
     </h2>
-    <h3>Problem No. 1:</h3>
+    <h3>Problem No. 1: Managing and writing CSS</h3>
+    <p>
+      With devGaido, we used a pretty generic folder structure with all of our
+      Stylus files being in ./src/client/stylus. This made adding new components
+      and their corresponding CSS always feeling cumbersome: + Even with BEM,
+      coming up with CSS class names was annoying + With long class names it was
+      hard to reason about a component's style + Constant back-and-forth between
+      files since component CSS was not located near its code
+    </p>
+    <h3>Solution: Atomic CSS</h3>
+    <p>
+      Even though the idea of functional/atomic CSS frameworks like Tachyons and
+      Tailwind was pretty novel back then, we opted to use this approach to
+      compose the brunt of our CSS directly in our code. We decided to add an
+      empty BEM-style class as an identifier (like "lesson-card") for easier
+      navigation, though. To be able to tweak it to our needs in regards to
+      naming and features I was tasked with creating our own version of an
+      atomic CSS framework (called "Atomiku"), which - in hindsight - was a
+      great learning experience but also kind of a waste of time.
+    </p>
+    <h3>Problem No. 2: Bloated CSS / PurifyCSS</h3>
+    <p>
+      Using Atomiku made creating new Components and their style much easier and
+      - more importantly - much faster. But it came with a huge drawback: As we
+      had created utility CSS classes for all kinds of scenarios this meant that
+      our production CSS file was pretty bloated, even though we only used a
+      fraction of the classes in our code.
+    </p>
+    <h3>Solution and Problem: PurifyCSS</h3>
+    <p>
+      To get rid of the unnecessary CSS, we decided to use PurifyCSS as a final
+      build step. This worked great at first glance but when we inspected the
+      resulting CSS we noticed that classes with numbers in them like "width-50"
+      did, in fact, NOT get removed at all.
+    </p>
+    <h3>Solution: Custom Fork of PurifyCSS</h3>
+    <p>
+      Luckily, the fix was pretty easy to implement as all I had to do was fork
+      PurifyCSS, edit some regex (and adjust the tests for good measure) and add
+      that fork to devGaido. From then on, only the absolutely needed CSS
+      classes remained in the production CSS.
+    </p>
+    <h3>Problem No. 3: Function Components</h3>
+    <p>
+      Driven by the promise of (future) performance benefits and the elegance of
+      arrow functions, we tried to use function components wherever possible.
+      This however lead to a pretty big problem: We couldn't use local state and
+      had no access to lifecycle functions. Although this was fine for the
+      majority of the codebase, it hurt a lot in the places where it wasn't.
+    </p>
+    <h3>Solution: Adding state and lifecycle hooks via HOCs</h3>
+    <p>
+      In absence of React Hooks, which had yet to be invented, I didn't want to
+      admit defeat and just use a Class component - instead, I tried to come up
+      with a way to inject state and lifecycle hooks into those function
+      components. And in the end, I did succeed with the following approach:
+      Create a wrapper HOC that exposes state, setState(), and the lifecycle
+      hooks Invoke the function component as a function inside the wrapper to
+      get the JSX but not create another component Overwrite the static name()
+      getter function to return the original component's name
+    </p>
+    <p>
+      For more details, check out the
+      {' '}
+      <a href="https://codeburst.io/save-the-zombies-how-to-add-state-and-lifecycle-methods-to-stateless-react-components-1a996513866d">
+        Medium story
+        {' '}
+      </a>
+      I wrote about this.
+    </p>
+    <h3>Problem No. 4: Lesson images</h3>
+    <p>
+      Throughout the app, we wanted to show images relating to the paths and
+      lessons to spice up the visuals, but with such a large number of lessons,
+      it would have taken ages to find all the necessary assets. Furthermore,
+      that meant we would have needed to find and upload appropriate images when
+      adding more lessons in the future.
+    </p>
+    <h3>Solution: Let our server take screenshots</h3>
+    <p>
+      Seeing that devGaido exclusively linked to external resources for its
+      learning materials, the idea of just using the URLs of the lesson
+      resources and letting the node server take screenshots was born. The
+      resulting images weren't as awesome as handpicked ones obviously, but it
+      was a great time saver and worked fine for our use case.
+    </p>
+    <h3>Problem No. 5: Server load</h3>
+    <p>
+      As mentioned earlier, we couldn't spend too much on our VPS for this first
+      MVP version which meant that our production server was running on a
+      "best-bang-for-your-buck" kind of system, which was, realistically
+      speaking, still pretty low-performance. This fact was backed up by our
+      load tests which suggested that our Node.js server could only handle a
+      moderate number of concurrent requests before breaking down. The constant
+      server requests to save user actions and getting lesson and path data
+      would therefore potentially lead to inoperability pretty quickly.
+    </p>
+    <h3>Solution: NGINX, Cloudflare, Hydrated Redux store</h3>
+    <p>
+      As we discovered this issue pretty early in development, we were able to
+      make the necessary adjustments without much impact on the codebase: + Use
+      NGINX as a reverse proxy + Use Cloudflare CDN to server the static assets
+      + Hydrate the Redux store with the complete curriculum data to make
+      subsequent requests unneeded Just adding NGINX to the front of our Node.js
+      server made a pretty significant difference in the number of concurrent
+      requests that could be handled, especially so, since Cloudflare would
+      serve the images, etc. instead.
+    </p>
+    <p>
+      This would have probably sufficed, but since we already hydrated the
+      initial store with user data and authentication details, I proposed trying
+      to send over the complete curriculum data (lessons and paths) as well. And
+      as testing suggested that this would only have a small impact on the speed
+      of the initial page load, we went with it. The effect of this was twofold:
+      In the absence of requesting data before switching pages, the server load
+      was significantly lessened and the perceived speed of the app increased
+      dramatically.
+    </p>
+    <p>
+      In hindsight, I guess just generating static HTML from the curriculum data
+      would have been the cleaner solution, but you know how the saying goes:
+      "Hindsight is 20/20", plus - learning about this technique might prove
+      valuable in future projects.
+    </p>
     <h2 className={styles.CaseStudySectionTitle}>Current Status</h2>
     <h2 className={styles.CaseStudySectionTitle}>Lessons Learned</h2>
   </div>

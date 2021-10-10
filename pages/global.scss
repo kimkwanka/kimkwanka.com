@@ -79,6 +79,7 @@ main {
   width: 100%;
 }
 
+// TODO: choose a color that doesn't trigger "auto background color adjust" for anchor tags
 ::selection {
   background: var(--primaryCol);
 }

@@ -36,6 +36,9 @@ const useScrollSpy = () => {
     Object.values(scrollSectionRefs.current).forEach((section) => {
       observer.observe(section);
     });
+    return () => {
+      observer.disconnect();
+    };
   }, [setCurrentScrollSection]);
 };
 

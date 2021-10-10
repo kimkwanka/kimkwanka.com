@@ -17,7 +17,7 @@ const ProjectCard = ({
   <Link href={href}>
     <a className={styles.Project} href={href}>
       {!mirrored && (
-      <div className={styles.ProjectImageContainer}>
+      <div className={`${styles.ProjectImageContainer} ${styles[title]}`}>
         <Image
           className={styles.ProjectImage}
           src={imgSrc}

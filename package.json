@@ -10,12 +10,14 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "@react-three/fiber": "^7.0.15",
     "babel-plugin-module-resolver": "^4.1.0",
     "modern-css-reset": "^1.4.0",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "^1.42.1"
+    "sass": "^1.42.1",
+    "three": "^0.133.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",

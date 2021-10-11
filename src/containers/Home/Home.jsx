@@ -7,6 +7,7 @@ import { addSectionRef, useScrollSpy, scrollToTarget } from '@hooks/useScrollSpy
 import styles from './Home.module.scss';
 
 import ProjectCard from './ProjectCard/ProjectCard';
+import HeroBackground from './HeroBackground/HeroBackground';
 
 const HomeView = () => {
   useScrollSpy();
@@ -19,6 +20,7 @@ const HomeView = () => {
         ref={addSectionRef('#home')}
       >
         <div className={styles.hero__container}>
+          <HeroBackground />
           <div className={styles.hero__content}>
             <h1 className={styles.hero__title}>
               Kim Kwanka,

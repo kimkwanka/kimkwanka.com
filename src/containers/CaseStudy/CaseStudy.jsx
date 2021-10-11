@@ -100,9 +100,9 @@ const CaseStudy = () => (
     <p>
       With devGaido, we used a pretty generic folder structure with all of our
       Stylus files being in ./src/client/stylus. This made adding new components
-      and their corresponding CSS always feeling cumbersome: + Even with BEM,
+      and their corresponding CSS always feel cumbersome: + Even with BEM,
       coming up with CSS class names was annoying + With long class names it was
-      hard to reason about a component's style + Constant back-and-forth between
+      hard to reason about a component&apos;s style + Constant back-and-forth between
       files since component CSS was not located near its code
     </p>
     <h3>Solution: Atomic CSS</h3>
@@ -110,10 +110,10 @@ const CaseStudy = () => (
       Even though the idea of functional/atomic CSS frameworks like Tachyons and
       Tailwind was pretty novel back then, we opted to use this approach to
       compose the brunt of our CSS directly in our code. We decided to add an
-      empty BEM-style class as an identifier (like "lesson-card") for easier
+      empty BEM-style class as an identifier (like &quot;lesson-card&quot;) for easier
       navigation, though. To be able to tweak it to our needs in regards to
       naming and features I was tasked with creating our own version of an
-      atomic CSS framework (called "Atomiku"), which - in hindsight - was a
+      atomic CSS framework (called &quot;Atomiku&quot;), which - in hindsight - was a
       great learning experience but also kind of a waste of time.
     </p>
     <h3>Problem No. 2: Bloated CSS / PurifyCSS</h3>
@@ -128,7 +128,7 @@ const CaseStudy = () => (
     <p>
       To get rid of the unnecessary CSS, we decided to use PurifyCSS as a final
       build step. This worked great at first glance but when we inspected the
-      resulting CSS we noticed that classes with numbers in them like "width-50"
+      resulting CSS we noticed that classes with numbers in them like &quot;width-50&quot;
       did, in fact, NOT get removed at all.
     </p>
     <h3>Solution: Custom Fork of PurifyCSS</h3>
@@ -142,20 +142,20 @@ const CaseStudy = () => (
     <p>
       Driven by the promise of (future) performance benefits and the elegance of
       arrow functions, we tried to use function components wherever possible.
-      This however lead to a pretty big problem: We couldn't use local state and
+      This however lead to a pretty big problem: We couldn&apos;t use local state and
       had no access to lifecycle functions. Although this was fine for the
-      majority of the codebase, it hurt a lot in the places where it wasn't.
+      majority of the codebase, it hurt a lot in the places where it wasn&apos;t.
     </p>
     <h3>Solution: Adding state and lifecycle hooks via HOCs</h3>
     <p>
-      In absence of React Hooks, which had yet to be invented, I didn't want to
+      In absence of React Hooks, which had yet to be invented, I didn&apos;t want to
       admit defeat and just use a Class component - instead, I tried to come up
       with a way to inject state and lifecycle hooks into those function
       components. And in the end, I did succeed with the following approach:
       Create a wrapper HOC that exposes state, setState(), and the lifecycle
       hooks Invoke the function component as a function inside the wrapper to
       get the JSX but not create another component Overwrite the static name()
-      getter function to return the original component's name
+      getter function to return the original component&apos;s name
     </p>
     <p>
       For more details, check out the
@@ -179,14 +179,14 @@ const CaseStudy = () => (
       Seeing that devGaido exclusively linked to external resources for its
       learning materials, the idea of just using the URLs of the lesson
       resources and letting the node server take screenshots was born. The
-      resulting images weren't as awesome as handpicked ones obviously, but it
+      resulting images weren&apos;t as awesome as handpicked ones obviously, but it
       was a great time saver and worked fine for our use case.
     </p>
     <h3>Problem No. 5: Server load</h3>
     <p>
-      As mentioned earlier, we couldn't spend too much on our VPS for this first
+      As mentioned earlier, we couldn&apos;t spend too much on our VPS for this first
       MVP version which meant that our production server was running on a
-      "best-bang-for-your-buck" kind of system, which was, realistically
+      &quot;best-bang-for-your-buck&quot; kind of system, which was, realistically
       speaking, still pretty low-performance. This fact was backed up by our
       load tests which suggested that our Node.js server could only handle a
       moderate number of concurrent requests before breaking down. The constant
@@ -217,7 +217,7 @@ const CaseStudy = () => (
     <p>
       In hindsight, I guess just generating static HTML from the curriculum data
       would have been the cleaner solution, but you know how the saying goes:
-      "Hindsight is 20/20", plus - learning about this technique might prove
+      &quot;Hindsight is 20/20&quot;, plus - learning about this technique might prove
       valuable in future projects.
     </p>
     <h2 className={styles.CaseStudySectionTitle}>Current Status</h2>

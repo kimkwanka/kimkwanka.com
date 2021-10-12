@@ -13,23 +13,31 @@ const CaseStudy = () => (
         layout="fill"
       />
     </div> */}
+    <h2 className={styles.CaseStudySectionTitle}>Introduction</h2>
+    <p>
+      When
+      {' '}
+      <a href="https://www.linkedin.com/in/jdmedlock/">Jim Medlock</a>
+      ,
+      Co-Founder of
+      {' '}
+      <a href="https://chingu.io/">Chingu</a>
+      , asked me if I
+      wanted to join his international team to develop an application that would
+      try to streamline the learning experience of new and experienced web
+      developers alike, I immediately said yes. Not having much remote working
+      experience under my belt, I felt a bit nervous, but the prospect of a such a
+      great learning opportunity was just too good to pass up.
+    </p>
     <p className={styles.CaseStudyDescription}>
-      devGaido is a platform that tries to streamline the learning experience by
-      combining &quot;lessons&quot; (free learning resources) into
+      devGaido is a platform that helps (aspiring) web developers effienctly locate experience
+      and simplifies studying by combining &quot;lessons&quot; (free learning resources) into
       &quot;paths&quot; that follow different learning goals.
     </p>
     <p>
       Lessons and paths can each be bookmarked, progress towards completion is
       tracked and paths tangential to your completed lessons are recommended
       automatically.
-    </p>
-    <p>
-      I was pumped when
-      {' '}
-      <a href="https://medium.com/@jdmedlock">Jim Medlock</a>
-      {' '}
-      asked me to join his team to help salvage a project and finally bring it
-      to MVP status. Little did I know what hell of a ride was about to begin.
     </p>
     <h2 className={styles.CaseStudySectionTitle}>Tech Stack and Explanation</h2>
     <ul>
@@ -102,19 +110,19 @@ const CaseStudy = () => (
       Stylus files being in ./src/client/stylus. This made adding new components
       and their corresponding CSS always feel cumbersome: + Even with BEM,
       coming up with CSS class names was annoying + With long class names it was
-      hard to reason about a component&apos;s style + Constant back-and-forth between
-      files since component CSS was not located near its code
+      hard to reason about a component&apos;s style + Constant back-and-forth
+      between files since component CSS was not located near its code
     </p>
     <h3>Solution: Atomic CSS</h3>
     <p>
       Even though the idea of functional/atomic CSS frameworks like Tachyons and
       Tailwind was pretty novel back then, we opted to use this approach to
       compose the brunt of our CSS directly in our code. We decided to add an
-      empty BEM-style class as an identifier (like &quot;lesson-card&quot;) for easier
-      navigation, though. To be able to tweak it to our needs in regards to
-      naming and features I was tasked with creating our own version of an
-      atomic CSS framework (called &quot;Atomiku&quot;), which - in hindsight - was a
-      great learning experience but also kind of a waste of time.
+      empty BEM-style class as an identifier (like &quot;lesson-card&quot;) for
+      easier navigation, though. To be able to tweak it to our needs in regards
+      to naming and features I was tasked with creating our own version of an
+      atomic CSS framework (called &quot;Atomiku&quot;) which was a great learning experience
+      in its own right.
     </p>
     <h3>Problem No. 2: Bloated CSS / PurifyCSS</h3>
     <p>
@@ -128,8 +136,8 @@ const CaseStudy = () => (
     <p>
       To get rid of the unnecessary CSS, we decided to use PurifyCSS as a final
       build step. This worked great at first glance but when we inspected the
-      resulting CSS we noticed that classes with numbers in them like &quot;width-50&quot;
-      did, in fact, NOT get removed at all.
+      resulting CSS we noticed that classes with numbers in them like
+      &quot;width-50&quot; did, in fact, NOT get removed at all.
     </p>
     <h3>Solution: Custom Fork of PurifyCSS</h3>
     <p>
@@ -142,15 +150,16 @@ const CaseStudy = () => (
     <p>
       Driven by the promise of (future) performance benefits and the elegance of
       arrow functions, we tried to use function components wherever possible.
-      This however lead to a pretty big problem: We couldn&apos;t use local state and
-      had no access to lifecycle functions. Although this was fine for the
-      majority of the codebase, it hurt a lot in the places where it wasn&apos;t.
+      This however lead to a pretty big problem: We couldn&apos;t use local
+      state and had no access to lifecycle functions. Although this was fine for
+      the majority of the codebase, it hurt a lot in the places where it
+      wasn&apos;t.
     </p>
     <h3>Solution: Adding state and lifecycle hooks via HOCs</h3>
     <p>
-      In absence of React Hooks, which had yet to be invented, I didn&apos;t want to
-      admit defeat and just use a Class component - instead, I tried to come up
-      with a way to inject state and lifecycle hooks into those function
+      In absence of React Hooks, which had yet to be invented, I didn&apos;t
+      want to admit defeat and just use a Class component - instead, I tried to
+      come up with a way to inject state and lifecycle hooks into those function
       components. And in the end, I did succeed with the following approach:
       Create a wrapper HOC that exposes state, setState(), and the lifecycle
       hooks Invoke the function component as a function inside the wrapper to
@@ -179,19 +188,19 @@ const CaseStudy = () => (
       Seeing that devGaido exclusively linked to external resources for its
       learning materials, the idea of just using the URLs of the lesson
       resources and letting the node server take screenshots was born. The
-      resulting images weren&apos;t as awesome as handpicked ones obviously, but it
-      was a great time saver and worked fine for our use case.
+      resulting images weren&apos;t as awesome as handpicked ones obviously, but
+      it was a great time saver and worked fine for our use case.
     </p>
     <h3>Problem No. 5: Server load</h3>
     <p>
-      As mentioned earlier, we couldn&apos;t spend too much on our VPS for this first
-      MVP version which meant that our production server was running on a
-      &quot;best-bang-for-your-buck&quot; kind of system, which was, realistically
-      speaking, still pretty low-performance. This fact was backed up by our
-      load tests which suggested that our Node.js server could only handle a
-      moderate number of concurrent requests before breaking down. The constant
-      server requests to save user actions and getting lesson and path data
-      would therefore potentially lead to inoperability pretty quickly.
+      As mentioned earlier, we couldn&apos;t spend too much on our VPS for this
+      first MVP version which meant that our production server was running on a
+      &quot;best-bang-for-your-buck&quot; kind of system, which was,
+      realistically speaking, still pretty low-performance. This fact was backed
+      up by our load tests which suggested that our Node.js server could only
+      handle a moderate number of concurrent requests before breaking down. The
+      constant server requests to save user actions and getting lesson and path
+      data would therefore potentially lead to inoperability pretty quickly.
     </p>
     <h3>Solution: NGINX, Cloudflare, Hydrated Redux store</h3>
     <p>
@@ -217,8 +226,8 @@ const CaseStudy = () => (
     <p>
       In hindsight, I guess just generating static HTML from the curriculum data
       would have been the cleaner solution, but you know how the saying goes:
-      &quot;Hindsight is 20/20&quot;, plus - learning about this technique might prove
-      valuable in future projects.
+      &quot;Hindsight is 20/20&quot;, plus - learning about this technique might
+      prove valuable in future projects.
     </p>
     <h2 className={styles.CaseStudySectionTitle}>Current Status</h2>
     <h2 className={styles.CaseStudySectionTitle}>Lessons Learned</h2>

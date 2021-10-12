@@ -48,6 +48,7 @@ const HeroBackground = () => (
       fov: 55,
     }}
   >
+    <fog attach="fog" args={['#669666', 1, 150000]} />
     <Plane />
   </Canvas>
 );

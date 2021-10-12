@@ -30,8 +30,8 @@ const CaseStudy = () => (
       great learning opportunity was just too good to pass up.
     </p>
     <p className={styles.CaseStudyDescription}>
-      devGaido is a platform that helps (aspiring) web developers effienctly locate experience
-      and simplifies studying by combining &quot;lessons&quot; (free learning resources) into
+      devGaido is a platform that helps (aspiring) web developers effienctly locate
+      learning resources and simplifies studying by combining &quot;lessons&quot; into
       &quot;paths&quot; that follow different learning goals.
     </p>
     <p>

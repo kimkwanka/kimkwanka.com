@@ -44,6 +44,7 @@ const HomeView = () => {
           <div className={styles.PortraitImageContainer}>
             <Image src="/img/portrait_round.png" alt="Kim Kwanka" className={styles.PortraitImage} layout="fill" />
           </div>
+          <h2 className={styles.DownArrow}>🡣</h2>
         </div>
       </section>
       <section

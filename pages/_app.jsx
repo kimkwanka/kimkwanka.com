@@ -2,13 +2,13 @@
 import 'modern-css-reset';
 import './global.scss';
 
-import { ScrollSpyProvider } from '@hooks/useScrollSpy';
+import { SectionProvider } from '@hooks/useSections';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ScrollSpyProvider>
+    <SectionProvider>
       <Component {...pageProps} />
-    </ScrollSpyProvider>
+    </SectionProvider>
   );
 }
 

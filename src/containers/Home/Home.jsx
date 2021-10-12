@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import Image from 'next/image';
 
-import { addSectionRef, useScrollSpy, scrollToTarget } from '@hooks/useScrollSpy';
+import { useSections } from '@hooks/useSections';
 
 import styles from './Home.module.scss';
 
@@ -10,14 +10,14 @@ import ProjectCard from './ProjectCard/ProjectCard';
 import HeroBackground from './HeroBackground/HeroBackground';
 
 const HomeView = () => {
-  useScrollSpy();
+  const { observeSection, scrollToSection } = useSections();
 
   return (
     <div className={styles['home-view']}>
       <section
         className={styles.hero}
         id="home"
-        ref={addSectionRef('#home')}
+        ref={observeSection('#home')}
       >
         <div className={styles.hero__container}>
           <HeroBackground />
@@ -36,7 +36,7 @@ const HomeView = () => {
             <a
               href="#work"
               className="button"
-              onClick={scrollToTarget}
+              onClick={scrollToSection}
             >
               Check out my work
             </a>
@@ -50,7 +50,7 @@ const HomeView = () => {
       <section
         className={styles.work}
         id="work"
-        ref={addSectionRef('#work')}
+        ref={observeSection('#work')}
       >
         <div className={styles.work__container}>
           <div className={styles.work__content}>
@@ -81,7 +81,7 @@ const HomeView = () => {
       <section
         className={styles.about}
         id="about"
-        ref={addSectionRef('#about')}
+        ref={observeSection('#about')}
       >
         <div className={styles.about__container}>
           <div className={styles.about__content}>
@@ -103,7 +103,7 @@ const HomeView = () => {
       <section
         className={styles.contact}
         id="contact"
-        ref={addSectionRef('#contact')}
+        ref={observeSection('#contact')}
       >
         <div className={styles.contact__container}>
           <div className={styles.contact__content}>

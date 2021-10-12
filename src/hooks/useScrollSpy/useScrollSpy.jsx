@@ -1,60 +1,42 @@
 import {
-  useRef, useEffect, useState, useContext, createContext,
+  useRef, useEffect,
 } from 'react';
 
-let scrollSectionRefs = null;
+let elementRefs = null;
 
-const ScrollSpyContext = createContext(null);
-const useScrollSpyContext = () => useContext(ScrollSpyContext);
+const useScrollSpy = (options = {}) => {
+  elementRefs = useRef({});
 
-const ScrollSpyProvider = ({ children }) => {
-  const [currentScrollSection, setCurrentScrollSection] = useState(null);
+  const observe = (id, callback) => (el) => {
+    if (el) {
+      elementRefs.current[id] = el;
+      elementRefs.current[id].onEnterView = callback;
+    }
+  };
 
-  return (
-    <ScrollSpyContext.Provider value={[currentScrollSection, setCurrentScrollSection]}>
-      {children}
-    </ScrollSpyContext.Provider>
-  );
-};
-
-const useScrollSpy = () => {
-  scrollSectionRefs = useRef([]);
-
-  const [, setCurrentScrollSection] = useContext(ScrollSpyContext);
+  const getElementById = (id) => elementRefs.current[id];
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setCurrentScrollSection(entry.target.id);
+          entry.target.onEnterView();
         }
       });
-    }, {
-      rootMargin: '-50% 0px -50% 0px',
-    });
+    }, options);
 
-    Object.values(scrollSectionRefs.current).forEach((section) => {
-      observer.observe(section);
+    Object.values(elementRefs.current).forEach((element) => {
+      observer.observe(element);
     });
     return () => {
       observer.disconnect();
     };
-  }, [setCurrentScrollSection]);
+  }, [options]);
+
+  return {
+    observe,
+    getElementById,
+  };
 };
 
-const addSectionRef = (sectionHash) => (el) => {
-  scrollSectionRefs.current[sectionHash] = el;
-};
-
-const scrollToTarget = (e) => {
-  if (window.location.pathname !== '/') {
-    return;
-  }
-  e.preventDefault();
-
-  scrollSectionRefs.current[e.currentTarget.hash].scrollIntoView({ behavior: 'smooth' });
-};
-
-export {
-  ScrollSpyProvider, addSectionRef, useScrollSpy, scrollToTarget, useScrollSpyContext,
-};
+export default useScrollSpy;

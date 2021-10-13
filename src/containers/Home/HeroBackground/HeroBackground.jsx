@@ -1,6 +1,8 @@
 import { useLayoutEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 
+import styles from './HeroBackground.module.scss';
+
 const Plane = () => {
   const planeGeoRef = useRef(null);
   const meshRef = useRef(null);
@@ -40,7 +42,7 @@ const Plane = () => {
 
 const HeroBackground = () => (
   <Canvas
-    className="hero-background"
+    className={styles.HeroBackground}
     camera={{
       position: [0, -19000, 14000],
       near: 1,

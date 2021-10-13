@@ -1,0 +1,17 @@
+.HeroBackground {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: FadeInAnimation 3s linear 0s 1 normal forwards;
+}
+
+@keyframes FadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

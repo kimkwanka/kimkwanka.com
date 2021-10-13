@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import NavBar from '@common/NavBar';
+import Header from '@common/Header';
 import CaseStudy from '@containers/CaseStudy';
 
 export default function devGaidoPage() {
@@ -11,9 +11,7 @@ export default function devGaidoPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kim Kwanka - Case Study: devGaido</title>
       </Head>
-      <header>
-        <NavBar />
-      </header>
+      <Header />
       <CaseStudy />
     </>
   );

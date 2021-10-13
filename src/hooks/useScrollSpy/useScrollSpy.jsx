@@ -1,41 +1,69 @@
-import {
-  useRef, useEffect,
-} from 'react';
-
-let elementRefs = null;
+import { useRef, useEffect, useState } from 'react';
 
 const useScrollSpy = (options = {}) => {
-  elementRefs = useRef({});
+  const { root = null, rootMargin = '', thresholds = 0 } = options;
+  const elementRefs = useRef({});
+  const observerRef = useRef(null);
 
-  const observe = (id, callback) => (el) => {
+  const [observedElements, setObservedElements] = useState({});
+
+  const observe = (id, onEnterView = () => {}, onExitView = () => {}) => (el) => {
     if (el) {
       elementRefs.current[id] = el;
-      elementRefs.current[id].onEnterView = callback;
+      elementRefs.current[id].onEnterView = onEnterView;
+      elementRefs.current[id].onExitView = onExitView;
+      elementRefs.current[id].observerId = id;
     }
   };
 
-  const getElementById = (id) => elementRefs.current[id];
+  const isInView = (id) => observedElements[id]?.isInView;
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.onEnterView();
-        }
-      });
-    }, options);
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        const updatedElementsInView = {};
+
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.onEnterView();
+          } else {
+            entry.target.onExitView();
+          }
+
+          updatedElementsInView[entry.target.observerId] = {
+            isInView: entry.isIntersecting,
+            id: entry.target.observerId,
+          };
+        });
+
+        setObservedElements(updatedElementsInView);
+      },
+      { root, rootMargin, thresholds },
+    );
 
     Object.values(elementRefs.current).forEach((element) => {
-      observer.observe(element);
+      observerRef.current.observe(element);
     });
+
     return () => {
-      observer.disconnect();
+      observerRef.current.disconnect();
     };
-  }, [options]);
+  }, [root, rootMargin, thresholds]);
+
+  const scrollToTarget = (e) => {
+    if (window.location.pathname !== '/') {
+      return;
+    }
+    e.preventDefault();
+    document
+      .querySelector(e.currentTarget.hash)
+      ?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return {
     observe,
-    getElementById,
+    isInView,
+    scrollToTarget,
   };
 };
 

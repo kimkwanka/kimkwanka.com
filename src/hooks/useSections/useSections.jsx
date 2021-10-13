@@ -17,52 +17,23 @@ const SectionProvider = ({ children }) => {
 };
 
 const useSections = () => {
-  const { observe, getElementById } = useScrollSpy({ rootMargin: '-50% 0px -50% 0px' });
+  const { observe } = useScrollSpy({ rootMargin: '-50% 0px -50% 0px' });
 
   const [currentSection, setCurrentSection] = useContext(SectionContext);
 
-  const observeSection = (id) => observe(id, () => setCurrentSection(id));
+  const observeSection = (id) => observe(id, () => {
+    setCurrentSection(id);
+  });
 
   const scrollToSection = (e) => {
     if (window.location.pathname !== '/') {
       return;
     }
     e.preventDefault();
-
-    getElementById(e.currentTarget.hash).scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(e.currentTarget.hash)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return { observeSection, scrollToSection, currentSection };
 };
-
-
-// const useScrollSpy = () => {
-//   scrollSectionRefs = useRef([]);
-
-//   const [, setCurrentScrollSection] = useContext(ScrollSpyContext);
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver((entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           setCurrentScrollSection(entry.target.id);
-//         }
-//       });
-//     }, {
-//       rootMargin: '-50% 0px -50% 0px',
-//     });
-
-//     Object.values(scrollSectionRefs.current).forEach((section) => {
-//       observer.observe(section);
-//     });
-//     return () => {
-//       observer.disconnect();
-//     };
-//   }, [setCurrentScrollSection]);
-// };
-
-// const addSectionRef = (sectionHash) => (el) => {
-//   scrollSectionRefs.current[sectionHash] = el;
-// };
 
 export { useSections, SectionProvider };

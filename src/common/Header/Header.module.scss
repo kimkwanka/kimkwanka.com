@@ -1,0 +1,17 @@
+.Header {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  transition: background-color var(--transitionSpeed) var(--transitionTiming);
+  width: 100%;
+  z-index: 100;
+}
+
+.transparent {
+  transition: background-color var(--transitionSpeed) var(--transitionTiming);
+  background: transparent;
+}
+
+.HeaderSentinel {
+  height: 80px; // Height of the NavBar
+  position: absolute;
+}

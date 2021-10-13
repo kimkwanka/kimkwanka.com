@@ -24,6 +24,7 @@
 }
 
 .hero__container {
+  align-content: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   margin-top: var(--s8);
@@ -31,7 +32,6 @@
   max-width: var(--contentMaxWidth);
   padding: 0 var(--s3);
   width: 100%;
-
 }
 
 .hero__content {

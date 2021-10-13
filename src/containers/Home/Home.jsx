@@ -19,8 +19,8 @@ const HomeView = () => {
         id="home"
         ref={observeSection('#home')}
       >
+        <HeroBackground />
         <div className={styles.hero__container}>
-          <HeroBackground />
           <div className={styles.hero__content}>
             <h1 className={styles.hero__title}>
               Kim Kwanka,

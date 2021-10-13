@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import NavBar from '@common/NavBar';
+import Header from '@common/Header';
 import CaseStudy from '@containers/CaseStudy';
 
 export default function devGaidoPage() {
@@ -12,7 +12,7 @@ export default function devGaidoPage() {
         <title>Kim Kwanka - Case Study: Pokédex</title>
       </Head>
       <header>
-        <NavBar />
+        <Header />
       </header>
       <CaseStudy />
     </>

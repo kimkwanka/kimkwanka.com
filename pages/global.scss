@@ -44,12 +44,7 @@
     'Segoe UI Symbol';
 }
 
-header {
-  //background: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-}
+// Header styles are inside Header component
 
 body {
   color: var(--textCol);

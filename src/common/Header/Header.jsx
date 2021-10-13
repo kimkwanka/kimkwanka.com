@@ -18,7 +18,7 @@ const Header = ({ doesChangeOnScroll = false }) => {
       />
       )}
       <header
-        className={doesChangeOnScroll && isInView('header-sentinel') ? `${styles.Header} ${styles.transparent}` : styles.Header}
+        className={doesChangeOnScroll && isInView('header-sentinel') ? styles.Header : `${styles.Header} ${styles.solid}`}
       >
         <NavBar />
       </header>

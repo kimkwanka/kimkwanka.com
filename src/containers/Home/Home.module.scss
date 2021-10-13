@@ -10,7 +10,7 @@
 //================================================================
 
 .hero {
-  background: linear-gradient(270deg, #473b47, #596666 );
+  background: linear-gradient(270deg, #473b47, #596666);
   color: rgba(255, 255, 255, 0.87);
   display: flex;
   margin-bottom: var(--s6);
@@ -63,7 +63,6 @@
   height: 100%;
 }
 
-
 .PortraitImageContainer {
   height: 700px;
   overflow: hidden;
@@ -75,22 +74,37 @@
 }
 
 .DownArrow {
-  animation-direction: alternate;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-name: DownArrowAnimation;
-  animation-timing-function: ease-in-out;
+  animation:
+    DownArrowAnimation 1s ease-in-out 7s infinite alternate-reverse,
+    FadeInAnimation 7s linear 0s 1 normal forwards;
   bottom: 0;
   font-size: 60px;
   left: 50%;
-  opacity: 0.5;
   position: absolute;
-  transform: translateX(-50%);
+  transform: translate(-50%);
 }
 
 @keyframes DownArrowAnimation {
-  from {transform: translateY(-20%);}
-  to {transform: translateY(0);}
+  from {
+    transform: translate(-50%, -20%);
+  }
+  to {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes FadeInAnimation {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  75% {
+    opacity: 0;
+    pointer-events: auto;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 //================================================================
 
@@ -98,7 +112,7 @@
   background: #eee;
   color: #131313;
   display: flex;
-  padding: var(--s6) 0 ;
+  padding: var(--s6) 0;
   width: 100%;
 }
 
@@ -127,10 +141,9 @@
 
 //================================================================
 
-
 .work {
   display: flex;
-  padding: var(--s6) 0 ;
+  padding: var(--s6) 0;
   width: 100%;
 }
 
@@ -161,8 +174,6 @@
   grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
   width: 100%;
 }
-
-
 
 .grid__item {
   background: #252525;

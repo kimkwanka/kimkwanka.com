@@ -44,7 +44,12 @@ const HomeView = () => {
           <div className={styles.PortraitImageContainer}>
             <Image src="/img/portrait_round.png" alt="Kim Kwanka" className={styles.PortraitImage} layout="fill" />
           </div>
-          <h2 className={styles.DownArrow}>🡣</h2>
+          <a
+            href="#work"
+            onClick={scrollToSection}
+          >
+            <h2 className={styles.DownArrow}>🡣</h2>
+          </a>
         </div>
       </section>
       <section

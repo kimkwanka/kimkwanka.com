@@ -46,32 +46,43 @@
 
 // Header styles are inside Header component
 
+html {
+  font-size: 112.5%;
+} /*18px*/
+
 body {
   color: var(--textCol);
-  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.75;
   min-height: 100vh;
 }
+  
+h1, h2, h3, h4, h5 {
+  line-height: 1.3;
+  margin: 0;
+}
+
+h1 {font-size: 3.052rem;}
+h2 {font-size: 2.441rem;}
+h3 {font-size: 1.953rem;}
+h4 {font-size: 1.563rem;}
+h5 {font-size: 1.25rem;}
+small, .text_small {font-size: 0.8rem;}
+
+// Uncomment for Perfect Fourth Type Scale on larger screens
+// @media screen and (min-width: 720px) {
+//   h1 {font-size: 4.209rem;}
+//   h2 {font-size: 3.157rem;}
+//   h3 {font-size: 2.369rem;}
+//   h4 {font-size: 1.777rem;}
+//   h5 {font-size: 1.333rem;}
+//   small, .text_small {font-size: 0.75rem;}
+// }
 
 #__next {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  margin: 0 auto;
-  max-width: var(--contentMaxWidth);
-  width: 100%;
 }
 
 // TODO: choose a color that doesn't trigger "auto background color adjust" for anchor tags
@@ -252,3 +263,4 @@ button.clear--secondary,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+

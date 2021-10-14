@@ -16,11 +16,11 @@ const NavBar = () => {
             href="#home"
             onClick={scrollToSection}
           >
-            <h1 className={styles.logo}>
+            <h5 className={styles.logo}>
               kim
               <span className="gradient--secondary">kwanka</span>
               .io
-            </h1>
+            </h5>
           </a>
         </Link>
       </div>

@@ -26,7 +26,8 @@
 .hero__container {
   align-content: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: 2fr 1fr;
+  column-gap: var(--s3);
   margin-top: var(--s8);
   margin: 0 auto;
   max-width: var(--contentMaxWidth);
@@ -35,11 +36,14 @@
 }
 
 .hero__content {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
   width: 100%;
+
+  * + * {
+    margin-top: var(--s5);
+  }
 }
 
 .hero__title {
@@ -62,7 +66,6 @@
 }
 
 .PortraitImageContainer {
-  height: 700px;
   overflow: hidden;
   position: relative;
 }

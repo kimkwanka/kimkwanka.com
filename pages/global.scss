@@ -62,6 +62,8 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
+//Major Third Type Scale
+
 h1 {font-size: 3.052rem;}
 h2 {font-size: 2.441rem;}
 h3 {font-size: 1.953rem;}
@@ -69,7 +71,7 @@ h4 {font-size: 1.563rem;}
 h5 {font-size: 1.25rem;}
 small, .text_small {font-size: 0.8rem;}
 
-// Uncomment for Perfect Fourth Type Scale on larger screens
+//Perfect Fourth Type Scale on larger screens
  @media screen and (min-width: 720px) {
   h1 {font-size: 4.209rem;}
   h2 {font-size: 3.157rem;}

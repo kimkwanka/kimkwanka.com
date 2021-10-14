@@ -23,7 +23,7 @@ const CaseStudy = () => (
       {' '}
       <a href="https://chingu.io/">Chingu</a>
       , asked me if I
-      wanted to join his international team to develop an application that would
+      wanted to join his team to develop an application that would
       try to streamline the learning experience of new and experienced web
       developers alike, I immediately said yes. Not having much remote working
       experience under my belt, I felt a bit nervous, but the prospect of a such

@@ -64,7 +64,7 @@ const HomeView = () => {
               title="devGaido"
               href="/devgaido"
               imgSrc="/img/devgaido.png"
-              description=" A learning platform created to provide a guided learning
+              description=" A platform created to provide a guided learning
             experience for (aspiring) web developers"
             />
             <ProjectCard

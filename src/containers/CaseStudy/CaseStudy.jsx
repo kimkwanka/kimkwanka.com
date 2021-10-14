@@ -26,13 +26,14 @@ const CaseStudy = () => (
       wanted to join his international team to develop an application that would
       try to streamline the learning experience of new and experienced web
       developers alike, I immediately said yes. Not having much remote working
-      experience under my belt, I felt a bit nervous, but the prospect of a such a
-      great learning opportunity was just too good to pass up.
+      experience under my belt, I felt a bit nervous, but the prospect of a such
+      a great learning opportunity was just too good to pass up.
     </p>
     <p className={styles.CaseStudyDescription}>
-      devGaido is a platform that helps (aspiring) web developers effienctly locate
-      learning resources and simplifies studying by combining &quot;lessons&quot; into
-      &quot;paths&quot; that follow different learning goals.
+      devGaido is a platform that helps (aspiring) web developers effienctly
+      locate learning resources and simplifies studying by combining
+      &quot;lessons&quot; into &quot;paths&quot; that follow different learning
+      goals.
     </p>
     <p>
       Lessons and paths can each be bookmarked, progress towards completion is
@@ -61,16 +62,13 @@ const CaseStudy = () => (
       syntax.
     </p>
     <p>
-      Even though we had a database, we didn&apos;t want to risk leaking private
-      data so we let Auth0 handle authentication and only saved the user id for
-      identification.
+      As we didn&apos;t want to risk leaking private data, we let Auth0 handle
+      authentication and only saved the user id for identification.
     </p>
     <p>
-      On the Dev Ops side we of course used Docker to orchestrate the server
-      deployment. NGINX was utilized here as a reverse proxy to lessen the load
-      on the server and allowing it to scale in the future. As the difference in
-      performance was negligible for our use case and we couldn&apos;t afford
-      the memory required on our VPS we decided against adding Redis.
+      On the Dev Ops side we used Docker to orchestrate the server deployment
+      and NGINX was utilized here as a reverse proxy to lessen the load on the
+      server and allowing it to scale more easily in the future.
     </p>
     <div className={styles.CaseStudyLinks}>
       <a
@@ -121,8 +119,8 @@ const CaseStudy = () => (
       empty BEM-style class as an identifier (like &quot;lesson-card&quot;) for
       easier navigation, though. To be able to tweak it to our needs in regards
       to naming and features I was tasked with creating our own version of an
-      atomic CSS framework (called &quot;Atomiku&quot;) which was a great learning experience
-      in its own right.
+      atomic CSS framework (called &quot;Atomiku&quot;) which was a great
+      learning experience in its own right.
     </p>
     <h3>Problem No. 2: Bloated CSS / PurifyCSS</h3>
     <p>
@@ -229,8 +227,35 @@ const CaseStudy = () => (
       &quot;Hindsight is 20/20&quot;, plus - learning about this technique might
       prove valuable in future projects.
     </p>
-    <h2 className={styles.CaseStudySectionTitle}>Current Status</h2>
     <h2 className={styles.CaseStudySectionTitle}>Lessons Learned</h2>
+    <p>The main takeaway for me from this project is:</p>
+    <h3>Communication is key.</h3>
+    <p>
+      It doesn&apos;t matter if it&apos;s between team members or with your users - the
+      way you handle communication can make or break a project.
+    </p>
+    <p>
+      We had numerous, sometimes heated discussions about various aspects of
+      devGaido - direction, UI/UX, app architecture, and countless other details
+      - more than enough potential for controversy. But even in the most
+      passionate of debates, we always made sure to be respectful and willing to
+      listen and give careful consideration to opposing views.
+    </p>
+    <p>
+      That doesn&apos;t mean that we compromised on the product just for sake of
+      &quot;getting along&quot; - sharing opinions and arguing for one&apos;s beliefs was
+      equally as important - but we took great care to keep it all professional.
+    </p>
+    <p>
+      It&apos;s not about winning a popularity contest but about trying to create an
+      environment where everyone feels heard and where ideas can blossom.
+    </p>
+    <p>
+      That extended to communication with our userbase as well: It wasn&apos;t about
+      trying to fix every issue instantly or answering every question thoroughly
+      on the spot, but making sure to respond in _some_ way - no one likes to
+      feel being ignored.
+    </p>
   </div>
 );
 

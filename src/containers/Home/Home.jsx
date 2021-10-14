@@ -23,11 +23,11 @@ const HomeView = () => {
         <div className={styles.hero__container}>
           <div className={styles.hero__content}>
             <h1 className={styles.hero__title}>
-              Kim Kwanka,
+              Hi, I&apos;m Kim,
               <span className={`${styles.hero__span} gradient`}>
-                Fullstack Web
+                Full-Stack
               </span>
-              Developer
+              Web Developer.
             </h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam

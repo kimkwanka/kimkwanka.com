@@ -1,7 +1,7 @@
 // Use CSS variables instead of SCSS variables so we can use them in other files without the need to export/import
 :root {
   --contentMaxWidth: 1280px;
-  --textCol: #131313;
+  --textCol: #212121;
   --buttonTextCol: #fff;
   --linkCol: #131313;
   --textColDisabled: rgba(255, 255, 255, 0.4);
@@ -148,8 +148,8 @@ button,
     135deg,
     var(--tertiaryCol),
     var(--quaternaryCol),
-    var(--gradientCol1),
-    var(--gradientCol2)
+    var(--primaryCol),
+    var(--secondaryCol)
   );
   background-size: 300% 100%;
   background-position-x: -1px;

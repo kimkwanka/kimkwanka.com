@@ -32,6 +32,7 @@ const Footer = () => {
             href="https://github.com/kimkwanka"
             target="_blank"
             rel="noreferrer"
+            aria-label="Github"
           >
             <span className="h2 icon-github" />
           </a>
@@ -40,6 +41,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/kimkwanka/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Linkedin"
           >
             <span className="h2 icon-linkedin2" />
           </a>
@@ -48,6 +50,7 @@ const Footer = () => {
             href="https://twitter.com/kimkwanka/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Twitter"
           >
             <span className="h2 icon-twitter" />
           </a>

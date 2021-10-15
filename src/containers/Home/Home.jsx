@@ -73,7 +73,7 @@ const HomeView = () => {
               title="myFlix"
               href="/myflix"
               imgSrc="/img/myflix.png"
-              description="A movie database frontend"
+              description="A movie database frontend app with a custom backend"
               mirrored
             />
             <ProjectCard

@@ -21,28 +21,26 @@ const HomeView = () => {
       >
         <HeroBackground />
         <div className={styles.hero__container}>
-          <div className={styles.hero__content}>
-            <h1 className={styles.hero__title}>
-              Hi, I&apos;m Kim,
-              <span className={`${styles.hero__span} gradient`}>
-                Full-Stack
-              </span>
-              Web Developer.
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
-              sagittis viverra dolor nulla integer rhoncus, et mollis adipiscing.
-            </p>
-            <a
-              href="#work"
-              className="button"
-              onClick={scrollToSection}
-            >
-              Check out my work
-              {' '}
-              <span className="icon-chevron-thin-right" />
-            </a>
-          </div>
+          <h1 className={styles.hero__title}>
+            Hi, I&apos;m Kim:
+            <span className={`${styles.hero__span} gradient`}>
+              Full-Stack
+            </span>
+            Web Developer.
+          </h1>
+          <p className={styles.hero__text}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
+            sagittis viverra dolor nulla integer rhoncus, et mollis adipiscing.
+          </p>
+          <a
+            href="#work"
+            className={`${styles.hero__button} button`}
+            onClick={scrollToSection}
+          >
+            Check out my work
+            {' '}
+            <span className="icon-chevron-thin-right" />
+          </a>
           <div className={styles.PortraitImageContainer}>
             <Image src="/img/retro.svg" alt="Kim Kwanka" className={styles.PortraitImage} layout="fill" />
           </div>

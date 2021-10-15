@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from '@common/Header';
+import Footer from '@common/Footer';
 import CaseStudy from '@containers/CaseStudy';
 
 export default function myFlixPage() {
@@ -13,6 +14,7 @@ export default function myFlixPage() {
       </Head>
       <Header />
       <CaseStudy />
+      <Footer />
     </>
   );
 }

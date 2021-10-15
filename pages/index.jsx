@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from '@common/Header';
+import Footer from '@common/Footer';
 import Home from '@containers/Home';
 
 export default function IndexPage() {
@@ -13,6 +14,7 @@ export default function IndexPage() {
       </Head>
       <Header doesChangeOnScroll />
       <Home />
+      <Footer />
     </>
   );
 }

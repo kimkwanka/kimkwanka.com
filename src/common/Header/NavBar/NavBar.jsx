@@ -16,11 +16,11 @@ const NavBar = () => {
             href="#home"
             onClick={scrollToSection}
           >
-            <h5 className={styles.logo}>
+            <h4 className={styles.logo}>
               kim
               <span className="gradient--secondary">kwanka</span>
-              .io
-            </h5>
+
+            </h4>
           </a>
         </Link>
       </div>
@@ -59,10 +59,12 @@ const NavBar = () => {
           <li>
             <Link href="/#contact">
               <a
-                className={`${styles.NavBar__LinkButton} button`}
+                className={`${styles.NavBar__LinkButton} button clear--secondary`}
                 href="#contact"
                 onClick={scrollToSection}
               >
+                <span className="icon-mail2" />
+                {' '}
                 Contact Me
               </a>
             </Link>

@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Header from '@common/Header';
+import Footer from '@common/Footer';
+
 import CaseStudy from '@containers/CaseStudy';
 
 export default function devGaidoPage() {
@@ -13,6 +15,7 @@ export default function devGaidoPage() {
       </Head>
       <Header />
       <CaseStudy />
+      <Footer />
     </>
   );
 }

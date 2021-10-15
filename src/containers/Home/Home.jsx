@@ -39,6 +39,8 @@ const HomeView = () => {
               onClick={scrollToSection}
             >
               Check out my work
+              {' '}
+              <span className="icon-chevron-thin-right" />
             </a>
           </div>
           <div className={styles.PortraitImageContainer}>

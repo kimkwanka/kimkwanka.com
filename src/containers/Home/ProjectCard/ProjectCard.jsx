@@ -33,6 +33,8 @@ const ProjectCard = ({
         </p>
         <button type="button" className={styles.ProjectButton}>
           View Case Study
+          {' '}
+          <span className="icon-chevron-thin-right" />
         </button>
       </div>
       {mirrored && (

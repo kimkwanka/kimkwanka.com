@@ -44,7 +44,7 @@ const HomeView = () => {
             </a>
           </div>
           <div className={styles.PortraitImageContainer}>
-            <Image src="/img/portrait_round.png" alt="Kim Kwanka" className={styles.PortraitImage} layout="fill" />
+            <Image src="/img/retro.svg" alt="Kim Kwanka" className={styles.PortraitImage} layout="fill" />
           </div>
           <a
             href="#work"

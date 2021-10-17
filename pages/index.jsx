@@ -15,7 +15,7 @@ export default function IndexPage() {
         <meta name="keywords" content="Kim Kwanka, developer, React, CSS, HTML, JavaScript" />
         <meta name="author" content="Kim Kwanka" />
       </Head>
-      <Header doesChangeOnScroll />
+      <Header transparentAtTop />
       <Home />
       <Footer />
     </>

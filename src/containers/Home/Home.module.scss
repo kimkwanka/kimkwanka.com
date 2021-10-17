@@ -129,6 +129,7 @@
     DownArrowAnimation 1s ease-in-out 7s infinite alternate-reverse,
     FadeInAnimation 7s linear 0s 1 normal forwards;
   bottom: 0;
+  color: var(--primaryCol);
   left: 50%;
   position: absolute;
   transform: translate(-50%);

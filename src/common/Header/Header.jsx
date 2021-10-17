@@ -6,19 +6,22 @@ import NavBar from './NavBar/NavBar';
 
 import styles from './Header.module.scss';
 
-const Header = ({ doesChangeOnScroll = false }) => {
+const Header = ({ transparentAtTop = false }) => {
   const { observe, isInView } = useScrollSpy();
 
   return (
     <>
-      {doesChangeOnScroll && (
-      <div
-        id="header-sentinel"
-        ref={observe('header-sentinel')}
-      />
-      )}
+      <div id="header-sentinel" ref={observe('header-sentinel')} />
       <header
-        className={doesChangeOnScroll && isInView('header-sentinel') ? styles.Header : `${styles.Header} ${styles.solid}`}
+        className={
+          transparentAtTop
+            ? `${styles.transparentAtTopHeader} ${
+              !isInView('header-sentinel') && styles.scrolledDown
+            }`
+            : `${styles.Header} ${
+              !isInView('header-sentinel') && styles.scrolledDown
+            }`
+        }
       >
         <NavBar />
       </header>

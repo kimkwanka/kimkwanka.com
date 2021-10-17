@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import 'modern-css-reset';
-import './global.scss';
+import '@src/global.scss';
 
 import { SectionProvider } from '@hooks/useSections';
 

@@ -20,6 +20,8 @@
   --tertiaryCol: #f97565;
   --quaternaryCol: #eb4985;
 
+  --linkUnderlineCol: #00d1ca62;
+
   --disabledCol: #43687c;
   --gradientCol1: #1c709d;
   --gradientCol2: #761d7d;
@@ -94,19 +96,18 @@ small, .text_small {font-size: 0.8rem;}
 
 a {
   color: var(--textCol);
-  font-weight: bold;
+  text-decoration: none;
   transition: all var(--transitionSpeed) var(--transitionTiming);
 }
 
 a:not([class]) {
-  color: var(--primaryCol);
-  text-decoration: none;
+  color: var(--textCol);
 
   // Fat underline link style:
-  // background: linear-gradient(to left, var(--secondaryCol), var(--secondaryCol));
-  // background-position: 0 100%;
-  // background-size: 100% 0.4em;
-  // background-repeat: repeat-x;
+  background: linear-gradient(to left, var(--linkUnderlineCol), var(--linkUnderlineCol));
+  background-position: 0 100%;
+  background-size: 100% 0.4em;
+  background-repeat: repeat-x;
 
   &:hover {
     color: var(--buttonGradientCol1);

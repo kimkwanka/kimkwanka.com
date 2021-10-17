@@ -26,6 +26,15 @@
   }
 }
 
+.SocialIcon {
+  background: none;
+  color: var(--primaryCol);
+
+  &:hover {
+    color: var(--buttonGradientCol1);
+  }
+}
+
 .ImprintLink {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;

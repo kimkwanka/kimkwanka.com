@@ -23,11 +23,11 @@ const CaseStudy = () => (
       {' '}
       <a href="https://chingu.io/">Chingu</a>
       , asked me if I
-      wanted to join his team to develop an application that would
-      try to streamline the learning experience of new and experienced web
-      developers alike, I immediately said yes. Not having much remote working
-      experience under my belt, I felt a bit nervous, but the prospect of a such
-      a great learning opportunity was just too good to pass up.
+      wanted to join his team to develop an application that would try to
+      streamline the learning experience of new and experienced web developers
+      alike, I immediately said yes. Not having much remote working experience
+      under my belt, I felt a bit nervous, but the prospect of a such a great
+      learning opportunity was just too good to pass up.
     </p>
     <p className={styles.CaseStudyDescription}>
       devGaido is a platform that helps (aspiring) web developers effienctly
@@ -191,22 +191,20 @@ const CaseStudy = () => (
     </p>
     <h3>Problem No. 5: Server load</h3>
     <p>
-      As mentioned earlier, we couldn&apos;t spend too much on our VPS for this
-      first MVP version which meant that our production server was running on a
-      &quot;best-bang-for-your-buck&quot; kind of system, which was,
-      realistically speaking, still pretty low-performance. This fact was backed
-      up by our load tests which suggested that our Node.js server could only
-      handle a moderate number of concurrent requests before breaking down. The
-      constant server requests to save user actions and getting lesson and path
-      data would therefore potentially lead to inoperability pretty quickly.
+      To keep the costs low for our MVP version, our production server was
+      running on a &quot;best-bang-for-your-buck&quot; VPS, which
+      was, realistically speaking, still pretty low-performance. This fact was
+      backed up by our load tests which suggested that our Node.js server could
+      only handle a moderate number of concurrent requests before breaking down.
+      In a real world scenario, we assumed, the constant server requests could
+      potentially lead to inoperability pretty quickly.
     </p>
     <h3>Solution: NGINX, Cloudflare, Hydrated Redux store</h3>
     <p>
-      As we discovered this issue pretty early in development, we were able to
-      make the necessary adjustments without much impact on the codebase: + Use
-      NGINX as a reverse proxy + Use Cloudflare CDN to server the static assets
-      + Hydrate the Redux store with the complete curriculum data to make
-      subsequent requests unneeded Just adding NGINX to the front of our Node.js
+      Luckily, were able to make the necessary adjustments without much impact on the codebase:
+      + Use NGINX as a reverse proxy + Use Cloudflare CDN to serve the static assets +
+      Hydrate the Redux store with the complete curriculum data to make
+      subsequent requests unneeded Just adding NGINX in front of our Node.js
       server made a pretty significant difference in the number of concurrent
       requests that could be handled, especially so, since Cloudflare would
       serve the images, etc. instead.
@@ -231,8 +229,8 @@ const CaseStudy = () => (
     <p>The main takeaway for me from this project is:</p>
     <h3>Communication is key.</h3>
     <p>
-      It doesn&apos;t matter if it&apos;s between team members or with your users - the
-      way you handle communication can make or break a project.
+      It doesn&apos;t matter if it&apos;s between team members or with your
+      users - the way you communicate can make or break a project.
     </p>
     <p>
       We had numerous, sometimes heated discussions about various aspects of
@@ -243,18 +241,20 @@ const CaseStudy = () => (
     </p>
     <p>
       That doesn&apos;t mean that we compromised on the product just for sake of
-      &quot;getting along&quot; - sharing opinions and arguing for one&apos;s beliefs was
-      equally as important - but we took great care to keep it all professional.
+      &quot;getting along&quot; - sharing opinions and arguing for one&apos;s
+      beliefs was equally as important - but we took great care to keep it all
+      professional.
     </p>
     <p>
-      It&apos;s not about winning a popularity contest but about trying to create an
-      environment where everyone feels heard and where ideas can blossom.
+      It&apos;s not about winning a popularity contest but about trying to
+      create an environment where everyone feels heard and where ideas can
+      blossom.
     </p>
     <p>
-      That extended to communication with our userbase as well: It wasn&apos;t about
-      trying to fix every issue instantly or answering every question thoroughly
-      on the spot, but making sure to respond in _some_ way - no one likes to
-      feel being ignored.
+      That extended to communication with our userbase as well: It wasn&apos;t
+      about trying to fix every issue instantly or answering every question
+      thoroughly on the spot, but making sure to respond in _some_ way - no one
+      likes to feel being ignored.
     </p>
   </div>
 );

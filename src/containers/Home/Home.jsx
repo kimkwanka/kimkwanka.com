@@ -23,9 +23,11 @@ const HomeView = () => {
         <div className={styles.hero__container}>
           <h1 className={styles.hero__title}>
             Hi, I&apos;m Kim:
+            <br />
             <span className={`${styles.hero__span} gradient`}>
               Full-Stack
             </span>
+            {' '}
             Web Developer.
           </h1>
           <p className={styles.hero__text}>

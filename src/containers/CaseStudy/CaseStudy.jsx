@@ -17,15 +17,15 @@ const CaseStudy = () => (
     <p>
       When
       {' '}
-      <a href="https://www.linkedin.com/in/jdmedlock/">Jim Medlock</a>
+      <a href="https://www.linkedin.com/in/jdmedlock/" target="_blank" rel="noreferrer">Jim Medlock</a>
       ,
       Co-Founder of
       {' '}
-      <a href="https://chingu.io/">Chingu</a>
+      <a href="https://chingu.io/" target="_blank" rel="noreferrer">Chingu</a>
       , asked me if I
       wanted to join his team to develop an application that would try to
       streamline the learning experience of new and experienced web developers
-      alike, I immediately said yes. Not having much remote working experience
+      alike, accepting was a no-brainer. Not having much remote working experience
       under my belt, I felt a bit nervous, but the prospect of a such a great
       learning opportunity was just too good to pass up.
     </p>
@@ -91,7 +91,7 @@ const CaseStudy = () => (
       We built devGaido to provide a guided learning experience for people
       wanting to learn web development, especially those using the excellent
       {' '}
-      <a href="https://github.com/P1xt/p1xt-guides">P1xt Guides</a>
+      <a href="https://github.com/P1xt/p1xt-guides" target="_blank" rel="noreferrer">P1xt Guides</a>
       .
     </p>
     <p>
@@ -167,7 +167,7 @@ const CaseStudy = () => (
     <p>
       For more details, check out the
       {' '}
-      <a href="https://codeburst.io/save-the-zombies-how-to-add-state-and-lifecycle-methods-to-stateless-react-components-1a996513866d">
+      <a href="https://codeburst.io/save-the-zombies-how-to-add-state-and-lifecycle-methods-to-stateless-react-components-1a996513866d" target="_blank" rel="noreferrer">
         Medium story
         {' '}
       </a>

@@ -79,7 +79,7 @@ const CaseStudy = () => (
       />
     </div>
     <small className={styles.CaseStudyImageCaption}>
-      devGaido - still in all it&apos;s blue and green glory
+      devGaido - still in all its blue and green glory
     </small>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Tech Stack</h2>

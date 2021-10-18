@@ -310,8 +310,8 @@ const CaseStudy = () => (
       </small>
       <p>
         In absence of React Hooks, which had yet to be invented, I didn&apos;t
-        want to admit defeat and resort to using a Class component.
-        So, after a lot of trial and error I came up with the following approach:
+        want to admit defeat and resort to using a Class component. So, after a
+        lot of trial and error I came up with the following approach:
       </p>
       <ul>
         <li>
@@ -421,8 +421,8 @@ const CaseStudy = () => (
         Cloudflare for this as well.
       </p>
       <p>
-        The next step was putting an NGINX as a reverse proxy in front of the
-        Node.js server. On the one hand, this worked as a &quot;buffer&quot; for
+        The next step was putting NGINX in front of the Node.js server as a
+        reverse proxy. On the one hand, this worked as a &quot;buffer&quot; for
         our server, on the other hand, it enabled load balancing capabilities
         across multiple Node instances.
       </p>
@@ -485,10 +485,14 @@ const CaseStudy = () => (
         blossom.
       </p>
       <p>
-        That extended to communication with our userbase as well: It wasn&apos;t
-        about trying to fix every issue instantly or answering every question
-        thoroughly on the spot, but making sure to respond in _some_ way - no
-        one likes to feel being ignored.
+        That extended to communication with our userbase as well: We didn&apos;t
+        fix every issue instantly or answer every question thoroughly on the
+        spot, but we always made sure to respond in
+        {' '}
+        <i>some</i>
+        {' '}
+        way - no one
+        likes to feel being ignored.
       </p>
     </section>
     <section>

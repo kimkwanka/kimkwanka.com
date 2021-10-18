@@ -15,8 +15,9 @@
   * + p {
     margin-top: var(--s3);
   }
-  h1, h2 {
-    margin-top: var(--s5);
+
+  h2 {
+    margin-top: var(--s8);
   }
 
   h3 {
@@ -24,15 +25,50 @@
   }
 }
 
+.CaseStudyTitle {
+  margin: var(--s4) 0 var(--s3) 0;
+}
+
 .CaseStudySubtitle {
   color: #666;
 }
 
+.CaseStudySectionTitle,
+.CaseStudyProblemTitle {
+  padding-bottom: 4px;
+  background: linear-gradient( to right, var(--tertiaryCol), var(--quaternaryCol));
+  background-position: 0 100%;
+  background-size: 100% 4px;
+  background-repeat: repeat-x;
+}
+
+.CaseStudySolutionTitle {
+  padding-bottom: 4px;
+  background: linear-gradient( to right, var(--primaryCol), var(--secondaryCol));
+  background-position: 0 100%;
+  background-size: 100% 4px;
+  background-repeat: repeat-x;
+}
+
+.CaseStudySolutionAndProblemTitle {
+  padding-bottom: 4px;
+  background: linear-gradient( to right, var(--primaryCol), var(--quaternaryCol));
+  background-position: 0 100%;
+  background-size: 100% 4px;
+  background-repeat: repeat-x;
+}
+
 .CaseStudyImageContainer {
-  border-radius: 16px;
-  height: 500px;
+  border-radius: 8px;
+  height: 600px;
   overflow: hidden;
   position: relative;
+}
+
+.smallCaseStudyImageContainer {
+  composes: CaseStudyImageContainer;
+  height: 450px;
+  margin-top: var(--s8);
 }
 
 .CaseStudyImage {
@@ -40,10 +76,50 @@
   transition: transform 0.3s ease-out;
 }
 
-.CaseStudyLinks {
-  text-align: right;
+.CaseStudyImageCaption {
+  color: rgba(0, 0, 0, 0.4);
+  margin-top: var(--s3);
+  text-align: center;
+}
+
+.CaseStudyLinkContainer {
+  margin: var(--s4) 0 var(--s8) 0;
 
   * + a {
     margin-left: var(--s3);
+  }
+}
+
+.CaseStudyLink {
+  composes: button from global;
+}
+
+.CaseStudyTechStackContainer {
+  display: flex;
+  margin-top: var(--s3);
+
+  ul {
+    margin: 0 var(--s3) 0 0;
+    padding: 0 0 0 var(--s3);
+  }
+}
+
+.CaseStudySection {
+  display: grid;
+  column-gap: var(--s3);
+  grid-template-columns: 1.618fr 1fr;
+  grid-template-areas:
+    ". image"
+    ". image"
+    ". image";
+
+  p {
+    margin-top: var(--s3);
+    width: 100%;
+  }
+
+  .CaseStudyImageContainer {
+    margin-top: var(--s3);
+    grid-area: image;
   }
 }

@@ -44,7 +44,7 @@ const HomeView = () => {
             <span className="icon-chevron-thin-right" />
           </a>
           <div className={styles.PortraitImageContainer}>
-            <Image src="/img/retro.svg" alt="Kim Kwanka" className={styles.PortraitImage} layout="fill" />
+            <Image src="/img/retro.svg" alt="Kim Kwanka" className={styles.PortraitImage} layout="fill" priority />
           </div>
           <a
             href="#work"
@@ -66,6 +66,7 @@ const HomeView = () => {
               title="devGaido"
               href="/devgaido"
               imgSrc="/img/devgaido.png"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
               description=" A platform created to provide a guided learning
             experience for (aspiring) web developers"
             />
@@ -73,6 +74,7 @@ const HomeView = () => {
               title="myFlix"
               href="/myflix"
               imgSrc="/img/myflix.png"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
               description="A movie database frontend app with a custom backend"
               mirrored
             />
@@ -80,6 +82,7 @@ const HomeView = () => {
               title="Pokédex"
               href="/pokedex"
               imgSrc="/img/pokedex.png"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
               description="An app that allows you to learn more about Pokémon"
             />
           </div>

@@ -12,6 +12,7 @@ const ProjectCard = ({
   description,
   href,
   imgSrc,
+  blurDataURL,
   mirrored = false,
 }) => (
   <Link href={href}>
@@ -19,6 +20,8 @@ const ProjectCard = ({
       {!mirrored && (
       <div className={`${styles.ProjectImageContainer} ${styles[title]}`}>
         <Image
+          placeholder="blur"
+          blurDataURL={blurDataURL}
           className={styles.ProjectImage}
           src={imgSrc}
           alt={title}
@@ -40,6 +43,8 @@ const ProjectCard = ({
       {mirrored && (
       <div className={styles.ProjectImageContainer}>
         <Image
+          placeholder="blur"
+          blurDataURL={blurDataURL}
           className={styles.ProjectImage}
           src={imgSrc}
           alt={title}

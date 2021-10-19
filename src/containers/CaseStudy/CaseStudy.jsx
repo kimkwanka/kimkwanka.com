@@ -10,7 +10,10 @@ const CaseStudy = () => (
         className={styles.CaseStudyImage}
         src="/img/devgaido_hero.png"
         alt="devGaido hero image"
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
         layout="fill"
+        priority
       />
     </div>
     <section>
@@ -75,6 +78,8 @@ const CaseStudy = () => (
         className={styles.CaseStudyImage}
         src="/img/firstdesign.png"
         alt="first design of devgaido"
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVQImQEnANj/AP7//+ru9cfL07PExADCw8umqLRYZnpGVmoAUFNjAAAbjpantLvK9h8WHxwQlfsAAAAASUVORK5CYII="
         layout="fill"
       />
     </div>
@@ -121,6 +126,8 @@ const CaseStudy = () => (
         className={styles.CaseStudyImage}
         src="/img/seconddesign.png"
         alt="redesigned devgaido styleguide"
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AHZ4gQAACOfp9vz//wCwsL3IxdG8wM28wM27jRBFBAzvJgAAAABJRU5ErkJggg=="
         layout="fill"
       />
     </div>
@@ -153,6 +160,8 @@ const CaseStudy = () => (
         className={styles.CaseStudyImage}
         src="/img/library.png"
         alt="devgaido's library showing the p1xt guides"
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWNgkNFi4JVlEFVm0LNj+Pz+3bIVq/fu3fv/3x8AU3gLDvWJT8AAAAAASUVORK5CYII="
         layout="fill"
       />
     </div>
@@ -179,6 +188,8 @@ const CaseStudy = () => (
           className={styles.CaseStudyImage}
           src="/img/css.jpg"
           alt="piechart showing coming up with CSS class names takes too much time"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAdEAACAgEFAAAAAAAAAAAAAAACAwABBAcIFCFD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAZEQACAwEAAAAAAAAAAAAAAAAAAQIDMnH/2gAMAwEAAhEDEQA/AKptxQpmlmETFAZcrK7Iav2OIiGnCJV4jxH/2Q=="
           layout="fill"
         />
       </div>
@@ -263,6 +274,8 @@ const CaseStudy = () => (
           className={styles.CaseStudyImage}
           src="/img/purify.png"
           alt="screenshot of purifycss"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAIUlEQVQImWO4eePqujVrZs2YoaioyPD//485c6eDWAwMAL4+C+Nj/xloAAAAAElFTkSuQmCC"
           layout="fill"
         />
       </div>
@@ -302,6 +315,8 @@ const CaseStudy = () => (
           className={styles.CaseStudyImage}
           src="/img/medium.png"
           alt="screenshot of the medium article"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAJUlEQVQImQEaAOX/AOj//5+5xavI1N36/wAXAAAeCQA3Jh6zo5rN7gzKe+KU4wAAAABJRU5ErkJggg=="
           layout="fill"
         />
       </div>
@@ -352,6 +367,8 @@ const CaseStudy = () => (
           className={styles.CaseStudyImage}
           src="/img/sameimage.png"
           alt="placeholder images used everywhere in the app"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVQImWOwTMhn4BBh4BDxKmxg+P/7v544v7G0yP+ffwFaZgkg/16hAwAAAABJRU5ErkJggg=="
           layout="fill"
         />
       </div>
@@ -407,6 +424,8 @@ const CaseStudy = () => (
           className={styles.CaseStudyImage}
           src="/img/nginx.png"
           alt="load balancing"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWP48+0PgxoDgwnD/7//GX69+cygwcAgxfD/138AoPEMV7oKoogAAAAASUVORK5CYII="
           layout="fill"
         />
       </div>
@@ -458,9 +477,14 @@ const CaseStudy = () => (
           className={styles.CaseStudyImage}
           src="/img/communication.jpg"
           alt="word cloud around communication"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAdEAABBAIDAAAAAAAAAAAAAAAEAAECAwUGEVJj/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABgRAAMBAQAAAAAAAAAAAAAAAAASUQEC/9oADAMBAAIRAxEAPwC243QNetiVOwc6UnJt5d8kT3f0RES20E5h/9k="
           layout="fill"
         />
       </div>
+      <small className={styles.CaseStudyImageCaption}>
+        Source: https://pros-blog.padi.com/
+      </small>
       <h3>Communication is key.</h3>
       <p>
         It doesn&apos;t matter if it&apos;s between team members or with your

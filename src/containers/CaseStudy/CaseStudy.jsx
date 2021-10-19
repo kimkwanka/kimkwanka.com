@@ -57,9 +57,9 @@ const CaseStudy = () => (
           href="https://devgaido.cardinalzero.com"
           rel="noreferrer"
         >
-          <span className="icon-earth" />
+          <span className="icon-external-link" />
           {' '}
-          Live Version
+          Live
         </a>
         <a
           className={styles.CaseStudyLink}

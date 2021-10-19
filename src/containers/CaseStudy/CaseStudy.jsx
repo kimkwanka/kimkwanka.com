@@ -88,37 +88,77 @@ const CaseStudy = () => (
     </small>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Tech Stack</h2>
-      <div className={styles.CaseStudyTechStackContainer}>
-        <ul>
-          <li>MongoDB</li>
-          <li>Express</li>
-          <li>React</li>
-        </ul>
-        <ul>
-          <li>Node.js</li>
-          <li>Redux</li>
-          <li>Stylus</li>
-        </ul>
-        <ul>
-          <li>Docker</li>
-          <li>NGINX</li>
-          <li>Auth0</li>
-        </ul>
+      <div className={styles.TechStackImageContainer}>
+        <Image
+          className={styles.TechStackImage}
+          src="/img/stack.png"
+          alt="icons of our tech stack"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQImWOY8v8ag42nMwMDQ5kHACDzA/AuVM8zAAAAAElFTkSuQmCC"
+          layout="fill"
+        />
       </div>
+      <small className={styles.CaseStudyImageCaption}>
+        MongoDB, React, Node.js, Redux, Stylus, Auth0, Docker, NGINX
+      </small>
       <p>
-        The tried and true MERN stack and Redux were obvious choices because of
-        their ease of use and reliability. Stylus was chosen so we could use the
-        much terser indented syntax, but still paste in snippets in regular
-        syntax.
+        The tried and true MERN stack (
+        {' '}
+        <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
+          MongoDB
+        </a>
+        ,
+        {' '}
+        <a href="https://expressjs.com/" target="_blank" rel="noreferrer">
+          Express
+        </a>
+        ,
+        {' '}
+        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
+          React
+        </a>
+        ,
+        {' '}
+        <a href="https://nodejs.org/" target="_blank" rel="noreferrer">
+          Node.js
+        </a>
+        ) and
+        {' '}
+        <a href="https://redux.js.org/" target="_blank" rel="noreferrer">
+          Redux
+        </a>
+        {' '}
+        were obvious choices because of their ease of use and reliability.
+        {' '}
+        <a href="https://stylus-lang.com/" target="_blank" rel="noreferrer">
+          Stylus
+        </a>
+        {' '}
+        was chosen so we could use the much terser indented syntax, but still
+        paste in snippets in regular syntax.
       </p>
       <p>
-        As we didn&apos;t want to risk leaking private data, we let Auth0 handle
-        authentication and only saved the user id for identification.
+        As we didn&apos;t want to risk leaking private data, we let
+        {' '}
+        <a href="https://auth0.com/" target="_blank" rel="noreferrer">
+          Auth0
+        </a>
+        {' '}
+        handle authentication and only saved the user id for identification.
       </p>
       <p>
-        On the Dev Ops side we used Docker to orchestrate the server deployment
-        and NGINX was utilized here as a reverse proxy to lessen the load on the
-        server and allowing it to scale more easily in the future.
+        <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
+          Docker
+        </a>
+        {' '}
+        was used to orchestrate the server deployment and
+        {' '}
+        <a href="https://www.nginx.com/" target="_blank" rel="noreferrer">
+          NGINX
+        </a>
+        {' '}
+        was utilized here as a reverse proxy to lessen the load on the server
+        and allowing it to scale more easily in the future.
       </p>
     </section>
     <div className={styles.CaseStudyImageContainer}>
@@ -170,12 +210,12 @@ const CaseStudy = () => (
     </small>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Problems</h2>
-      <h5>
+      <p>
         As I can&apos;t possibly cover all the problems we had to deal with, and
         since frankly no one would actually want to read about all of them - I
         tried to boil this section down to the most interesting challenges we
         faced.
-      </h5>
+      </p>
     </section>
     <section>
       <h3 className={styles.CaseStudyProblemTitle}>
@@ -471,7 +511,7 @@ const CaseStudy = () => (
     </section>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Lessons Learned</h2>
-      <h5>The main takeaway for me from this project is:</h5>
+      <p>The main takeaway for me from this project is:</p>
       <div className={styles.smallCaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
@@ -521,12 +561,12 @@ const CaseStudy = () => (
     </section>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Closing Thoughts</h2>
-      <h5>
+      <p>
         I am grateful to have been part of this project and to be able to work
         with these great people. The amount and quality of things I learned on
         this journey are immeasurable - I thank everyone involved for this
         opportunity.
-      </h5>
+      </p>
     </section>
   </div>
 );

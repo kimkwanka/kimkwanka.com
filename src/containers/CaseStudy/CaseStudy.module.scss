@@ -94,9 +94,20 @@
   margin-bottom: var(--s3);
 }
 
+.TechStackImageContainer {
+  border-radius: 8px;
+  height: 101px;
+  margin-top: var(--s3);
+  overflow: hidden;
+  position: relative;
+}
+
+.TechStackImage {
+  object-fit: contain;
+}
+
 .CaseStudyImage {
   object-fit: cover;
-  transition: transform 0.3s ease-out;
 }
 
 .CaseStudyImageCaption {

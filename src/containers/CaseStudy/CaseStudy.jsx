@@ -474,13 +474,32 @@ const CaseStudy = () => (
       </small>
       <p>
         As a large portion of our server requests was retrieving the lesson and
-        path images, the first step was to incorporate Cloudflare as a CDN to
+        path images, the first step was to incorporate
+        {' '}
+        {' '}
+        <a href="https://www.cloudflare.com/" target="_blank" rel="noreferrer">
+          Cloudflare
+        </a>
+        {' '}
+        as a CDN to
         serve our static assets cached. Not only did this lessen the load
-        immensely but it also let us drop Let&apos;s Encrypt SSL and leverage
+        immensely but it also let us drop
+        {' '}
+        <a href="https://letsencrypt.org/" target="_blank" rel="noreferrer">
+          Let&apos;s Encrypt SSL
+        </a>
+        {' '}
+        and leverage
         Cloudflare for this as well.
       </p>
       <p>
-        The next step was putting NGINX in front of the Node.js server as a
+        The next step was putting
+        {' '}
+        <a href="https://www.nginx.com/" target="_blank" rel="noreferrer">
+          NGINX
+        </a>
+        {' '}
+        in front of the Node.js server as a
         reverse proxy. On the one hand, this worked as a &quot;buffer&quot; for
         our server, on the other hand, it enabled load balancing capabilities
         across multiple Node instances.
@@ -488,7 +507,13 @@ const CaseStudy = () => (
       <p>
         As the final step, I proposed sending over the complete curriculum data
         (lessons and paths) with the initial page request via server-side Redux
-        store hydration. We already hydrated the initial Redux store with user
+        store hydration. We already hydrated the initial
+        {' '}
+        <a href="https://redux.js.org/api/store" target="_blank" rel="noreferrer">
+          Redux store
+        </a>
+        {' '}
+        with user
         data and authentication details anyway, so the idea wasn&apos;t too
         far-fetched.
       </p>
@@ -549,9 +574,12 @@ const CaseStudy = () => (
         blossom.
       </p>
       <p>
-        That extended to communication with our userbase as well: We didn&apos;t
-        fix every issue instantly or answer every question thoroughly on the
-        spot, but we always made sure to respond in
+        That extended to communication with our userbase as well:
+        {' '}
+        <br />
+        Though we couldn&apos;t possibly fix every issue instantly
+        or answer every question thoroughly on the
+        spot, we always made sure to respond in
         {' '}
         <i>some</i>
         {' '}

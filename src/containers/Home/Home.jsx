@@ -14,11 +14,7 @@ const HomeView = () => {
 
   return (
     <div className={styles['home-view']}>
-      <section
-        className={styles.hero}
-        id="home"
-        ref={observeSection('#home')}
-      >
+      <section className={styles.hero} id="home" ref={observeSection('#home')}>
         <HeroBackground />
         <div className={styles.hero__container}>
           <h1 className={styles.hero__title}>
@@ -31,8 +27,8 @@ const HomeView = () => {
             Web Developer.
           </h1>
           <p className={styles.hero__text}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
-            sagittis viverra dolor nulla integer rhoncus, et mollis adipiscing.
+            Anyone can learn to code but you can&apos;t teach someone how to
+            enjoy what they&apos;re doing.
           </p>
           <a
             href="#work"
@@ -44,21 +40,20 @@ const HomeView = () => {
             <span className="icon-chevron-thin-right" />
           </a>
           <div className={styles.PortraitImageContainer}>
-            <Image src="/img/retro.svg" alt="Kim Kwanka" className={styles.PortraitImage} layout="fill" priority />
+            <Image
+              src="/img/retro.svg"
+              alt="Kim Kwanka"
+              className={styles.PortraitImage}
+              layout="fill"
+              priority
+            />
           </div>
-          <a
-            href="#work"
-            onClick={scrollToSection}
-          >
+          <a href="#work" onClick={scrollToSection}>
             <h2 className={styles.DownArrow}>🡣</h2>
           </a>
         </div>
       </section>
-      <section
-        className={styles.work}
-        id="work"
-        ref={observeSection('#work')}
-      >
+      <section className={styles.work} id="work" ref={observeSection('#work')}>
         <div className={styles.work__container}>
           <div className={styles.work__content}>
             <h1 className={styles.work__title}>Work</h1>
@@ -94,18 +89,60 @@ const HomeView = () => {
         ref={observeSection('#about')}
       >
         <div className={styles.about__container}>
+
+          <h1 className={styles.about__title}>About Me</h1>
+          <div className={styles.PortraitImageContainer}>
+            <Image
+              src="/img/portrait_round.png"
+              alt="Kim Kwanka"
+              className={styles.PortraitImage}
+              layout="fill"
+              priority
+            />
+          </div>
           <div className={styles.about__content}>
-            <h1 className={styles.about__title}>About Me</h1>
-            <p className={styles.about__text}>
-              I&apos;m a former executive officer of tax authorities and nurse who
-              took the plunge into the world of
-              {' '}
-              <span className="gradient">web development</span>
-              .
+            <p>
+              Hi, I'm Kim, a curious and tech-loving web developer with a
+              background in fiscal economics.
             </p>
-            <p className={styles.about__text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
-              sagittis viverra dolor nulla integer rhoncus, et mollis adipiscing.
+            <p>
+              When I was only 7, I saw my uncle
+              play NES for the first time when suddenly, two thoughts crossed my
+              mind: "How does this work? I want to build something like this
+              myself!"
+            </p>
+            <p>
+              Since then, I read PC magazines when I didn’t even own a
+              computer, learned to code at 13, created countless small games,
+              apps, and websites, and even studied Computer Science.
+            </p>
+            <p>
+              Wanting to
+              support my family financially I gave up my studies though and
+              started a "combined vocational training and degree program" in
+              fiscal economics instead.
+            </p>
+            <p>
+              While giving financial stability and
+              being fulfilling in its own right, working as a tax officer sadly
+              couldn't quench my thirst for knowledge and satisfy my urge to
+              create, so it felt natural to transition back into IT.
+            </p>
+            <p>
+              That's why
+              I started becoming a Full-Stack Developer and got my hands dirty
+              in VR and educational software projects and also dipped my toes
+              into UI/UX design on the side.
+            </p>
+            <p>
+              I’m always looking for the next
+              opportunity to enrich people's lives by helping turn ideas into
+              reality.
+            </p>
+            <p>
+              When I’m not coding, I’m probably hanging out with my
+              family or friends, cuddling with my cute little dog, playing a
+              video game or messing around with some geeky gadget.
             </p>
           </div>
         </div>

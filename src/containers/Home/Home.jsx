@@ -1,8 +1,10 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
+
+import ReCAPTCHA from 'react-google-recaptcha';
 
 import { useSections } from '@hooks/useSections';
 
@@ -32,23 +34,33 @@ const unCryptMailTo = (s, shift) => {
 
 const HomeView = () => {
   const { observeSection, scrollToSection } = useSections();
+  const contactFormRef = useRef(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
+    recaptchaSuccess: false,
   });
+
+  const isContactFormValid = () => contactFormRef.current.reportValidity();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData)
-    fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json, text/plain, */*',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+
+    if (isContactFormValid()) {
+      try {
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+      } catch (error) {
+        console.error(error);
+      }
+    }
   };
 
   return (
@@ -141,14 +153,14 @@ const HomeView = () => {
           </div>
           <div className={styles.about__content}>
             <p>
-              Hi, I'm Kim, a curious and tech-loving web developer with a
+              Hi, I&apos;m Kim, a curious and tech-loving web developer with a
               background in fiscal economics.
             </p>
             <p>
               When I was only 7, I saw my uncle
               play NES for the first time when suddenly, two thoughts crossed my
-              mind: "How does this work? I want to build something like this
-              myself!"
+              mind: &quot;How does this work? I want to build something like this
+              myself!&quot;
             </p>
             <p>
               Since then, I read PC magazines when I didn’t even own a
@@ -158,24 +170,24 @@ const HomeView = () => {
             <p>
               Wanting to
               support my family financially I gave up my studies though and
-              started a "combined vocational training and degree program" in
+              started a &quot;combined vocational training and degree program&quot; in
               fiscal economics instead.
             </p>
             <p>
               While giving financial stability and
               being fulfilling in its own right, working as a tax officer sadly
-              couldn't quench my thirst for knowledge and satisfy my urge to
+              couldn&apos;t quench my thirst for knowledge and satisfy my urge to
               create, so it felt natural to transition back into IT.
             </p>
             <p>
-              That's why
+              That&apos;s why
               I started becoming a Full-Stack Developer and got my hands dirty
               in VR and educational software projects and also dipped my toes
               into UI/UX design on the side.
             </p>
             <p>
               I’m always looking for the next
-              opportunity to enrich people's lives by helping turn ideas into
+              opportunity to enrich people&apos;s lives by helping turn ideas into
               reality.
             </p>
             <p>
@@ -236,43 +248,65 @@ const HomeView = () => {
               </a>
               <br />
             </div>
-            <form>
-              <label htmlFor="formName">
+            <form ref={contactFormRef}>
+              <label htmlFor="contactFormName">
                 Name:
                 <span>*</span>
                 <input
                   type="text"
-                  id="formName"
+                  id="contactFormName"
                   defaultValue={formData.name}
                   onChange={(e) => {
                     setFormData({ ...formData, name: e.target.value });
                   }}
+                  required
                 />
               </label>
-              <label htmlFor="formEmail">
+              <label htmlFor="contactFormEmail">
                 Email:
                 <span>*</span>
                 <input
                   type="email"
-                  id="formEmail"
+                  id="contactFormEmail"
                   defaultValue={formData.email}
                   onChange={(e) => {
                     setFormData({ ...formData, email: e.target.value });
                   }}
+                  required
                 />
               </label>
-              <label htmlFor="formMessage">
+              <label htmlFor="contactFormMessage">
                 Message:
                 <span>*</span>
                 <textarea
-                  id="formMessage"
+                  id="contactFormMessage"
                   defaultValue={formData.message}
                   onChange={(e) => {
                     setFormData({ ...formData, message: e.target.value });
                   }}
+                  required
                 />
               </label>
-              <button type="button" onClick={(e) => handleSubmit(e)}>Send Message</button>
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY}
+                onChange={async (response) => {
+                  try {
+                    const res = await fetch('/api/recaptcha', {
+                      method: 'POST',
+                      headers: {
+                        Accept: 'application/json, text/plain, */*',
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({ response }),
+                    });
+                    const data = await res.json();
+                    setFormData({ ...formData, recaptchaSuccess: data.success });
+                  } catch (error) {
+                    console.error(error);
+                  }
+                }}
+              />
+              <button className={styles.ContactButton} type="button" onClick={(e) => handleSubmit(e)} disabled={!formData.recaptchaSuccess}>Send Message</button>
             </form>
           </div>
         </div>

@@ -43,7 +43,9 @@ const HomeView = () => {
     submitDisabled: true,
   });
 
-  const isSubmitDisabled = !(formData.name && formData.email && formData.message && formData.recaptchaSuccess);
+  const isSubmitDisabled = !(
+    formData.name && formData.email && formData.message && formData.recaptchaSuccess
+  );
 
   const isContactFormValid = () => contactFormRef.current.reportValidity();
 
@@ -319,14 +321,14 @@ const HomeView = () => {
                   }
                 }}
               />
-              <button
+              <buttonbutton
                 className={styles.ContactButton}
                 type="button"
                 onClick={(e) => handleSubmit(e)}
                 disabled={isSubmitDisabled}
               >
                 Send Message
-              </button>
+              </buttonbutton>
             </form>
           </div>
         </div>

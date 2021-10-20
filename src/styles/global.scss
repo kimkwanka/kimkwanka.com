@@ -87,30 +87,30 @@ a:not([class]) {
 }
 
 label {
-  display: flex;
-  flex-direction: column;
+  color: var(--textCol);
   font-weight: bold;
   margin: 0;
   padding: 0;
 }
 
-input {
+input,
+textarea {
   border-radius: var(--s1);
-  border: 1px solid transparent;
-  caret-color: var(--mutedText);
-  color: var(--buttonTextCol);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: var(--textCol);
   font-weight: normal;
   margin-bottom: var(--s2);
   margin-top: var(--s1);
+  outline: none;
   outline: none;
   padding: var(--s1) var(--s3);
   transition: border var(--transitionSpeed) var(--transitionTiming);
 
   &:hover {
-    border: 1px solid var(--secondaryCol);
+    border: 1px solid var(--textCol);
   }
   &:focus {
-    border: 1px solid var(--primaryCol);
+    border: 1px solid var(--textCol);
   }
 }
 

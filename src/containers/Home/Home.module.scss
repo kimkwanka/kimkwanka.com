@@ -218,6 +218,18 @@
   display: flex;
   padding: var(--s6) 0;
   width: 100%;
+
+  span {
+    color: var(--accentCol);
+    width: fit-content;
+  }
+  input, textarea {
+    width: 100%;
+  }
+
+  textarea {
+    border-radius: var(--s1);
+  }
 }
 
 .contact__container {

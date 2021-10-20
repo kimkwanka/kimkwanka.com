@@ -167,16 +167,6 @@ const HomeView = () => {
                 kimkwanka
               </a>
               <br />
-              Medium:
-              {' '}
-              <a
-                target="_blank"
-                href="https://medium.com/@kimkwanka"
-                rel="noreferrer"
-              >
-                kimkwanka
-              </a>
-              <br />
               Twitter:
               {' '}
               <a
@@ -198,6 +188,24 @@ const HomeView = () => {
               </a>
               <br />
             </div>
+            <form>
+              <label htmlFor="formName">
+                Name:
+                <span>*</span>
+                <input type="text" id="formName" />
+              </label>
+              <label htmlFor="formEmail">
+                Email:
+                <span>*</span>
+                <input type="email" id="formEmail" />
+              </label>
+              <label htmlFor="formMessage">
+                Message:
+                <span>*</span>
+                <textarea id="formMessage" />
+              </label>
+              <button type="button">Send Message</button>
+            </form>
           </div>
         </div>
       </section>

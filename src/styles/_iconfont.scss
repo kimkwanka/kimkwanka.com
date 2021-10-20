@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';
-  src:  url('/fonts/iconfont.eot?jnz6v');
-  src:  url('/fonts/iconfont.eot?jnz6v#iefix') format('embedded-opentype'),
-    url('/fonts/iconfont.ttf?jnz6v') format('truetype'),
-    url('/fonts/iconfont.woff?jnz6v') format('woff'),
-    url('/fonts/iconfont.svg?jnz6v#iconfont') format('svg');
+  src:  url('/fonts/iconfont.eot?b8jrt6');
+  src:  url('/fonts/iconfont.eot?b8jrt6#iefix') format('embedded-opentype'),
+    url('/fonts/iconfont.ttf?b8jrt6') format('truetype'),
+    url('/fonts/iconfont.woff?b8jrt6') format('woff'),
+    url('/fonts/iconfont.svg?b8jrt6#iconfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -39,6 +39,9 @@
 }
 .icon-heart:before {
   content: "\e9da";
+}
+.icon-arrow-down2:before {
+  content: "\ea3e";
 }
 .icon-embed2:before {
   content: "\ea80";

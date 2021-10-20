@@ -49,7 +49,7 @@ const HomeView = () => {
             />
           </div>
           <a href="#work" onClick={scrollToSection}>
-            <h2 className={styles.DownArrow}>🡣</h2>
+            <h2 className={styles.DownArrow}><span className="icon-arrow-down2" /></h2>
           </a>
         </div>
       </section>

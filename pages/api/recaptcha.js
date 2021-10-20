@@ -9,9 +9,11 @@ const handler = async (req, res) => {
       },
     });
     const data = await recaptchaRes.json();
+
     res.status(200).send(data);
   } catch (error) {
     console.error(error);
+    res.status(500).send({ error: error.message });
   }
 };
 

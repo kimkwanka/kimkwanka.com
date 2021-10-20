@@ -21,7 +21,7 @@ const unCrypt = (s, shift) => {
     if (n >= 8364) {
       n = 128;
     }
-    r += String.fromCharCode(n - (shift));
+    r += String.fromCharCode(n - shift);
   }
   return r;
 };
@@ -40,7 +40,10 @@ const HomeView = () => {
     email: '',
     message: '',
     recaptchaSuccess: false,
+    submitDisabled: true,
   });
+
+  const isSubmitDisabled = !(formData.name && formData.email && formData.message && formData.recaptchaSuccess);
 
   const isContactFormValid = () => contactFormRef.current.reportValidity();
 
@@ -110,7 +113,9 @@ const HomeView = () => {
             />
           </div>
           <a href="#work" onClick={scrollToSection}>
-            <h2 className={styles.DownArrow}><span className="icon-arrow-down2" /></h2>
+            <h2 className={styles.DownArrow}>
+              <span className="icon-arrow-down2" />
+            </h2>
           </a>
         </div>
       </section>
@@ -150,7 +155,6 @@ const HomeView = () => {
         ref={observeSection('#about')}
       >
         <div className={styles.about__container}>
-
           <h1 className={styles.about__title}>About Me</h1>
           <div className={styles.PortraitImageContainer}>
             <Image
@@ -167,43 +171,39 @@ const HomeView = () => {
               background in fiscal economics.
             </p>
             <p>
-              When I was only 7, I saw my uncle
-              play NES for the first time when suddenly, two thoughts crossed my
-              mind: &quot;How does this work? I want to build something like this
-              myself!&quot;
+              When I was only 7, I saw my uncle play NES for the first time when
+              suddenly, two thoughts crossed my mind: &quot;How does this work?
+              I want to build something like this myself!&quot;
             </p>
             <p>
-              Since then, I read PC magazines when I didn’t even own a
-              computer, learned to code at 13, created countless small games,
-              apps, and websites, and even studied Computer Science.
+              Since then, I read PC magazines when I didn’t even own a computer,
+              learned to code at 13, created countless small games, apps, and
+              websites, and even studied Computer Science.
             </p>
             <p>
-              Wanting to
-              support my family financially I gave up my studies though and
-              started a &quot;combined vocational training and degree program&quot; in
-              fiscal economics instead.
+              Wanting to support my family financially I gave up my studies
+              though and started a &quot;combined vocational training and degree
+              program&quot; in fiscal economics instead.
             </p>
             <p>
-              While giving financial stability and
-              being fulfilling in its own right, working as a tax officer sadly
-              couldn&apos;t quench my thirst for knowledge and satisfy my urge to
-              create, so it felt natural to transition back into IT.
+              While giving financial stability and being fulfilling in its own
+              right, working as a tax officer sadly couldn&apos;t quench my
+              thirst for knowledge and satisfy my urge to create, so it felt
+              natural to transition back into IT.
             </p>
             <p>
-              That&apos;s why
-              I started becoming a Full-Stack Developer and got my hands dirty
-              in VR and educational software projects and also dipped my toes
-              into UI/UX design on the side.
+              That&apos;s why I started becoming a Full-Stack Developer and got
+              my hands dirty in VR and educational software projects and also
+              dipped my toes into UI/UX design on the side.
             </p>
             <p>
-              I’m always looking for the next
-              opportunity to enrich people&apos;s lives by helping turn ideas into
-              reality.
+              I’m always looking for the next opportunity to enrich
+              people&apos;s lives by helping turn ideas into reality.
             </p>
             <p>
-              When I’m not coding, I’m probably hanging out with my
-              family or friends, cuddling with my cute little dog, playing a
-              video game or messing around with some geeky gadget.
+              When I’m not coding, I’m probably hanging out with my family or
+              friends, cuddling with my cute little dog, playing a video game or
+              messing around with some geeky gadget.
             </p>
           </div>
         </div>
@@ -310,13 +310,23 @@ const HomeView = () => {
                       body: JSON.stringify({ response }),
                     });
                     const data = await res.json();
-                    setFormData({ ...formData, recaptchaSuccess: data.success });
+                    setFormData({
+                      ...formData,
+                      recaptchaSuccess: data.success,
+                    });
                   } catch (error) {
                     console.error(error);
                   }
                 }}
               />
-              <button className={styles.ContactButton} type="button" onClick={(e) => handleSubmit(e)} disabled={!formData.recaptchaSuccess}>Send Message</button>
+              <button
+                className={styles.ContactButton}
+                type="button"
+                onClick={(e) => handleSubmit(e)}
+                disabled={isSubmitDisabled}
+              >
+                Send Message
+              </button>
             </form>
           </div>
         </div>

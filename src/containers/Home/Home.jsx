@@ -44,12 +44,12 @@ const HomeView = () => {
 
   const isContactFormValid = () => contactFormRef.current.reportValidity();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (isContactFormValid()) {
       try {
-        fetch('/api/contact', {
+        const sendEmailResponse = await fetch('/api/contact', {
           method: 'POST',
           headers: {
             Accept: 'application/json, text/plain, */*',
@@ -57,6 +57,16 @@ const HomeView = () => {
           },
           body: JSON.stringify(formData),
         });
+        const sendEmailResponseData = await sendEmailResponse.json();
+
+        if (sendEmailResponseData.success) {
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+            recaptchaSuccess: formData.recaptchaSuccess,
+          });
+        }
       } catch (error) {
         console.error(error);
       }
@@ -255,7 +265,7 @@ const HomeView = () => {
                 <input
                   type="text"
                   id="contactFormName"
-                  defaultValue={formData.name}
+                  value={formData.name}
                   onChange={(e) => {
                     setFormData({ ...formData, name: e.target.value });
                   }}
@@ -268,7 +278,7 @@ const HomeView = () => {
                 <input
                   type="email"
                   id="contactFormEmail"
-                  defaultValue={formData.email}
+                  value={formData.email}
                   onChange={(e) => {
                     setFormData({ ...formData, email: e.target.value });
                   }}
@@ -280,7 +290,7 @@ const HomeView = () => {
                 <span>*</span>
                 <textarea
                   id="contactFormMessage"
-                  defaultValue={formData.message}
+                  value={formData.message}
                   onChange={(e) => {
                     setFormData({ ...formData, message: e.target.value });
                   }}

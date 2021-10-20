@@ -1,5 +1,7 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+import { useState } from 'react';
 import Image from 'next/image';
 
 import { useSections } from '@hooks/useSections';
@@ -9,8 +11,45 @@ import styles from './Home.module.scss';
 import ProjectCard from './ProjectCard/ProjectCard';
 import HeroBackground from './HeroBackground/HeroBackground';
 
+const unCrypt = (s, shift) => {
+  let n = 0;
+  let r = '';
+  for (let i = 0; i < s.length; i++) {
+    n = s.charCodeAt(i);
+    if (n >= 8364) {
+      n = 128;
+    }
+    r += String.fromCharCode(n - (shift));
+  }
+  return r;
+};
+
+const unCryptMailTo = (s, shift) => {
+  if (typeof location !== 'undefined') {
+    location.href = unCrypt(s, shift);
+  }
+};
+
 const HomeView = () => {
   const { observeSection, scrollToSection } = useSections();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData)
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+  };
 
   return (
     <div className={styles['home-view']}>
@@ -157,6 +196,15 @@ const HomeView = () => {
             <h1 className={styles.contact__title}>Contact</h1>
             <p>Feel free to reach out to me via:</p>
             <div className={styles.contact__info}>
+              Email:
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="mailto: kimkwanka"
+                onClick={() => unCryptMailTo('thps{vArptr~hurhGnthps5jvt', 7)}
+              >
+                kimkwanka
+              </a>
               Github:
               {' '}
               <a
@@ -192,19 +240,39 @@ const HomeView = () => {
               <label htmlFor="formName">
                 Name:
                 <span>*</span>
-                <input type="text" id="formName" />
+                <input
+                  type="text"
+                  id="formName"
+                  defaultValue={formData.name}
+                  onChange={(e) => {
+                    setFormData({ ...formData, name: e.target.value });
+                  }}
+                />
               </label>
               <label htmlFor="formEmail">
                 Email:
                 <span>*</span>
-                <input type="email" id="formEmail" />
+                <input
+                  type="email"
+                  id="formEmail"
+                  defaultValue={formData.email}
+                  onChange={(e) => {
+                    setFormData({ ...formData, email: e.target.value });
+                  }}
+                />
               </label>
               <label htmlFor="formMessage">
                 Message:
                 <span>*</span>
-                <textarea id="formMessage" />
+                <textarea
+                  id="formMessage"
+                  defaultValue={formData.message}
+                  onChange={(e) => {
+                    setFormData({ ...formData, message: e.target.value });
+                  }}
+                />
               </label>
-              <button type="button">Send Message</button>
+              <button type="button" onClick={(e) => handleSubmit(e)}>Send Message</button>
             </form>
           </div>
         </div>

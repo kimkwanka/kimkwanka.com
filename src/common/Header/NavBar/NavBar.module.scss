@@ -46,15 +46,23 @@
   justify-content: flex-end;
 }
 
-.LogoLink {
-  align-items: center;
-  align-items: center;
-  color: #fff;
-  display: flex;
+.LogoImageContainer {
+  position: relative;
   height: 100%;
-  text-decoration: none;
-  z-index: 301;
+  width: 93px;
+}
 
+.LogoImage {
+  object-fit: contain;
+}
+
+.LogoLink {
+  //background: red;
+  display: flex;
+  color: #fff;
+  //flex-grow: 1;
+  z-index: 301;
+  width: 100%;
   &:hover {
     color: var(--primaryCol);
   }

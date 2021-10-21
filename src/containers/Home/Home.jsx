@@ -299,14 +299,14 @@ const HomeView = () => {
                   required
                 />
               </label>
-              <ReCAPTCHA
+              {/* <ReCAPTCHA
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY}
                 onChange={async (response) => {
                   try {
                     const res = await fetch('/api/recaptcha', {
                       method: 'POST',
                       headers: {
-                        Accept: 'application/json, text/plain, */*',
+                        Accept: 'application/json, text/plain, *',
                         'Content-Type': 'application/json',
                       },
                       body: JSON.stringify({ response }),
@@ -320,7 +320,7 @@ const HomeView = () => {
                     console.error(error);
                   }
                 }}
-              />
+              /> */}
               <buttonbutton
                 className={styles.ContactButton}
                 type="button"

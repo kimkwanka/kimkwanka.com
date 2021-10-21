@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { useSections } from '@hooks/useSections';
 
@@ -65,10 +66,18 @@ const NavBar = () => {
       <div className={styles.NavBarLeftSide}>
         <Link href="/#home">
           <a className={styles.LogoLink} href="#home" onClick={scrollToSection}>
-            <h4 className={styles.Logo}>
-              kim
+            <div className={styles.LogoImageContainer}>
+              <Image
+                src="/img/logo15.svg"
+                alt="Kim Kwanka logo"
+                className={styles.LogoImage}
+                layout="fill"
+                priority
+              />
+            </div>
+            {/* <h4 className={styles.Logo}>
               <span className="gradient--secondary">kwanka</span>
-            </h4>
+            </h4> */}
           </a>
         </Link>
       </div>

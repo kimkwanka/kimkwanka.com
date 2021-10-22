@@ -1,3 +1,7 @@
+// TODO: Find a fix for ESLint bug "TypeError: Cannot read property 'value' of null"
+// Proposed solution didn't work:
+// https://github.com/babel/babel-eslint/issues/799#issuecomment-533951967
+
 const handler = async (req, res) => {
   try {
     const { response } = req.body;

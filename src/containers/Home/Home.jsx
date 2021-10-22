@@ -202,7 +202,6 @@ const HomeView = () => {
               my hands dirty in VR and educational software projects, and also
               dipped my toes into UI/UX design on the side.
             </p>
-
           </div>
           <h5 className={styles.AboutEndText}>
             <strong>
@@ -220,8 +219,10 @@ const HomeView = () => {
         <div className={styles.ContactContainer}>
           <div className={styles.ContactContent}>
             <h1 className={styles.ContactTitle}>Get In Touch</h1>
-            <h5>Want to say hello or ask a question?</h5>
-            <h5>Just get in touch via:</h5>
+            <h5 className={styles.ContactSubTitle}>
+              Want to create something awesome or just say hello?
+            </h5>
+            <h5 className={styles.ContactSubTitle}>Get in touch via:</h5>
             <div className={styles.SocialIconContainer}>
               <a
                 className={styles.SocialIcon}

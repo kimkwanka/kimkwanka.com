@@ -189,7 +189,7 @@ const HomeView = () => {
             <p>
               That&apos;s why I read PC magazines when I didn’t even own a
               computer, learned to code at 13, created countless small games,
-              apps, and websites, and even studied Computer Science.
+              apps, and websites, and of course, studied Computer Science.
             </p>
             <p>
               To support my family, I gave up my studies though and started a
@@ -206,7 +206,7 @@ const HomeView = () => {
           </div>
           <h5 className={styles.AboutEndText}>
             <strong>
-              I&apos;m always on the look out for the next opportunity to enrich
+              I&apos;m now on the look out for the next opportunity to enrich
               people&apos;s lives by turning ideas into reality.
             </strong>
           </h5>

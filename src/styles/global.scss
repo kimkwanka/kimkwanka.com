@@ -82,7 +82,7 @@ a:not([class]) {
   background-repeat: repeat-x;
 
   &:hover {
-    color: var(--buttonGradientCol1);
+    color: var(--accentCol);
   }
 }
 
@@ -124,8 +124,8 @@ input:-webkit-autofill:focus {
   filter: invert(1);
 }
 
-input::placeholder {
-  color: var(--mutedText);
+::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 button,

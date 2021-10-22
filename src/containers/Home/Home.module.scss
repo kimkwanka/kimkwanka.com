@@ -207,16 +207,17 @@
   padding: var(--s6) 0;
   width: 100%;
 
-  span {
-    color: var(--accentCol);
-    width: fit-content;
-  }
   input, textarea {
     width: 100%;
   }
 
   textarea {
     border-radius: var(--s1);
+    min-height: 200px;
+  }
+
+  h5 {
+    text-align: center;
   }
 }
 
@@ -227,6 +228,8 @@
 .ContactContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   max-width: var(--contentMaxWidth);
   padding: var(--s3);
@@ -234,10 +237,54 @@
 }
 
 .ContactContent {
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 791px;
+  margin: 0 auto;
+  margin-top: var(--s3);
 }
 
 .ContactTitle {
   margin-bottom: var(--s5);
+}
+
+.SocialIconContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--s3);
+
+  * + * {
+    margin-left: var(--s5);
+  }
+}
+
+.SocialIcon {
+  background: none;
+  color: var(--primaryCol);
+  flex-grow: 1;
+  &:hover {
+    color: var(--accentCol);
+  }
+}
+
+.ContactForm {
+  margin-top: var(--s5);
+
+  span {
+    color: var(--accentCol);
+  }
+
+  textarea, input {
+    background: #eee;
+    &:focus {
+      background: #fff;
+    }
+  }
+}
+
+.ContactButtonContainer {
+  text-align: center;
 }
 //================================================================

@@ -96,7 +96,7 @@ label {
 input,
 textarea {
   border-radius: var(--s1);
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   color: var(--textCol);
   font-weight: normal;
   margin-bottom: var(--s2);
@@ -104,7 +104,7 @@ textarea {
   outline: none;
   outline: none;
   padding: var(--s1) var(--s3);
-  transition: border var(--transitionSpeed) var(--transitionTiming);
+  transition: all var(--transitionSpeed) var(--transitionTiming);
 
   &:hover {
     border: 1px solid var(--textCol);

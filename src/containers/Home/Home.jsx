@@ -217,50 +217,42 @@ const HomeView = () => {
       >
         <div className={styles.ContactContainer}>
           <div className={styles.ContactContent}>
-            <h1 className={styles.ContactTitle}>Contact</h1>
-            <p>Feel free to reach out to me via:</p>
-            <div className={styles.ContactInfo}>
-              Email:
+            <h1 className={styles.ContactTitle}>Get In Touch</h1>
+            <h5>Want to say hello or ask a question?</h5>
+            <h5>Just get in touch via:</h5>
+            <div className={styles.SocialIconContainer}>
               <a
-                target="_blank"
-                rel="noreferrer"
+                className={styles.SocialIcon}
                 href="mailto: kimkwanka"
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => unCryptMailTo('thps{vArptr~hurhGnthps5jvt', 7)}
+                aria-label="Email"
               >
-                kimkwanka
+                <span className="h1 icon-mail2" />
               </a>
-              Github:
-              {' '}
               <a
-                target="_blank"
-                href="https://github.com/kimkwanka/"
-                rel="noreferrer"
-              >
-                kimkwanka
-              </a>
-              <br />
-              Twitter:
-              {' '}
-              <a
-                target="_blank"
-                href="https://www.twitter.com/kimkwanka/"
-                rel="noreferrer"
-              >
-                @kimkwanka
-              </a>
-              <br />
-              LinkedIn:
-              {' '}
-              <a
-                target="_blank"
+                className={styles.SocialIcon}
                 href="https://www.linkedin.com/in/kimkwanka/"
+                target="_blank"
                 rel="noreferrer"
+                aria-label="Linkedin"
               >
-                kimkwanka
+                <span className="h1 icon-linkedin2" />
               </a>
-              <br />
+              <a
+                className={styles.SocialIcon}
+                href="https://twitter.com/kimkwanka/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Twitter"
+              >
+                <span className="h1 icon-twitter" />
+              </a>
             </div>
-            <form ref={contactFormRef}>
+            <h5>Or drop me a line below - </h5>
+            <h5>I&apos;d love to hear from you.</h5>
+            <form className={styles.ContactForm} ref={contactFormRef}>
               <label htmlFor="contactFormName">
                 Name:
                 <span>*</span>
@@ -321,14 +313,17 @@ const HomeView = () => {
                   }
                 }}
               />
-              <button
-                className={styles.ContactButton}
-                type="button"
-                onClick={(e) => handleSubmit(e)}
-                disabled={isSubmitDisabled}
-              >
-                Send Message
-              </button>
+              <div className={styles.ContactButtonContainer}>
+                <button
+                  className={styles.ContactButton}
+                  type="button"
+                  onClick={(e) => handleSubmit(e)}
+                  disabled={isSubmitDisabled}
+                >
+                  Send Message
+                </button>
+
+              </div>
             </form>
           </div>
         </div>

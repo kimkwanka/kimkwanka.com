@@ -205,7 +205,7 @@ const HomeView = () => {
           </div>
           <h5 className={styles.AboutEndText}>
             <strong>
-              I&apos;m now on the look out for the next opportunity to enrich
+              I&apos;m now on the lookout for the next opportunity to enrich
               people&apos;s lives by turning ideas into reality.
             </strong>
           </h5>
@@ -220,7 +220,7 @@ const HomeView = () => {
           <div className={styles.ContactContent}>
             <h1 className={styles.ContactTitle}>Get In Touch</h1>
             <h5 className={styles.ContactSubTitle}>
-              Want to create something awesome or just say hello?
+              Want to build something awesome together or just say hello?
             </h5>
             <h5 className={styles.ContactSubTitle}>Get in touch via:</h5>
             <div className={styles.SocialIconContainer}>

@@ -44,7 +44,10 @@ const HomeView = () => {
   });
 
   const isSubmitDisabled = !(
-    formData.name && formData.email && formData.message && formData.recaptchaSuccess
+    formData.name
+    && formData.email
+    && formData.message
+    && formData.recaptchaSuccess
   );
 
   const isContactFormValid = () => contactFormRef.current.reportValidity();
@@ -158,56 +161,55 @@ const HomeView = () => {
       >
         <div className={styles.AboutContainer}>
           <h1 className={styles.AboutTitle}>About Me</h1>
-          <div className={styles.PortraitImageContainer}>
-            <Image
-              src="/img/portrait_round.png"
-              alt="Kim Kwanka"
-              className={styles.PortraitImage}
-              layout="fill"
-              priority
-            />
+          <div className={styles.AboutLeft}>
+            <h4 className={styles.AboutSubtitle}>
+              Hi, I&apos;m an an ex-nurse, ex CS-student, ex-tax officer turned
+              web developer.*
+            </h4>
+            <div className={styles.AboutImageContainer}>
+              <Image
+                src="/img/portrait_round.png"
+                alt="Kim Kwanka"
+                className={styles.AboutImage}
+                layout="fill"
+                priority
+              />
+            </div>
           </div>
-          <div className={styles.AboutContent}>
-            <p>
-              Hi, I&apos;m Kim, a curious and tech-loving web developer with a
-              background in fiscal economics.
-            </p>
-            <p>
-              When I was only 7, I saw my uncle play NES for the first time when
-              suddenly, two thoughts crossed my mind: &quot;How does this work?
-              I want to build something like this myself!&quot;
-            </p>
-            <p>
-              Since then, I read PC magazines when I didn’t even own a computer,
-              learned to code at 13, created countless small games, apps, and
-              websites, and even studied Computer Science.
-            </p>
-            <p>
-              Wanting to support my family financially I gave up my studies
-              though and started a &quot;combined vocational training and degree
-              program&quot; in fiscal economics instead.
-            </p>
-            <p>
-              While giving financial stability and being fulfilling in its own
-              right, working as a tax officer sadly couldn&apos;t quench my
-              thirst for knowledge and satisfy my urge to create, so it felt
-              natural to transition back into IT.
-            </p>
-            <p>
-              That&apos;s why I started becoming a Full-Stack Developer and got
-              my hands dirty in VR and educational software projects and also
-              dipped my toes into UI/UX design on the side.
-            </p>
-            <p>
-              I’m always looking for the next opportunity to enrich
-              people&apos;s lives by helping turn ideas into reality.
-            </p>
-            <p>
-              When I’m not coding, I’m probably hanging out with my family or
+          <div className={styles.AboutRight}>
+            <small className={styles.AboutSmall}>
+              *When I’m not coding, I’m probably hanging out with my family or
               friends, cuddling with my cute little dog, playing a video game or
               messing around with some geeky gadget.
+            </small>
+            <p>
+              Ever since I saw my uncle play NES when I was 7, I wanted to
+              understand how things work and create them myself.
             </p>
+            <p>
+              That&apos;s why I read PC magazines when I didn’t even own a
+              computer, learned to code at 13, created countless small games,
+              apps, and websites, and even studied Computer Science.
+            </p>
+            <p>
+              To support my family, I gave up my studies though and started a
+              career in fiscal economics instead - but neither this nor working
+              as a nurse could quench my thirst for knowledge or satisfy my urge
+              to create, so it felt natural to transition back into IT.
+            </p>
+            <p>
+              Consequently, I became a Full-Stack Developer and have since got
+              my hands dirty in VR and educational software projects, and also
+              dipped my toes into UI/UX design on the side.
+            </p>
+
           </div>
+          <h5 className={styles.AboutEndText}>
+            <strong>
+              I&apos;m always on the look out for the next opportunity to enrich
+              people&apos;s lives by turning ideas into reality.
+            </strong>
+          </h5>
         </div>
       </section>
       <section
@@ -322,7 +324,6 @@ const HomeView = () => {
                 >
                   Send Message
                 </button>
-
               </div>
             </form>
           </div>

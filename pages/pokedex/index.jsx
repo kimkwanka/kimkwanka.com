@@ -16,7 +16,6 @@ export default function devGaidoPage() {
         <meta name="author" content="Kim Kwanka" />
       </Head>
       <Header />
-      <CaseStudy />
       <Footer />
     </>
   );

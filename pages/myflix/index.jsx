@@ -16,7 +16,6 @@ export default function myFlixPage() {
         <meta name="author" content="Kim Kwanka" />
       </Head>
       <Header />
-      <CaseStudy />
       <Footer />
     </>
   );

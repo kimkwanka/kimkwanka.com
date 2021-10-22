@@ -129,9 +129,7 @@ const NavBar = () => {
                 href="#contact"
                 onClick={scrollToSection}
               >
-                <span className="icon-mail2" />
-                {' '}
-                Contact Me
+                Contact
               </a>
             </Link>
           </li>

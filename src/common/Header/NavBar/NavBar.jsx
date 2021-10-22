@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { useSections } from '@hooks/useSections';
+import { useSections } from '@hooks/useSections/useSections';
 
 import styles from './NavBar.module.scss';
 

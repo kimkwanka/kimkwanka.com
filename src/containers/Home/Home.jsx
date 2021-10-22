@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import ReCAPTCHA from 'react-google-recaptcha';
 
-import { useSections } from '@hooks/useSections';
+import { useSections } from '@hooks/useSections/useSections';
 
 import styles from './Home.module.scss';
 

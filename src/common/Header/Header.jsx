@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import useScrollSpy from '@hooks/useScrollSpy';
+import useScrollSpy from '@hooks/useScrollSpy/useScrollSpy';
 
 import NavBar from './NavBar/NavBar';
 

@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Header from '@common/Header';
-import Footer from '@common/Footer';
-import Home from '@containers/Home';
+import Header from '@common/Header/Header';
+import Footer from '@common/Footer/Footer';
+import Home from '@containers/Home/Home';
 
 export default function IndexPage() {
   return (

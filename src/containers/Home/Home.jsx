@@ -79,26 +79,26 @@ const HomeView = () => {
   };
 
   return (
-    <div className={styles['home-view']}>
-      <section className={styles.hero} id="home" ref={observeSection('#home')}>
+    <div className={styles.Home}>
+      <section className={styles.Hero} id="home" ref={observeSection('#home')}>
         <HeroBackground />
-        <div className={styles.hero__container}>
-          <h1 className={styles.hero__title}>
+        <div className={styles.HeroContainer}>
+          <h1 className={styles.HeroTitle}>
             Hi, I&apos;m Kim:
             <br />
-            <span className={`${styles.hero__span} gradient`}>
+            <span className={`${styles.HeroSpan} gradient`}>
               Full-Stack
             </span>
             {' '}
             Web Developer.
           </h1>
-          <p className={styles.hero__text}>
+          <p className={styles.HeroText}>
             Anyone can learn to code but you can&apos;t teach someone how to
             enjoy what they&apos;re doing.
           </p>
           <a
             href="#work"
-            className={`${styles.hero__button} button`}
+            className={`${styles.HeroButton} button`}
             onClick={scrollToSection}
           >
             Check out my work
@@ -121,10 +121,10 @@ const HomeView = () => {
           </a>
         </div>
       </section>
-      <section className={styles.work} id="work" ref={observeSection('#work')}>
-        <div className={styles.work__container}>
-          <div className={styles.work__content}>
-            <h1 className={styles.work__title}>Work</h1>
+      <section className={styles.Work} id="work" ref={observeSection('#work')}>
+        <div className={styles.WorkContainer}>
+          <div className={styles.WorkContent}>
+            <h1 className={styles.WorkTitle}>Work</h1>
             <ProjectCard
               title="devGaido"
               href="/devgaido"
@@ -152,12 +152,12 @@ const HomeView = () => {
         </div>
       </section>
       <section
-        className={styles.about}
+        className={styles.About}
         id="about"
         ref={observeSection('#about')}
       >
-        <div className={styles.about__container}>
-          <h1 className={styles.about__title}>About Me</h1>
+        <div className={styles.AboutContainer}>
+          <h1 className={styles.AboutTitle}>About Me</h1>
           <div className={styles.PortraitImageContainer}>
             <Image
               src="/img/portrait_round.png"
@@ -167,7 +167,7 @@ const HomeView = () => {
               priority
             />
           </div>
-          <div className={styles.about__content}>
+          <div className={styles.AboutContent}>
             <p>
               Hi, I&apos;m Kim, a curious and tech-loving web developer with a
               background in fiscal economics.
@@ -211,15 +211,15 @@ const HomeView = () => {
         </div>
       </section>
       <section
-        className={styles.contact}
+        className={styles.Contact}
         id="contact"
         ref={observeSection('#contact')}
       >
-        <div className={styles.contact__container}>
-          <div className={styles.contact__content}>
-            <h1 className={styles.contact__title}>Contact</h1>
+        <div className={styles.ContactContainer}>
+          <div className={styles.ContactContent}>
+            <h1 className={styles.ContactTitle}>Contact</h1>
             <p>Feel free to reach out to me via:</p>
-            <div className={styles.contact__info}>
+            <div className={styles.ContactInfo}>
               Email:
               <a
                 target="_blank"

@@ -221,6 +221,11 @@ button.clear--secondary,
   }
 }
 
+// Enable a smooth transition from blurred placeholder to img for next/image
+img {
+  transition: filter 0.3s linear;
+}
+
 .gradient {
   background: linear-gradient(
     90deg,

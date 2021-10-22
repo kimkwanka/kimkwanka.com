@@ -321,14 +321,14 @@ const HomeView = () => {
                   }
                 }}
               />
-              <buttonbutton
+              <button
                 className={styles.ContactButton}
                 type="button"
                 onClick={(e) => handleSubmit(e)}
                 disabled={isSubmitDisabled}
               >
                 Send Message
-              </buttonbutton>
+              </button>
             </form>
           </div>
         </div>

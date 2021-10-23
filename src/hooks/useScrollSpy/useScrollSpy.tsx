@@ -8,7 +8,7 @@ const useScrollSpy = (options = {}) => {
   const [observedElements, setObservedElements] = useState({});
 
   const observe =
-    (id, onEnterView = () => {}, onExitView = () => {}) =>
+    (id: string, onEnterView = null, onExitView = null) =>
     (el) => {
       if (el) {
         elementRefs.current[id] = el;
@@ -27,9 +27,9 @@ const useScrollSpy = (options = {}) => {
 
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.onEnterView();
+            entry.target.onEnterView?.();
           } else {
-            entry.target.onExitView();
+            entry.target.onExitView?.();
           }
 
           updatedElementsInView[entry.target.observerId] = {

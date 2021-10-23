@@ -1,5 +1,9 @@
 import Document, {
-  Html, Head, Main, NextScript,
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
 } from 'next/document';
 
 // Font Loading snippet from:
@@ -16,7 +20,7 @@ import Document, {
 // https://nextjs.org/docs/advanced-features/custom-document
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
 
     return initialProps;

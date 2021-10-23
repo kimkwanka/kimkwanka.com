@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 
 import Image from 'next/image';
 
@@ -7,7 +7,7 @@ import styles from './Footer.module.scss';
 const Footer = () => {
   const [isImprintShown, setIsImprintShown] = useState(false);
 
-  const handleClick = (e) => {
+  const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     setIsImprintShown(!isImprintShown);
   };
@@ -16,15 +16,8 @@ const Footer = () => {
     <footer className={styles.Footer}>
       <div className={styles.FooterContainer}>
         <p>
-          Created with
-          {' '}
-          <span className="icon-heart gradient--secondary" />
-          {' '}
-          and
-          powered by
-          {' '}
-          <span className="icon-coffee gradient" />
-          .
+          Created with <span className="icon-heart gradient--secondary" /> and
+          powered by <span className="icon-coffee gradient" />.
         </p>
         <div className={styles.SocialIconContainer}>
           <a
@@ -75,9 +68,7 @@ const Footer = () => {
         </div>
         <small className={styles.Copyright}>
           &copy;
-          {`${new Date().getFullYear()}`}
-          {' '}
-          Kim Kwanka
+          {`${new Date().getFullYear()}`} Kim Kwanka
         </small>
       </div>
     </footer>

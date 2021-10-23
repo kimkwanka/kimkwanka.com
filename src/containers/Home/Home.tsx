@@ -44,10 +44,10 @@ const HomeView = () => {
   });
 
   const isSubmitDisabled = !(
-    formData.name
-    && formData.email
-    && formData.message
-    && formData.recaptchaSuccess
+    formData.name &&
+    formData.email &&
+    formData.message &&
+    formData.recaptchaSuccess
   );
 
   const isContactFormValid = () => contactFormRef.current.reportValidity();
@@ -91,8 +91,7 @@ const HomeView = () => {
             <br />
             <span className={`${styles.HeroSpan} gradient`}>
               Full-Stack
-            </span>
-            {' '}
+            </span>{' '}
             Web Developer.
           </h1>
           <p className={styles.HeroText}>
@@ -104,9 +103,7 @@ const HomeView = () => {
             className={`${styles.HeroButton} button`}
             onClick={scrollToSection}
           >
-            Check out my work
-            {' '}
-            <span className="icon-chevron-thin-right" />
+            Check out my work <span className="icon-chevron-thin-right" />
           </a>
           <div className={styles.PortraitImageContainer}>
             <Image

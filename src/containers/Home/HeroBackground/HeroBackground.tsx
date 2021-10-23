@@ -10,8 +10,13 @@ const Plane = () => {
   const zArray = useRef([]);
 
   useLayoutEffect(() => {
-    for (let i = 2; i < planeGeoRef.current.attributes.position.array.length; i += 3) {
-      planeGeoRef.current.attributes.position.array[i] += Math.random() * 5000 - 2000;
+    for (
+      let i = 2;
+      i < planeGeoRef.current.attributes.position.array.length;
+      i += 3
+    ) {
+      planeGeoRef.current.attributes.position.array[i] +=
+        Math.random() * 5000 - 2000;
       zArray.current.push(planeGeoRef.current.attributes.position.array[i]);
     }
   }, []);
@@ -24,8 +29,9 @@ const Plane = () => {
     ) {
       const index = Math.floor(i / 3);
 
-      planeGeoRef.current.attributes.position.array[i] = Math.sin(i + count.current * 0.00002)
-        * (zArray.current[index] - zArray.current[index] * 0.6);
+      planeGeoRef.current.attributes.position.array[i] =
+        Math.sin(i + count.current * 0.00002) *
+        (zArray.current[index] - zArray.current[index] * 0.6);
       count.current += 0.1;
     }
     planeGeoRef.current.attributes.position.needsUpdate = true;

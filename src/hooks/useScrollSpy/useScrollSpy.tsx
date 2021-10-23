@@ -7,14 +7,16 @@ const useScrollSpy = (options = {}) => {
 
   const [observedElements, setObservedElements] = useState({});
 
-  const observe = (id, onEnterView = () => {}, onExitView = () => {}) => (el) => {
-    if (el) {
-      elementRefs.current[id] = el;
-      elementRefs.current[id].onEnterView = onEnterView;
-      elementRefs.current[id].onExitView = onExitView;
-      elementRefs.current[id].observerId = id;
-    }
-  };
+  const observe =
+    (id, onEnterView = () => {}, onExitView = () => {}) =>
+    (el) => {
+      if (el) {
+        elementRefs.current[id] = el;
+        elementRefs.current[id].onEnterView = onEnterView;
+        elementRefs.current[id].onExitView = onExitView;
+        elementRefs.current[id].observerId = id;
+      }
+    };
 
   const isInView = (id) => observedElements[id]?.isInView;
 

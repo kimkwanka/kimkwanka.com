@@ -19,8 +19,7 @@ const CaseStudy = () => (
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Introduction</h2>
       <p>
-        When
-        {' '}
+        When{' '}
         <a
           href="https://www.linkedin.com/in/jdmedlock/"
           target="_blank"
@@ -28,8 +27,7 @@ const CaseStudy = () => (
         >
           Jim Medlock
         </a>
-        , Co-Founder of
-        {' '}
+        , Co-Founder of{' '}
         <a href="https://chingu.io/" target="_blank" rel="noreferrer">
           Chingu
         </a>
@@ -57,9 +55,7 @@ const CaseStudy = () => (
           href="https://devgaido.cardinalzero.com"
           rel="noreferrer"
         >
-          <span className="icon-external-link" />
-          {' '}
-          Live
+          <span className="icon-external-link" /> Live
         </a>
         <a
           className={styles.CaseStudyLink}
@@ -67,9 +63,7 @@ const CaseStudy = () => (
           href="https://github.com/Chingu-cohorts/devgaido"
           rel="noreferrer"
         >
-          <span className="icon-embed2" />
-          {' '}
-          Code
+          <span className="icon-embed2" /> Code
         </a>
       </div>
     </section>
@@ -102,61 +96,48 @@ const CaseStudy = () => (
         MongoDB, React, Node.js, Redux, Stylus, Auth0, Docker, NGINX
       </small>
       <p>
-        The tried and true MERN stack (
-        {' '}
+        The tried and true MERN stack ({' '}
         <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
           MongoDB
         </a>
-        ,
-        {' '}
+        ,{' '}
         <a href="https://expressjs.com/" target="_blank" rel="noreferrer">
           Express
         </a>
-        ,
-        {' '}
+        ,{' '}
         <a href="https://reactjs.org" target="_blank" rel="noreferrer">
           React
         </a>
-        ,
-        {' '}
+        ,{' '}
         <a href="https://nodejs.org/" target="_blank" rel="noreferrer">
           Node.js
         </a>
-        ) and
-        {' '}
+        ) and{' '}
         <a href="https://redux.js.org/" target="_blank" rel="noreferrer">
           Redux
-        </a>
-        {' '}
-        were obvious choices because of their ease of use and reliability.
-        {' '}
+        </a>{' '}
+        were obvious choices because of their ease of use and reliability.{' '}
         <a href="https://stylus-lang.com/" target="_blank" rel="noreferrer">
           Stylus
-        </a>
-        {' '}
+        </a>{' '}
         was chosen so we could use the much terser indented syntax, but still
         paste in snippets in regular syntax.
       </p>
       <p>
-        As we didn&apos;t want to risk leaking private data, we let
-        {' '}
+        As we didn&apos;t want to risk leaking private data, we let{' '}
         <a href="https://auth0.com/" target="_blank" rel="noreferrer">
           Auth0
-        </a>
-        {' '}
+        </a>{' '}
         handle authentication and only saved the user id for identification.
       </p>
       <p>
         <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
           Docker
-        </a>
-        {' '}
-        was used to orchestrate the server deployment and
-        {' '}
+        </a>{' '}
+        was used to orchestrate the server deployment and{' '}
         <a href="https://www.nginx.com/" target="_blank" rel="noreferrer">
           NGINX
-        </a>
-        {' '}
+        </a>{' '}
         was utilized here as a reverse proxy to lessen the load on the server
         and allowing it to scale more easily in the future.
       </p>
@@ -178,8 +159,7 @@ const CaseStudy = () => (
       <h2 className={styles.CaseStudySectionTitle}>Purpose and Goal</h2>
       <p>
         We built devGaido to provide a guided learning experience for people
-        wanting to learn web development, especially those using the excellent
-        {' '}
+        wanting to learn web development, especially those using the excellent{' '}
         <a
           href="https://github.com/P1xt/p1xt-guides"
           target="_blank"
@@ -219,9 +199,7 @@ const CaseStudy = () => (
     </section>
     <section>
       <h3 className={styles.CaseStudyProblemTitle}>
-        <span>Problem No. 1:</span>
-        {' '}
-        Managing and writing CSS
+        <span>Problem No. 1:</span> Managing and writing CSS
       </h3>
       <div className={styles.smallCaseStudyImageContainer}>
         <Image
@@ -237,10 +215,8 @@ const CaseStudy = () => (
         Source: https://css.christmas/2019/22
       </small>
       <p>
-        While we tried our best to adhere to
-        {' '}
-        <a href="http://getbem.com/introduction/">BEM</a>
-        , coming up with CSS
+        While we tried our best to adhere to{' '}
+        <a href="http://getbem.com/introduction/">BEM</a>, coming up with CSS
         class names for a new Component was still pretty time consuming. Add to
         that the time spent constantly flipping back and forth between the
         Component&apos;s code and its CSS and it becomes a major problem.
@@ -248,19 +224,12 @@ const CaseStudy = () => (
     </section>
     <section>
       <h3 className={styles.CaseStudySolutionTitle}>
-        <span>Solution:</span>
-        {' '}
-        Atomic CSS framework
+        <span>Solution:</span> Atomic CSS framework
       </h3>
       <p>
-        Even though the idea of functional/atomic CSS frameworks like
-        {' '}
-        <a href="https://tachyons.io/">Tachyons</a>
-        {' '}
-        and
-        <a href="https://tailwindcss.com/">Tailwind</a>
-        {' '}
-        was pretty novel back
+        Even though the idea of functional/atomic CSS frameworks like{' '}
+        <a href="https://tachyons.io/">Tachyons</a> and
+        <a href="https://tailwindcss.com/">Tailwind</a> was pretty novel back
         then, we opted to use this approach to compose the brunt of our CSS
         directly in our code.
       </p>
@@ -272,9 +241,7 @@ const CaseStudy = () => (
     </section>
     <section>
       <h3 className={styles.CaseStudyProblemTitle}>
-        <span>Problem No. 2:</span>
-        {' '}
-        Bloated CSS
+        <span>Problem No. 2:</span> Bloated CSS
       </h3>
       <p>
         Using Atomiku made creating new Components and their style much easier
@@ -286,14 +253,7 @@ const CaseStudy = () => (
     </section>
     <section>
       <h3 className={styles.CaseStudySolutionAndProblemTitle}>
-        <span>Solution</span>
-        {' '}
-        (and new
-        {' '}
-        <span>Problem</span>
-        )
-        <span>:</span>
-        {' '}
+        <span>Solution</span> (and new <span>Problem</span>)<span>:</span>{' '}
         PurifyCSS
       </h3>
       <p>
@@ -305,9 +265,7 @@ const CaseStudy = () => (
     </section>
     <section>
       <h3 className={styles.CaseStudySolutionTitle}>
-        <span>Solution:</span>
-        {' '}
-        Custom Fork of PurifyCSS
+        <span>Solution:</span> Custom Fork of PurifyCSS
       </h3>
       <div className={styles.smallCaseStudyImageContainer}>
         <Image
@@ -331,9 +289,7 @@ const CaseStudy = () => (
     </section>
     <section>
       <h3 className={styles.CaseStudyProblemTitle}>
-        <span>Problem No. 3:</span>
-        {' '}
-        Function Components
+        <span>Problem No. 3:</span> Function Components
       </h3>
       <p>
         Driven by the promise of (future) performance benefits and the elegance
@@ -346,9 +302,7 @@ const CaseStudy = () => (
     </section>
     <section>
       <h3 className={styles.CaseStudySolutionTitle}>
-        <span>Solution:</span>
-        {' '}
-        Adding state and lifecycle hooks via HOCs
+        <span>Solution:</span> Adding state and lifecycle hooks via HOCs
       </h3>
       <div className={styles.smallCaseStudyImageContainer}>
         <Image
@@ -383,24 +337,20 @@ const CaseStudy = () => (
         </li>
       </ul>
       <p>
-        For more details, check out the
-        {' '}
+        For more details, check out the{' '}
         <a
           href="https://codeburst.io/save-the-zombies-how-to-add-state-and-lifecycle-methods-to-stateless-react-components-1a996513866d"
           target="_blank"
           rel="noreferrer"
         >
           Medium story
-        </a>
-        {' '}
+        </a>{' '}
         I wrote about this.
       </p>
     </section>
     <section>
       <h3 className={styles.CaseStudyProblemTitle}>
-        <span>Problem No. 4:</span>
-        {' '}
-        Lesson images
+        <span>Problem No. 4:</span> Lesson images
       </h3>
       <div className={styles.smallCaseStudyImageContainer}>
         <Image
@@ -425,9 +375,7 @@ const CaseStudy = () => (
     </section>
     <section>
       <h3 className={styles.CaseStudySolutionTitle}>
-        <span>Solution:</span>
-        {' '}
-        Let the server do it
+        <span>Solution:</span> Let the server do it
       </h3>
       <p>
         Seeing that devGaido exclusively linked to external resources for its
@@ -439,9 +387,7 @@ const CaseStudy = () => (
     </section>
     <section>
       <h3 className={styles.CaseStudyProblemTitle}>
-        <span>Problem No. 5:</span>
-        {' '}
-        Server load
+        <span>Problem No. 5:</span> Server load
       </h3>
       <p>
         To keep the costs low for our MVP version, our production server was
@@ -455,9 +401,7 @@ const CaseStudy = () => (
     </section>
     <section>
       <h3 className={styles.CaseStudySolutionTitle}>
-        <span>Solution:</span>
-        {' '}
-        NGINX, Cloudflare, Hydration
+        <span>Solution:</span> NGINX, Cloudflare, Hydration
       </h3>
       <div className={styles.smallCaseStudyImageContainer}>
         <Image
@@ -474,48 +418,39 @@ const CaseStudy = () => (
       </small>
       <p>
         As a large portion of our server requests was retrieving the lesson and
-        path images, the first step was to incorporate
-        {' '}
-        {' '}
+        path images, the first step was to incorporate{' '}
         <a href="https://www.cloudflare.com/" target="_blank" rel="noreferrer">
           Cloudflare
-        </a>
-        {' '}
-        as a CDN to
-        serve our static assets cached. Not only did this lessen the load
-        immensely but it also let us drop
-        {' '}
+        </a>{' '}
+        as a CDN to serve our static assets cached. Not only did this lessen the
+        load immensely but it also let us drop{' '}
         <a href="https://letsencrypt.org/" target="_blank" rel="noreferrer">
           Let&apos;s Encrypt SSL
-        </a>
-        {' '}
-        and leverage
-        Cloudflare for this as well.
+        </a>{' '}
+        and leverage Cloudflare for this as well.
       </p>
       <p>
-        The next step was putting
-        {' '}
+        The next step was putting{' '}
         <a href="https://www.nginx.com/" target="_blank" rel="noreferrer">
           NGINX
-        </a>
-        {' '}
-        in front of the Node.js server as a
-        reverse proxy. On the one hand, this worked as a &quot;buffer&quot; for
-        our server, on the other hand, it enabled load balancing capabilities
-        across multiple Node instances.
+        </a>{' '}
+        in front of the Node.js server as a reverse proxy. On the one hand, this
+        worked as a &quot;buffer&quot; for our server, on the other hand, it
+        enabled load balancing capabilities across multiple Node instances.
       </p>
       <p>
         As the final step, I proposed sending over the complete curriculum data
         (lessons and paths) with the initial page request via server-side Redux
-        store hydration. We already hydrated the initial
-        {' '}
-        <a href="https://redux.js.org/api/store" target="_blank" rel="noreferrer">
+        store hydration. We already hydrated the initial{' '}
+        <a
+          href="https://redux.js.org/api/store"
+          target="_blank"
+          rel="noreferrer"
+        >
           Redux store
-        </a>
-        {' '}
-        with user
-        data and authentication details anyway, so the idea wasn&apos;t too
-        far-fetched.
+        </a>{' '}
+        with user data and authentication details anyway, so the idea
+        wasn&apos;t too far-fetched.
       </p>
       <p>
         While further reducing server load, this method also increased the
@@ -574,17 +509,10 @@ const CaseStudy = () => (
         blossom.
       </p>
       <p>
-        That extended to communication with our userbase as well:
-        {' '}
-        <br />
-        Though we couldn&apos;t possibly fix every issue instantly
-        or answer every question thoroughly on the
-        spot, we always made sure to respond in
-        {' '}
-        <i>some</i>
-        {' '}
-        way - no one
-        likes to feel being ignored.
+        That extended to communication with our userbase as well: <br />
+        Though we couldn&apos;t possibly fix every issue instantly or answer
+        every question thoroughly on the spot, we always made sure to respond in{' '}
+        <i>some</i> way - no one likes to feel being ignored.
       </p>
     </section>
     <section>

@@ -1,6 +1,4 @@
-import {
-  useState, useContext, createContext,
-} from 'react';
+import { useState, useContext, createContext } from 'react';
 
 import useScrollSpy from '../useScrollSpy/useScrollSpy';
 
@@ -21,16 +19,19 @@ const useSections = () => {
 
   const [currentSection, setCurrentSection] = useContext(SectionContext);
 
-  const observeSection = (id) => observe(id, () => {
-    setCurrentSection(id);
-  });
+  const observeSection = (id) =>
+    observe(id, () => {
+      setCurrentSection(id);
+    });
 
   const scrollToSection = (e) => {
     if (window.location.pathname !== '/') {
       return;
     }
     e.preventDefault();
-    document.querySelector(e.currentTarget.hash)?.scrollIntoView({ behavior: 'smooth' });
+    document
+      .querySelector(e.currentTarget.hash)
+      ?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return { observeSection, scrollToSection, currentSection };

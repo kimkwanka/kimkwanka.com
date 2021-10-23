@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,23 +11,29 @@ const NavBar = () => {
   const { scrollToSection, currentSection } = useSections();
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
 
-  const handleClick = (e) => {
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setIsHamburgerMenuOpen(!isHamburgerMenuOpen);
   };
 
   return (
     <nav className={styles.NavBar}>
-      <div className={isHamburgerMenuOpen ? styles.HamburgerMenu : styles.hiddenHamburgerMenu}>
+      <div
+        className={
+          isHamburgerMenuOpen
+            ? styles.HamburgerMenu
+            : styles.hiddenHamburgerMenu
+        }
+      >
         <ul className={styles.HamburgerNavItems}>
           <li>
             <Link href="/#work">
               <a
                 className={
-                    currentSection === '#work'
-                      ? styles.activeNavBarLink
-                      : styles.NavBarLink
-                  }
+                  currentSection === '#work'
+                    ? styles.activeNavBarLink
+                    : styles.NavBarLink
+                }
                 href="#work"
                 onClick={scrollToSection}
               >
@@ -39,10 +45,10 @@ const NavBar = () => {
             <Link href="/#about">
               <a
                 className={
-                    currentSection === '#about'
-                      ? styles.activeNavBarLink
-                      : styles.NavBarLink
-                  }
+                  currentSection === '#about'
+                    ? styles.activeNavBarLink
+                    : styles.NavBarLink
+                }
                 href="#about"
                 onClick={scrollToSection}
               >
@@ -83,7 +89,11 @@ const NavBar = () => {
       </div>
       <div className={styles.NavBarRightSide}>
         <button
-          className={isHamburgerMenuOpen ? styles.openHamburgerButton : styles.HamburgerButton}
+          className={
+            isHamburgerMenuOpen
+              ? styles.openHamburgerButton
+              : styles.HamburgerButton
+          }
           type="button"
           onClick={handleClick}
         >

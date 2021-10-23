@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import useScrollSpy from '@hooks/useScrollSpy/useScrollSpy';
+import useScrollSpy from '@src/hooks/useScrollSpy/useScrollSpy';
 
 import NavBar from './NavBar/NavBar';
 
@@ -16,11 +16,11 @@ const Header = ({ transparentAtTop = false }) => {
         className={
           transparentAtTop
             ? `${styles.transparentAtTopHeader} ${
-              !isInView('header-sentinel') && styles.scrolledDown
-            }`
+                !isInView('header-sentinel') && styles.scrolledDown
+              }`
             : `${styles.Header} ${
-              !isInView('header-sentinel') && styles.scrolledDown
-            }`
+                !isInView('header-sentinel') && styles.scrolledDown
+              }`
         }
       >
         <NavBar />

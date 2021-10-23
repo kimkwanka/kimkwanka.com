@@ -1,14 +1,27 @@
-import { useState, useContext, createContext, MouseEvent, FC } from 'react';
+import {
+  useState,
+  useContext,
+  createContext,
+  MouseEvent,
+  FC,
+  Dispatch,
+  SetStateAction,
+} from 'react';
 
 import useScrollSpy from '../useScrollSpy/useScrollSpy';
 
-const SectionContext = createContext(null);
+interface IContextProps {
+  currentSection: string;
+  setCurrentSection: Dispatch<SetStateAction<string>>;
+}
+
+const SectionContext = createContext<Partial<IContextProps>>({});
 
 const SectionProvider: FC = ({ children }) => {
-  const [currentSection, setCurrentSection] = useState(null);
+  const [currentSection, setCurrentSection] = useState<string>('');
 
   return (
-    <SectionContext.Provider value={[currentSection, setCurrentSection]}>
+    <SectionContext.Provider value={{ currentSection, setCurrentSection }}>
       {children}
     </SectionContext.Provider>
   );
@@ -17,11 +30,11 @@ const SectionProvider: FC = ({ children }) => {
 const useSections = () => {
   const { observe } = useScrollSpy({ rootMargin: '-50% 0px -50% 0px' });
 
-  const [currentSection, setCurrentSection] = useContext(SectionContext);
+  const { currentSection, setCurrentSection } = useContext(SectionContext);
 
   const observeSection = (id: string) =>
     observe(id, () => {
-      setCurrentSection(id);
+      setCurrentSection?.(id);
     });
 
   const scrollToSection = (e: MouseEvent<HTMLAnchorElement>) => {

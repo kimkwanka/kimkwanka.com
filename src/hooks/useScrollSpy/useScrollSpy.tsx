@@ -1,58 +1,80 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, MouseEvent } from 'react';
 
-const useScrollSpy = (options = {}) => {
-  const { root = null, rootMargin = '', thresholds = 0 } = options;
-  const elementRefs = useRef({});
-  const observerRef = useRef(null);
+interface IIntersectionObserverOptions {
+  root?: HTMLElement | null;
+  rootMargin?: string;
+  threshold?: number | number[];
+}
 
-  const [observedElements, setObservedElements] = useState({});
+interface ICustomHTMLElement extends HTMLElement {
+  onEnterView?: () => void;
+  onExitView?: () => void;
+  observerId: string;
+}
+
+interface IElementInView {
+  id: string;
+  isInView?: boolean;
+}
+
+const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
+  const { root = null, rootMargin = '', threshold = 0 } = options;
+  const elementRefs = useRef<Map<string, ICustomHTMLElement>>(new Map());
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  const [observedElements, setObservedElements] = useState<
+    Map<string, IElementInView>
+  >(new Map());
 
   const observe =
-    (id: string, onEnterView = null, onExitView = null) =>
-    (el) => {
+    (id: string, onEnterView?: () => void, onExitView?: () => void) =>
+    (el: HTMLElement | null) => {
       if (el) {
-        elementRefs.current[id] = el;
-        elementRefs.current[id].onEnterView = onEnterView;
-        elementRefs.current[id].onExitView = onExitView;
-        elementRefs.current[id].observerId = id;
+        elementRefs.current.set(id, {
+          ...el,
+          onEnterView,
+          onExitView,
+          observerId: id,
+        });
       }
     };
 
-  const isInView = (id) => observedElements[id]?.isInView;
+  const isInView = (id: string) => observedElements?.get(id)?.isInView;
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       (entries) => {
-        const updatedElementsInView = {};
+        const updatedElementsInView: Map<string, IElementInView> = new Map();
 
         entries.forEach((entry) => {
+          const targetElement = entry.target as ICustomHTMLElement;
           if (entry.isIntersecting) {
-            entry.target.onEnterView?.();
+            targetElement.onEnterView?.();
           } else {
-            entry.target.onExitView?.();
+            targetElement.onExitView?.();
           }
 
-          updatedElementsInView[entry.target.observerId] = {
+          updatedElementsInView.set(targetElement.observerId, {
             isInView: entry.isIntersecting,
-            id: entry.target.observerId,
-          };
+            id: targetElement.observerId,
+          });
         });
 
         setObservedElements(updatedElementsInView);
       },
-      { root, rootMargin, thresholds },
+      { root, rootMargin, threshold },
     );
 
-    Object.values(elementRefs.current).forEach((element) => {
-      observerRef.current.observe(element);
+    elementRefs.current.forEach((element) => {
+      observerRef?.current?.observe(element);
     });
 
     return () => {
-      observerRef.current.disconnect();
+      observerRef?.current?.disconnect();
     };
-  }, [root, rootMargin, thresholds]);
+  }, [root, rootMargin, threshold]);
 
-  const scrollToTarget = (e) => {
+  const scrollToTarget = (e: MouseEvent<HTMLAnchorElement>) => {
     if (window.location.pathname !== '/') {
       return;
     }

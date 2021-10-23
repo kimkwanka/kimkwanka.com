@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "airbnb",
-    "next"
-  ],
+  "extends": ["airbnb", "next", "plugin:prettier/recommended"],
   "rules": {
     "brace-style": ["error", "1tbs"],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts" : true }],

@@ -19,9 +19,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const data = await recaptchaRes.json();
 
     res.status(200).send(data);
-  } catch (error: any) {
-    console.error(error);
-    res.status(500).send({ error: error.message });
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : error;
+
+    console.error(errorMessage);
+
+    res.status(500).send({ success: false, error: errorMessage });
   }
 };
 

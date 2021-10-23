@@ -16,9 +16,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     });
 
     res.status(202).send({ success: true, error: null });
-  } catch (error: any) {
-    console.error(error);
-    res.status(500).send({ success: false, error: error.message });
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : error;
+
+    console.error(errorMessage);
+
+    res.status(500).send({ success: false, error: errorMessage });
   }
 };
 

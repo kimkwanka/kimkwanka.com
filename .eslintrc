@@ -4,6 +4,7 @@
   "plugins": ["@typescript-eslint"],
   "extends": ["airbnb", "next", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
   "rules": {
+    "react/require-default-props": [1, { "ignoreFunctionalComponents": true }],
     "brace-style": ["error", "1tbs"],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],

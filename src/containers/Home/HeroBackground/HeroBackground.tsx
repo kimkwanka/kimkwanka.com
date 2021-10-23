@@ -1,41 +1,42 @@
 import { useLayoutEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
+import THREE from 'three';
 
 import styles from './HeroBackground.module.scss';
 
 const Plane = () => {
-  const planeGeoRef = useRef(null);
-  const meshRef = useRef(null);
-  const count = useRef(0);
-  const zArray = useRef([]);
+  const planeGeoRef = useRef<THREE.PlaneGeometry>(null);
+  const meshRef = useRef<THREE.Mesh>(null);
+  const count = useRef<number>(0);
+  const zArray = useRef<number[]>([]);
 
   useLayoutEffect(() => {
-    for (
-      let i = 2;
-      i < planeGeoRef.current.attributes.position.array.length;
-      i += 3
-    ) {
-      planeGeoRef.current.attributes.position.array[i] +=
-        Math.random() * 5000 - 2000;
-      zArray.current.push(planeGeoRef.current.attributes.position.array[i]);
+    if (planeGeoRef?.current) {
+      const { position } = planeGeoRef.current.attributes;
+
+      for (let i = 0; i < position.count; i++) {
+        const newZ = position.getZ(i) + Math.random() * 5000 - 2000;
+        position.setZ(i, newZ);
+        zArray.current.push(newZ);
+      }
     }
   }, []);
 
   useFrame(() => {
-    for (
-      let i = 2;
-      i < Math.floor(planeGeoRef.current.attributes.position.array.length);
-      i += 3
-    ) {
-      const index = Math.floor(i / 3);
+    if (planeGeoRef?.current && meshRef?.current) {
+      const { position } = planeGeoRef.current.attributes;
 
-      planeGeoRef.current.attributes.position.array[i] =
-        Math.sin(i + count.current * 0.00002) *
-        (zArray.current[index] - zArray.current[index] * 0.6);
-      count.current += 0.1;
+      for (let i = 0; i < position.count; i++) {
+        position.setZ(
+          i,
+          Math.sin(i + count.current * 0.00002) *
+            (zArray.current[i] - zArray.current[i] * 0.6),
+        );
+        count.current += 0.1;
+      }
+      planeGeoRef.current.attributes.position.needsUpdate = true;
+      meshRef.current.rotation.z -= 0.0003;
     }
-    planeGeoRef.current.attributes.position.needsUpdate = true;
-    meshRef.current.rotation.z -= 0.0003;
   });
 
   return (

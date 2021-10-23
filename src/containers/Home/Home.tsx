@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import { useState, useRef } from 'react';
+import { useState, useRef, MouseEvent } from 'react';
 import Image from 'next/image';
 
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -13,7 +13,7 @@ import styles from './Home.module.scss';
 import ProjectCard from './ProjectCard/ProjectCard';
 import HeroBackground from './HeroBackground/HeroBackground';
 
-const unCrypt = (s, shift) => {
+const unCrypt = (s: string, shift: number) => {
   let n = 0;
   let r = '';
   for (let i = 0; i < s.length; i++) {
@@ -26,7 +26,7 @@ const unCrypt = (s, shift) => {
   return r;
 };
 
-const unCryptMailTo = (s, shift) => {
+const unCryptMailTo = (s: string, shift: number) => {
   if (typeof location !== 'undefined') {
     location.href = unCrypt(s, shift);
   }
@@ -34,13 +34,12 @@ const unCryptMailTo = (s, shift) => {
 
 const HomeView = () => {
   const { observeSection, scrollToSection } = useSections();
-  const contactFormRef = useRef(null);
+  const contactFormRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
     recaptchaSuccess: false,
-    submitDisabled: true,
   });
 
   const isSubmitDisabled = !(
@@ -50,9 +49,9 @@ const HomeView = () => {
     formData.recaptchaSuccess
   );
 
-  const isContactFormValid = () => contactFormRef.current.reportValidity();
+  const isContactFormValid = () => contactFormRef?.current?.reportValidity();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     if (isContactFormValid()) {
@@ -292,7 +291,7 @@ const HomeView = () => {
                 />
               </label>
               <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY}
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY || ''}
                 onChange={async (response) => {
                   try {
                     const res = await fetch('/api/recaptcha', {

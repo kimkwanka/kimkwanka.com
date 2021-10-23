@@ -7,16 +7,16 @@ import Image from 'next/image';
 
 import styles from './ProjectCard.module.scss';
 
-interface Props {
+interface IProjectCardProps {
   title: string;
   description: string;
   href: string;
   imgSrc: string;
   blurDataURL: string;
-  mirrored: boolean;
+  mirrored?: boolean;
 }
 
-const ProjectCard: FC<Props> = ({
+const ProjectCard: FC<IProjectCardProps> = ({
   title,
   description,
   href,

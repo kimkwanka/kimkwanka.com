@@ -1,10 +1,10 @@
-import { useState, useContext, createContext } from 'react';
+import { useState, useContext, createContext, MouseEvent, FC } from 'react';
 
 import useScrollSpy from '../useScrollSpy/useScrollSpy';
 
 const SectionContext = createContext(null);
 
-const SectionProvider = ({ children }) => {
+const SectionProvider: FC = ({ children }) => {
   const [currentSection, setCurrentSection] = useState(null);
 
   return (
@@ -19,12 +19,12 @@ const useSections = () => {
 
   const [currentSection, setCurrentSection] = useContext(SectionContext);
 
-  const observeSection = (id) =>
+  const observeSection = (id: string) =>
     observe(id, () => {
       setCurrentSection(id);
     });
 
-  const scrollToSection = (e) => {
+  const scrollToSection = (e: MouseEvent<HTMLAnchorElement>) => {
     if (window.location.pathname !== '/') {
       return;
     }

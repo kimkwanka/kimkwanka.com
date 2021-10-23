@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "npx eslint \"pages/**/*.{ts,tsx}\"; npx eslint \"src/**/*.{ts,tsx}\"; npx tsc",
     "export": "next build && next export"
   },
   "dependencies": {
@@ -24,6 +24,8 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@types/react": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
     "eslint": "7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "11.1.2",

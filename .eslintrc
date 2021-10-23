@@ -1,5 +1,8 @@
 {
-  "extends": ["airbnb", "next", "plugin:prettier/recommended"],
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["airbnb", "next", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
   "rules": {
     "brace-style": ["error", "1tbs"],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],

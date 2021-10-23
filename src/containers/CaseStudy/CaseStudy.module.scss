@@ -11,9 +11,9 @@
   section {
     margin: var(--s5) auto;
     max-width: 762px;
-  
+
     &:last-of-type {
-      padding-bottom: var(--s8)
+      padding-bottom: var(--s8);
     }
   }
 
@@ -29,7 +29,8 @@
     margin-top: var(--s8);
   }
 
-  h3, h5 {
+  h3,
+  h5 {
     margin-top: var(--s3);
   }
 
@@ -159,4 +160,3 @@
 //     grid-area: image;
 //   }
 // }
-

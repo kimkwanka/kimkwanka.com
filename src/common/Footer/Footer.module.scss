@@ -1,7 +1,7 @@
 .Footer {
   background: rgba(0, 0, 0, 0.87);
-  color: rgba(255, 255, 255,0.87);
-  padding: var(--s3) 0 ;
+  color: rgba(255, 255, 255, 0.87);
+  padding: var(--s3) 0;
 }
 
 .FooterContainer {
@@ -14,7 +14,7 @@
   padding: var(--s3);
 
   * + * {
-   margin-top: var(--s3);
+    margin-top: var(--s3);
   }
 }
 
@@ -65,5 +65,5 @@
 }
 
 .Copyright {
-  color: rgba(255, 255, 255, 0.6)
+  color: rgba(255, 255, 255, 0.6);
 }

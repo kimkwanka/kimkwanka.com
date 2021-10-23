@@ -27,7 +27,7 @@
 }
 
 .NavBarLinkButton {
-  margin-left: var(--s3)
+  margin-left: var(--s3);
 }
 
 .activeNavBarLink {
@@ -126,11 +126,10 @@
       background: var(--accentCol);
     }
   }
-  
 }
 
 .HamburgerMenu {
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
   left: 0;
   overflow: hidden;
   position: fixed;
@@ -154,12 +153,12 @@
   margin: 0;
   text-align: left;
 
-
   * + * {
     margin-top: var(--s3);
   }
 
-  .NavBarLink, .NavBarLinkButton {
+  .NavBarLink,
+  .NavBarLinkButton {
     font-size: 1.953rem;
   }
 }

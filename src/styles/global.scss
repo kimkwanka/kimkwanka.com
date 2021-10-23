@@ -18,11 +18,11 @@
   // --primaryCol: #29BFDA;
   // --secondaryCol: #B04BBF;
 
-  --primaryCol: #00D1CA;
-  --secondaryCol: #C8FFBE;
+  --primaryCol: #00d1ca;
+  --secondaryCol: #c8ffbe;
   --tertiaryCol: #f97565;
   --quaternaryCol: #eb4985;
-  --accentCol: #F36076;
+  --accentCol: #f36076;
 
   --linkUnderlineCol: #00d1ca62;
 
@@ -76,7 +76,11 @@ a:not([class]) {
   color: var(--textCol);
 
   // Fat underline link style:
-  background: linear-gradient(to left, var(--linkUnderlineCol), var(--linkUnderlineCol));
+  background: linear-gradient(
+    to left,
+    var(--linkUnderlineCol),
+    var(--linkUnderlineCol)
+  );
   background-position: 0 100%;
   background-size: 100% 0.4em;
   background-repeat: repeat-x;

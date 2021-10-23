@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'iconfont';
-  src:  url('/fonts/iconfont.eot?b8jrt6');
-  src:  url('/fonts/iconfont.eot?b8jrt6#iefix') format('embedded-opentype'),
+  src: url('/fonts/iconfont.eot?b8jrt6');
+  src: url('/fonts/iconfont.eot?b8jrt6#iefix') format('embedded-opentype'),
     url('/fonts/iconfont.ttf?b8jrt6') format('truetype'),
     url('/fonts/iconfont.woff?b8jrt6') format('woff'),
     url('/fonts/iconfont.svg?b8jrt6#iconfont') format('svg');
@@ -10,7 +10,8 @@
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'iconfont' !important;
   speak: never;
@@ -26,38 +27,38 @@
 }
 
 .icon-chevron-thin-right:before {
-  content: "\e902";
+  content: '\e902';
 }
 .icon-external-link:before {
-  content: "\e901";
+  content: '\e901';
 }
 .icon-coffee:before {
-  content: "\e900";
+  content: '\e900';
 }
 .icon-printer:before {
-  content: "\e954";
+  content: '\e954';
 }
 .icon-heart:before {
-  content: "\e9da";
+  content: '\e9da';
 }
 .icon-arrow-down2:before {
-  content: "\ea3e";
+  content: '\ea3e';
 }
 .icon-embed2:before {
-  content: "\ea80";
+  content: '\ea80';
 }
 .icon-mail2:before {
-  content: "\ea84";
+  content: '\ea84';
 }
 .icon-twitter:before {
-  content: "\ea96";
+  content: '\ea96';
 }
 .icon-github:before {
-  content: "\eab0";
+  content: '\eab0';
 }
 .icon-linkedin2:before {
-  content: "\eaca";
+  content: '\eaca';
 }
 .icon-file-pdf:before {
-  content: "\eadf";
+  content: '\eadf';
 }

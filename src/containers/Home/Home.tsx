@@ -166,9 +166,10 @@ const HomeView = () => {
               <Image
                 src="/img/portrait_round.png"
                 alt="Kim Kwanka"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAIAAADETxJQAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAM0lEQVQImQEoANf/ALmSgc6jlFpGQQD//OPqsaCTbWIAopmO/+/Rq4x/AAsAD9iumwMACbjwE7MJq4V2AAAAAElFTkSuQmCC"
                 className={styles.AboutImage}
                 layout="fill"
-                priority
               />
             </div>
           </div>

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npx eslint \"pages/**/*.{ts,tsx}\"; npx eslint \"src/**/*.{ts,tsx}\"; npx tsc",
+    "lint": "npx eslint \"pages/**/*.{ts,tsx}\"; npx eslint \"src/**/*.{ts,tsx}\"; npx tsc --noEmit",
     "export": "next build && next export"
   },
   "dependencies": {

@@ -9,7 +9,7 @@ interface IIntersectionObserverOptions {
 interface ICustomHTMLElement extends HTMLElement {
   onEnterView?: () => void;
   onExitView?: () => void;
-  observerId: string;
+  observerId?: string;
 }
 
 interface IElementInView {
@@ -28,14 +28,15 @@ const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
 
   const observe =
     (id: string, onEnterView?: () => void, onExitView?: () => void) =>
-    (el: HTMLElement | null) => {
+    (el: ICustomHTMLElement | null) => {
       if (el) {
-        elementRefs.current.set(id, {
-          ...el,
-          onEnterView,
-          onExitView,
-          observerId: id,
-        });
+        const newElement = el;
+
+        newElement.onEnterView = onEnterView;
+        newElement.onExitView = onExitView;
+        newElement.observerId = id;
+
+        elementRefs.current.set(id, newElement);
       }
     };
 
@@ -48,15 +49,17 @@ const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
 
         entries.forEach((entry) => {
           const targetElement = entry.target as ICustomHTMLElement;
+
           if (entry.isIntersecting) {
             targetElement.onEnterView?.();
           } else {
             targetElement.onExitView?.();
           }
+          const id = targetElement.observerId || '_no_id_';
 
-          updatedElementsInView.set(targetElement.observerId, {
+          updatedElementsInView.set(id, {
             isInView: entry.isIntersecting,
-            id: targetElement.observerId,
+            id,
           });
         });
 

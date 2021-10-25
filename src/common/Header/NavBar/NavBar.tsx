@@ -59,7 +59,11 @@ const NavBar = () => {
           <li>
             <Link href="/#contact">
               <a
-                className={styles.NavBarLink}
+                className={
+                  currentSection === '#contact'
+                    ? styles.activeNavBarLink
+                    : styles.NavBarLink
+                }
                 href="#contact"
                 onClick={scrollToSection}
               >
@@ -81,9 +85,6 @@ const NavBar = () => {
                 priority
               />
             </div>
-            {/* <h4 className={styles.Logo}>
-              <span className="gradient--secondary">kwanka</span>
-            </h4> */}
           </a>
         </Link>
       </div>
@@ -135,7 +136,11 @@ const NavBar = () => {
           <li>
             <Link href="/#contact">
               <a
-                className={`${styles.NavBarLinkButton} button clear--secondary`}
+                className={
+                  currentSection === '#contact'
+                    ? styles.activeNavBarLink
+                    : styles.NavBarLink
+                }
                 href="#contact"
                 onClick={scrollToSection}
               >

@@ -2,42 +2,24 @@
   background: rgba(0, 0, 0, 0.9);
   padding: var(--s2) 0;
   position: fixed;
-  transition: padding var(--transitionSpeed) var(--transitionTiming);
+  transition: padding var(--transitionSpeed) var(--transitionTiming),
+    background-color var(--transitionSpeed) var(--transitionTiming);
   width: 100%;
   z-index: 100;
 }
 
-.transparentAtTopHeader {
+.HomeHeader {
   background: none;
   composes: Header;
 }
 
 .HeaderSentinel {
-  height: 84px; // Height of the header
+  height: 70px; // Height of the header
+  width: 100%;
   position: absolute;
 }
 
 .scrolledDown {
   padding: 4px 0;
-}
-
-// Since the Intersection Observer fires while page load, the solid header is shown for a bit.
-// To remedy this, instead of using a transition, we use a delayed animation instead, which
-// makes it so that only the transparent header is ever shown during loading.
-// The only downside is that there is no transition when scrolling back up again.
-
-.transparentAtTopHeader.scrolledDown {
-  animation: solidifyAnimation;
-  animation-duration: 0.3s;
-  animation-delay: 0.1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes solidifyAnimation {
-  from {
-    background: none;
-  }
-  to {
-    background: rgba(0, 0, 0, 0.9);
-  }
+  background: rgba(0, 0, 0, 0.9);
 }

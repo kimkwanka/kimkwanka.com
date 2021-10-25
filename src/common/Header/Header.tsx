@@ -6,22 +6,26 @@ import NavBar from './NavBar/NavBar';
 
 import styles from './Header.module.scss';
 
-const Header = ({ transparentAtTop = false }) => {
+const Header = ({ isHomeHeader = false }) => {
   const { observe, isInView } = useScrollSpy();
+
+  // On first render, isInView() returns undefined
+  const scrolledDown = !(
+    isInView('header-sentinel') ||
+    typeof isInView('header-sentinel') === 'undefined'
+  );
 
   return (
     <>
-      <div id="header-sentinel" ref={observe('header-sentinel')} />
+      <div
+        id="header-sentinel"
+        className={styles.HeaderSentinel}
+        ref={observe('header-sentinel')}
+      />
       <header
-        className={
-          transparentAtTop
-            ? `${styles.transparentAtTopHeader} ${
-                !isInView('header-sentinel') && styles.scrolledDown
-              }`
-            : `${styles.Header} ${
-                !isInView('header-sentinel') && styles.scrolledDown
-              }`
-        }
+        className={`
+        ${isHomeHeader ? styles.HomeHeader : styles.Header} 
+        ${scrolledDown && styles.scrolledDown}`}
       >
         <NavBar />
       </header>

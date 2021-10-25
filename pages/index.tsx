@@ -21,7 +21,7 @@ export default function IndexPage() {
         />
         <meta name="author" content="Kim Kwanka" />
       </Head>
-      <Header transparentAtTop />
+      <Header isHomeHeader />
       <Home />
       <Footer />
     </>

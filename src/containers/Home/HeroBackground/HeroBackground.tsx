@@ -1,12 +1,12 @@
 import { useLayoutEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import THREE from 'three';
+import { PlaneGeometry, Mesh } from 'three';
 
 import styles from './HeroBackground.module.scss';
 
 const Plane = () => {
-  const planeGeoRef = useRef<THREE.PlaneGeometry>(null);
-  const meshRef = useRef<THREE.Mesh>(null);
+  const planeGeoRef = useRef<PlaneGeometry>(null);
+  const meshRef = useRef<Mesh>(null);
   const count = useRef<number>(0);
   const zArray = useRef<number[]>([]);
 

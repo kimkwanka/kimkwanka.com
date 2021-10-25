@@ -57,7 +57,8 @@ const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
     return () => {
       observerRef?.current?.disconnect();
     };
-  }, [root, rootMargin, threshold]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [root, rootMargin, JSON.stringify(threshold)]);
 
   const observe =
     (id: string, onEnterView?: () => void, onExitView?: () => void) =>

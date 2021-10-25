@@ -4,14 +4,17 @@
 import { useState, useRef, MouseEvent } from 'react';
 import Image from 'next/image';
 
-import ReCAPTCHA from 'react-google-recaptcha';
+import dynamic from 'next/dynamic';
 
+import useScrollSpy from '@hooks/useScrollSpy/useScrollSpy';
 import { useSections } from '@hooks/useSections/useSections';
 
 import styles from './Home.module.scss';
 
 import ProjectCard from './ProjectCard/ProjectCard';
 import HeroBackground from './HeroBackground/HeroBackground';
+
+const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'));
 
 const unCrypt = (s: string, shift: number) => {
   let n = 0;
@@ -33,6 +36,7 @@ const unCryptMailTo = (s: string, shift: number) => {
 };
 
 const HomeView = () => {
+  const { observe, isInView } = useScrollSpy();
   const { observeSection, scrollToSection } = useSections();
   const contactFormRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
@@ -213,7 +217,10 @@ const HomeView = () => {
         id="contact"
         ref={observeSection('#contact')}
       >
-        <div className={styles.ContactContainer}>
+        <div
+          className={styles.ContactContainer}
+          ref={observe('#contact-container', true)}
+        >
           <div className={styles.ContactContent}>
             <h1 className={styles.ContactTitle}>Get In Touch</h1>
             <h5 className={styles.ContactSubTitle}>
@@ -291,28 +298,30 @@ const HomeView = () => {
                   required
                 />
               </label>
-              <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY || ''}
-                onChange={async (response) => {
-                  try {
-                    const res = await fetch('/api/recaptcha', {
-                      method: 'POST',
-                      headers: {
-                        Accept: 'application/json, text/plain, *',
-                        'Content-Type': 'application/json',
-                      },
-                      body: JSON.stringify({ response }),
-                    });
-                    const data = await res.json();
-                    setFormData({
-                      ...formData,
-                      recaptchaSuccess: data.success,
-                    });
-                  } catch (error) {
-                    console.error(error);
-                  }
-                }}
-              />
+              {isInView('#contact-container') && (
+                <ReCAPTCHA
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY || ''}
+                  onChange={async (response) => {
+                    try {
+                      const res = await fetch('/api/recaptcha', {
+                        method: 'POST',
+                        headers: {
+                          Accept: 'application/json, text/plain, *',
+                          'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ response }),
+                      });
+                      const data = await res.json();
+                      setFormData({
+                        ...formData,
+                        recaptchaSuccess: data.success,
+                      });
+                    } catch (error) {
+                      console.error(error);
+                    }
+                  }}
+                />
+              )}
               <div className={styles.ContactButtonContainer}>
                 <button
                   className={styles.ContactButton}

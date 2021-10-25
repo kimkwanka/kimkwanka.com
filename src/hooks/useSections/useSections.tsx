@@ -33,7 +33,7 @@ const useSections = () => {
   const { currentSection, setCurrentSection } = useContext(SectionContext);
 
   const observeSection = (id: string) =>
-    observe(id, () => {
+    observe(id, false, () => {
       setCurrentSection?.(id);
     });
 

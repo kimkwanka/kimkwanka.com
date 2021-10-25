@@ -11,7 +11,8 @@ interface IObserved {
   onEnterView?: () => void;
   onExitView?: () => void;
   id: string;
-  isInView: boolean;
+  isInView: boolean | undefined;
+  once: boolean;
 }
 
 const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
@@ -34,11 +35,22 @@ const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
           const targetElement = lookupMapRef.current.get(entry.target);
 
           if (targetElement) {
-            if (entry.isIntersecting) {
+            if (
+              entry.isIntersecting &&
+              typeof targetElement.isInView !== 'undefined'
+            ) {
               targetElement.onEnterView?.();
-            } else {
+            } else if (typeof targetElement.isInView !== 'undefined') {
               targetElement.onExitView?.();
             }
+
+            if (
+              targetElement.once &&
+              typeof targetElement.isInView !== 'undefined'
+            ) {
+              observerRef?.current?.unobserve(targetElement.element);
+            }
+
             targetElement.isInView = entry.isIntersecting;
 
             updatedMap.set(targetElement.id, targetElement);
@@ -61,7 +73,12 @@ const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
   }, [root, rootMargin, JSON.stringify(threshold)]);
 
   const observe =
-    (id: string, onEnterView?: () => void, onExitView?: () => void) =>
+    (
+      id: string,
+      once = false,
+      onEnterView?: () => void,
+      onExitView?: () => void,
+    ) =>
     (el: Element | null) => {
       if (el && !observedElementsMapRef.current.get(id)) {
         const newElement = {
@@ -69,7 +86,9 @@ const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
           id,
           onEnterView,
           onExitView,
-          isInView: false,
+          isInView: undefined,
+          lastInView: false,
+          once,
         };
 
         observedElementsMapRef.current.set(id, newElement);

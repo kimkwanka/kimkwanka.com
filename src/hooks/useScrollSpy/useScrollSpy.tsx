@@ -6,69 +6,51 @@ interface IIntersectionObserverOptions {
   threshold?: number | number[];
 }
 
-interface ICustomHTMLElement extends HTMLElement {
+interface IObserved {
+  element: Element;
   onEnterView?: () => void;
   onExitView?: () => void;
-  observerId?: string;
-}
-
-interface IElementInView {
   id: string;
-  isInView?: boolean;
+  isInView: boolean;
 }
 
 const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
   const { root = null, rootMargin = '', threshold = 0 } = options;
-  const elementRefs = useRef<Map<string, ICustomHTMLElement>>(new Map());
+  const observedElementsMapRef = useRef<Map<string, IObserved>>(new Map());
+  const lookupMapRef = useRef<WeakMap<Element, IObserved>>(new WeakMap());
+
   const observerRef = useRef<IntersectionObserver | null>(null);
 
-  const [observedElements, setObservedElements] = useState<
-    Map<string, IElementInView>
-  >(new Map());
-
-  const observe =
-    (id: string, onEnterView?: () => void, onExitView?: () => void) =>
-    (el: ICustomHTMLElement | null) => {
-      if (el) {
-        const newElement = el;
-
-        newElement.onEnterView = onEnterView;
-        newElement.onExitView = onExitView;
-        newElement.observerId = id;
-
-        elementRefs.current.set(id, newElement);
-      }
-    };
-
-  const isInView = (id: string) => observedElements?.get(id)?.isInView;
+  const [stateElements, setStateElements] = useState<Map<string, IObserved>>(
+    new Map(),
+  );
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       (entries) => {
-        const updatedElementsInView: Map<string, IElementInView> = new Map();
+        const updatedMap = new Map(observedElementsMapRef.current);
 
         entries.forEach((entry) => {
-          const targetElement = entry.target as ICustomHTMLElement;
+          const targetElement = lookupMapRef.current.get(entry.target);
 
-          if (entry.isIntersecting) {
-            targetElement.onEnterView?.();
-          } else {
-            targetElement.onExitView?.();
+          if (targetElement) {
+            if (entry.isIntersecting) {
+              targetElement.onEnterView?.();
+            } else {
+              targetElement.onExitView?.();
+            }
+            targetElement.isInView = entry.isIntersecting;
+
+            updatedMap.set(targetElement.id, targetElement);
           }
-          const id = targetElement.observerId || '_no_id_';
-
-          updatedElementsInView.set(id, {
-            isInView: entry.isIntersecting,
-            id,
-          });
         });
 
-        setObservedElements(updatedElementsInView);
+        setStateElements(updatedMap);
       },
       { root, rootMargin, threshold },
     );
 
-    elementRefs.current.forEach((element) => {
+    observedElementsMapRef.current.forEach(({ element }) => {
       observerRef?.current?.observe(element);
     });
 
@@ -76,6 +58,29 @@ const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
       observerRef?.current?.disconnect();
     };
   }, [root, rootMargin, threshold]);
+
+  const observe =
+    (id: string, onEnterView?: () => void, onExitView?: () => void) =>
+    (el: Element | null) => {
+      if (el && !observedElementsMapRef.current.get(id)) {
+        const newElement = {
+          element: el,
+          id,
+          onEnterView,
+          onExitView,
+          isInView: false,
+        };
+
+        observedElementsMapRef.current.set(id, newElement);
+        const observedElement = observedElementsMapRef.current.get(id);
+
+        if (observedElement) {
+          lookupMapRef.current.set(el, observedElement);
+        }
+      }
+    };
+
+  const isInView = (id: string) => stateElements?.get(id)?.isInView;
 
   const scrollToTarget = (e: MouseEvent<HTMLAnchorElement>) => {
     if (window.location.pathname !== '/') {

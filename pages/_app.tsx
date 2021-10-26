@@ -12,7 +12,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     <SectionProvider>
       <AnimatePresence
         exitBeforeEnter
-        onExitComplete={() => window.scrollTo(0, 0)}
+        onExitComplete={() => {
+          if (window.location.pathname !== '/') {
+            window.scrollTo(0, 0);
+          }
+        }}
       >
         <Component {...pageProps} key={Component.name} />
       </AnimatePresence>

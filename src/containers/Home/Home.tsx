@@ -2,9 +2,11 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useState, useRef, MouseEvent } from 'react';
-import Image from 'next/image';
 
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
+
+import { motion } from 'framer-motion';
 
 import useScrollSpy from '@hooks/useScrollSpy/useScrollSpy';
 import { useSections } from '@hooks/useSections/useSections';
@@ -33,6 +35,12 @@ const unCryptMailTo = (s: string, shift: number) => {
   if (typeof location !== 'undefined') {
     location.href = unCrypt(s, shift);
   }
+};
+
+const variants = {
+  hidden: { opacity: 0, x: 0, y: 200 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: 200 },
 };
 
 const HomeView = () => {
@@ -85,7 +93,14 @@ const HomeView = () => {
   };
 
   return (
-    <div className={styles.Home}>
+    <motion.div
+      initial="hidden"
+      animate="enter"
+      exit="exit"
+      variants={variants}
+      transition={{ type: 'tween', ease: 'anticipate', duration: 0.5 }}
+      className={styles.Home}
+    >
       <section className={styles.Hero} id="home" ref={observeSection('#home')}>
         <HeroBackground />
         <div className={styles.HeroContainer}>
@@ -336,7 +351,7 @@ const HomeView = () => {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

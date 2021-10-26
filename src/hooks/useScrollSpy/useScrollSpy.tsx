@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, MouseEvent } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 interface IIntersectionObserverOptions {
   root?: HTMLElement | null;
@@ -102,20 +102,9 @@ const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
 
   const isInView = (id: string) => stateElements?.get(id)?.isInView;
 
-  const scrollToTarget = (e: MouseEvent<HTMLAnchorElement>) => {
-    if (window.location.pathname !== '/') {
-      return;
-    }
-    e.preventDefault();
-    document
-      .querySelector(e.currentTarget.hash)
-      ?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return {
     observe,
     isInView,
-    scrollToTarget,
   };
 };
 

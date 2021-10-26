@@ -38,11 +38,14 @@ const useSections = () => {
     });
 
   const scrollToSection = (e: MouseEvent<HTMLAnchorElement>) => {
+    // When we're not on '/', behave like a regular link but set current section beforehand
     if (window.location.pathname !== '/') {
       setCurrentSection?.(e.currentTarget.hash);
       return;
     }
-    e.preventDefault();
+
+    // Don't preventDefault() to not break browser history
+
     document
       .querySelector(e.currentTarget.hash)
       ?.scrollIntoView({ behavior: 'smooth' });

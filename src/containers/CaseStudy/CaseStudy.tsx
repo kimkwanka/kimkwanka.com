@@ -1,9 +1,24 @@
 import Image from 'next/image';
 
+import { motion } from 'framer-motion';
+
 import styles from './CaseStudy.module.scss';
 
+const variants = {
+  hidden: { opacity: 0, x: 0, y: 200 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: 200 },
+};
+
 const CaseStudy = () => (
-  <div className={styles.CaseStudy}>
+  <motion.div
+    initial="hidden"
+    animate="enter"
+    exit="exit"
+    variants={variants}
+    transition={{ type: 'tween', ease: 'anticipate', duration: 0.5 }}
+    className={styles.CaseStudy}
+  >
     <h1 className={styles.CaseStudyTitle}>devGaido</h1>
     <div className={styles.CaseStudyImageContainer}>
       <Image
@@ -524,7 +539,7 @@ const CaseStudy = () => (
         opportunity.
       </p>
     </section>
-  </div>
+  </motion.div>
 );
 
 export default CaseStudy;

@@ -7,16 +7,33 @@ import '@src/styles/global.scss';
 
 import { SectionProvider } from '@hooks/useSections/useSections';
 
+const handleExitComplete = (): void => {
+  if (typeof window !== 'undefined') {
+    // When navigating to /devgaido, scroll to top first
+    if (window.location.pathname === '/devgaido') {
+      window.scrollTo(0, 0);
+    }
+    const hashId = window.location.hash;
+
+    if (hashId) {
+      document.querySelector(hashId)?.scrollIntoView({ block: 'start' });
+      // Adjust for framer motion's initial Y offset
+      window.scrollBy(0, -200);
+    }
+  }
+};
+
 function MyApp({ Component, pageProps }: AppProps) {
+  // Disable automatic scroll restoration
+  if (typeof window !== 'undefined') {
+    window.history.scrollRestoration = 'manual';
+  }
   return (
     <SectionProvider>
       <AnimatePresence
+        initial={false}
         exitBeforeEnter
-        onExitComplete={() => {
-          if (window.location.pathname !== '/') {
-            window.scrollTo(0, 0);
-          }
-        }}
+        onExitComplete={handleExitComplete}
       >
         <Component {...pageProps} key={Component.name} />
       </AnimatePresence>

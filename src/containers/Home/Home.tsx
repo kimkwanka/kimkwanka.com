@@ -4,6 +4,7 @@
 import { useState, useRef, MouseEvent } from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
 import { motion } from 'framer-motion';
@@ -116,13 +117,15 @@ const HomeView = () => {
             Anyone can learn to code but you can&apos;t teach someone how to
             enjoy what they&apos;re doing.
           </p>
-          <a
-            href="#work"
-            className={`${styles.HeroButton} button`}
-            onClick={scrollToSection}
-          >
-            Check out my work <span className="icon-chevron-thin-right" />
-          </a>
+          <Link href="/#work" scroll={false}>
+            <a
+              href="#work"
+              className={`${styles.HeroButton} button`}
+              onClick={scrollToSection}
+            >
+              Check out my work <span className="icon-chevron-thin-right" />
+            </a>
+          </Link>
           <div className={styles.PortraitImageContainer}>
             <Image
               src="/img/retro.svg"
@@ -132,11 +135,13 @@ const HomeView = () => {
               priority
             />
           </div>
-          <a href="#work" onClick={scrollToSection}>
-            <h2 className={styles.DownArrow}>
-              <span className="icon-arrow-down2" />
-            </h2>
-          </a>
+          <Link href="/#work" scroll={false}>
+            <a href="#work" onClick={scrollToSection}>
+              <h2 className={styles.DownArrow}>
+                <span className="icon-arrow-down2" />
+              </h2>
+            </a>
+          </Link>
         </div>
       </section>
       <section className={styles.Work} id="work" ref={observeSection('#work')}>

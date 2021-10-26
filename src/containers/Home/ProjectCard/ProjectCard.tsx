@@ -24,7 +24,7 @@ const ProjectCard: FC<IProjectCardProps> = ({
   blurDataURL,
   mirrored = false,
 }) => (
-  <Link href={href}>
+  <Link href={href} scroll={false}>
     <a className={styles.Project} href={href}>
       {!mirrored && (
         <div className={`${styles.ProjectImageContainer} ${styles[title]}`}>

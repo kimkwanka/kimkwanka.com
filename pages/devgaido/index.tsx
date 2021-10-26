@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '@common/Header/Header';
 import Footer from '@common/Footer/Footer';
+import TransitionLayout from '@common/TransitionLayout/TransitionLayout';
 
 import CaseStudy from '@containers/CaseStudy/CaseStudy';
 
@@ -23,7 +24,9 @@ export default function devGaidoPage() {
         <meta name="author" content="Kim Kwanka" />
       </Head>
       <Header />
-      <CaseStudy />
+      <TransitionLayout>
+        <CaseStudy />
+      </TransitionLayout>
       <Footer />
     </>
   );

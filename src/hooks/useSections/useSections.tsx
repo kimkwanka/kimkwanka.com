@@ -39,6 +39,7 @@ const useSections = () => {
 
   const scrollToSection = (e: MouseEvent<HTMLAnchorElement>) => {
     if (window.location.pathname !== '/') {
+      setCurrentSection?.(e.currentTarget.hash);
       return;
     }
     e.preventDefault();

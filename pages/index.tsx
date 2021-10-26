@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from '@common/Header/Header';
 import Footer from '@common/Footer/Footer';
 import Home from '@src/containers/Home/Home';
+import TransitionLayout from '@common/TransitionLayout/TransitionLayout';
 
 export default function IndexPage() {
   return (
@@ -22,7 +23,9 @@ export default function IndexPage() {
         <meta name="author" content="Kim Kwanka" />
       </Head>
       <Header isHomeHeader />
-      <Home />
+      <TransitionLayout>
+        <Home />
+      </TransitionLayout>
       <Footer />
     </>
   );

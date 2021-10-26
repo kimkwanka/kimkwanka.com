@@ -27,7 +27,7 @@ const NavBar = () => {
       >
         <ul className={styles.HamburgerNavItems}>
           <li>
-            <Link href="/#work">
+            <Link href="/#work" scroll={false}>
               <a
                 className={
                   currentSection === '#work'
@@ -42,7 +42,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/#about">
+            <Link href="/#about" scroll={false}>
               <a
                 className={
                   currentSection === '#about'
@@ -57,7 +57,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/#contact">
+            <Link href="/#contact" scroll={false}>
               <a
                 className={
                   currentSection === '#contact'
@@ -74,7 +74,7 @@ const NavBar = () => {
         </ul>
       </div>
       <div className={styles.NavBarLeftSide}>
-        <Link href="/#home">
+        <Link href="/#home" scroll={false}>
           <a className={styles.LogoLink} href="#home" onClick={scrollToSection}>
             <div className={styles.LogoImageContainer}>
               <Image
@@ -104,7 +104,7 @@ const NavBar = () => {
         </button>
         <ul className={styles.NavBarNavItems}>
           <li>
-            <Link href="/#work">
+            <Link href="/#work" scroll={false}>
               <a
                 className={
                   currentSection === '#work'
@@ -119,7 +119,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/#about">
+            <Link href="/#about" scroll={false}>
               <a
                 className={
                   currentSection === '#about'
@@ -134,7 +134,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/#contact">
+            <Link href="/#contact" scroll={false}>
               <a
                 className={
                   currentSection === '#contact'

@@ -84,10 +84,10 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
       >
         <div className={styles.ContactContent}>
           <h1 className={styles.ContactTitle}>Get In Touch</h1>
-          <h5 className={styles.ContactSubTitle}>
+          <h2 className={styles.ContactSubTitle}>
             Want to build something awesome together or just say hello?
-          </h5>
-          <h5 className={styles.ContactSubTitle}>Get in touch via:</h5>
+          </h2>
+          <h2 className={styles.ContactSubTitle}>Get in touch via:</h2>
           <div className={styles.SocialIconContainer}>
             <a
               className={styles.SocialIcon}
@@ -118,8 +118,10 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
               <span className="h1 icon-twitter" />
             </a>
           </div>
-          <h5>Or drop me a line below - </h5>
-          <h5>I&apos;d love to hear from you.</h5>
+          <h2 className={styles.ContactSubTitle}>Or drop me a line below - </h2>
+          <h2 className={styles.ContactSubTitle}>
+            I&apos;d love to hear from you.
+          </h2>
           <form className={styles.ContactForm} ref={contactFormRef}>
             <label htmlFor="contactFormName">
               Name:

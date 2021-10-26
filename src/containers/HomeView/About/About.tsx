@@ -10,10 +10,10 @@ const About = forwardRef<HTMLElement>((_, ref) => {
       <div className={styles.AboutContainer}>
         <h1 className={styles.AboutTitle}>About Me</h1>
         <div className={styles.AboutLeft}>
-          <h4 className={styles.AboutSubtitle}>
+          <h2 className={styles.AboutSubtitle}>
             Hi, I&apos;m an an ex-nurse, ex CS-student, ex-tax officer turned
             web developer.*
-          </h4>
+          </h2>
           <div className={styles.AboutImageContainer}>
             <Image
               src="/img/portrait_round.png"

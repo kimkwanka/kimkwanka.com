@@ -1,4 +1,5 @@
 import {
+  useEffect,
   useState,
   useContext,
   createContext,
@@ -27,31 +28,43 @@ const SectionProvider: FC = ({ children }) => {
   );
 };
 
+const scrollToSection = (e: MouseEvent<HTMLAnchorElement>) => {
+  // When we're not on '/', behave like a regular link
+  if (window.location.pathname !== '/') {
+    return;
+  }
+  e.preventDefault();
+
+  document
+    .querySelector(e.currentTarget.hash)
+    ?.scrollIntoView({ behavior: 'smooth' });
+
+  // window.history.replaceState(null, '', e.currentTarget.hash);
+};
+
 const useSections = () => {
   const { observe } = useScrollSpy({ rootMargin: '-50% 0px -50% 0px' });
 
   const { currentSection, setCurrentSection } = useContext(SectionContext);
 
+  useEffect(() => {
+    return () => {
+      if (window.location.pathname !== '/') {
+        setCurrentSection?.('');
+      }
+    };
+  }, [setCurrentSection]);
+
   const observeSection = (id: string) =>
-    observe(id, false, () => {
-      setCurrentSection?.(id);
+    observe({
+      id,
+      skipFirstEvent: false,
+      onEnterView: () => {
+        setCurrentSection?.(id);
+      },
     });
 
-  const scrollToSection = (e: MouseEvent<HTMLAnchorElement>) => {
-    // When we're not on '/', behave like a regular link but set current section beforehand
-    if (window.location.pathname !== '/') {
-      setCurrentSection?.(e.currentTarget.hash);
-      return;
-    }
-
-    // Don't preventDefault() to not break browser history
-
-    document
-      .querySelector(e.currentTarget.hash)
-      ?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  return { observeSection, scrollToSection, currentSection };
+  return { observeSection, currentSection };
 };
 
-export { useSections, SectionProvider };
+export { useSections, scrollToSection, SectionProvider };

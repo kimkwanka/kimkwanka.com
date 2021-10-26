@@ -80,7 +80,7 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
     <section className={styles.Contact} id="contact" ref={ref}>
       <div
         className={styles.ContactContainer}
-        ref={observe('#contact-container', true)}
+        ref={observe({ id: '#contact-container', unobserveOnEnter: true })}
       >
         <div className={styles.ContactContent}>
           <h1 className={styles.ContactTitle}>Get In Touch</h1>

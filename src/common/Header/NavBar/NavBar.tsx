@@ -3,12 +3,12 @@ import { useState, MouseEvent } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { useSections } from '@hooks/useSections/useSections';
+import { useSections, scrollToSection } from '@hooks/useSections/useSections';
 
 import styles from './NavBar.module.scss';
 
 const NavBar = () => {
-  const { scrollToSection, currentSection } = useSections();
+  const { currentSection } = useSections();
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {

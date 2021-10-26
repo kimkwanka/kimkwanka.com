@@ -3,15 +3,13 @@ import { forwardRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { useSections } from '@hooks/useSections/useSections';
+import { scrollToSection } from '@hooks/useSections/useSections';
 
 import HeroBackground from './HeroBackground/HeroBackground';
 
 import styles from './Hero.module.scss';
 
 const Hero = forwardRef<HTMLElement>((_, ref) => {
-  const { scrollToSection } = useSections();
-
   return (
     <section className={styles.Hero} id="home" ref={ref}>
       <HeroBackground />

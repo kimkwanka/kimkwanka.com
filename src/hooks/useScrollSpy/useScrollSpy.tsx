@@ -8,11 +8,21 @@ interface IIntersectionObserverOptions {
 
 interface IObserved {
   element: Element;
+  id: string;
   onEnterView?: () => void;
   onExitView?: () => void;
+  isInView?: boolean;
+  unobserveOnEnter: boolean;
+  skipFirstEvent: boolean;
+}
+
+interface IObserveOptions {
   id: string;
-  isInView: boolean | undefined;
-  once: boolean;
+  onEnterView?: () => void;
+  onExitView?: () => void;
+  isInView?: boolean;
+  unobserveOnEnter: boolean;
+  skipFirstEvent: boolean;
 }
 
 const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
@@ -36,16 +46,20 @@ const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
 
           if (targetElement) {
             if (
-              entry.isIntersecting &&
-              typeof targetElement.isInView !== 'undefined'
+              !(
+                targetElement.skipFirstEvent &&
+                typeof targetElement.isInView === 'undefined'
+              )
             ) {
-              targetElement.onEnterView?.();
-            } else if (typeof targetElement.isInView !== 'undefined') {
-              targetElement.onExitView?.();
+              if (entry.isIntersecting) {
+                targetElement.onEnterView?.();
+              } else {
+                targetElement.onExitView?.();
+              }
             }
 
             if (
-              targetElement.once &&
+              targetElement.unobserveOnEnter &&
               typeof targetElement.isInView !== 'undefined'
             ) {
               observerRef?.current?.unobserve(targetElement.element);
@@ -72,33 +86,60 @@ const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [root, rootMargin, JSON.stringify(threshold)]);
 
-  const observe =
-    (
-      id: string,
-      once = false,
-      onEnterView?: () => void,
-      onExitView?: () => void,
-    ) =>
-    (el: Element | null) => {
-      if (el && !observedElementsMapRef.current.get(id)) {
-        const newElement = {
-          element: el,
-          id,
-          onEnterView,
-          onExitView,
-          isInView: undefined,
-          lastInView: false,
-          once,
-        };
+  interface IObserveParams {
+    // eslint-disable-next-line no-unused-vars
+    (param: string): (el: Element | null) => void;
+    // eslint-disable-next-line no-unused-vars
+    (param: object): (el: Element | null) => void;
+  }
 
-        observedElementsMapRef.current.set(id, newElement);
-        const observedElement = observedElementsMapRef.current.get(id);
+  const observe: IObserveParams = (param) => (el: Element | null) => {
+    if (!el) {
+      return;
+    }
 
-        if (observedElement) {
-          lookupMapRef.current.set(el, observedElement);
-        }
+    let newElement = {} as IObserved;
+    let id = '';
+
+    if (typeof param === 'string') {
+      id = param;
+
+      newElement = {
+        element: el,
+        id,
+        unobserveOnEnter: false,
+        skipFirstEvent: true,
+      };
+    } else {
+      const {
+        id: _id,
+        onEnterView,
+        onExitView,
+        unobserveOnEnter = false,
+        skipFirstEvent = true,
+      } = param as IObserveOptions;
+
+      id = _id;
+
+      newElement = {
+        element: el,
+        id: _id,
+        onEnterView,
+        onExitView,
+        unobserveOnEnter,
+        skipFirstEvent,
+      };
+    }
+
+    if (!observedElementsMapRef.current.get(id)) {
+      observedElementsMapRef.current.set(id, newElement);
+      const observedElement = observedElementsMapRef.current.get(id);
+
+      if (observedElement) {
+        lookupMapRef.current.set(el, observedElement);
       }
-    };
+    }
+  };
 
   const isInView = (id: string) => stateElements?.get(id)?.isInView;
 

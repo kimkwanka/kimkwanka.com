@@ -52,12 +52,10 @@ const About = forwardRef<HTMLElement>((_, ref) => {
             my toes into UI/UX design on the side.
           </p>
         </div>
-        <h5 className={styles.AboutEndText}>
-          <strong>
-            I&apos;m now on the lookout for the next opportunity to enrich
-            people&apos;s lives by turning ideas into reality.
-          </strong>
-        </h5>
+        <p className={styles.AboutEndText}>
+          I&apos;m now on the lookout for the next opportunity to enrich
+          people&apos;s lives by turning ideas into reality.
+        </p>
       </div>
     </section>
   );

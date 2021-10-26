@@ -64,7 +64,9 @@
 }
 
 .AboutEndText {
+  composes: h5 from global;
   color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
   margin-top: var(--s7);
   max-width: 811px;
 }

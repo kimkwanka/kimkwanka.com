@@ -1,0 +1,22 @@
+.Work {
+  display: flex;
+  padding: var(--s6) 0;
+  width: 100%;
+}
+
+.WorkContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--contentMaxWidth);
+  padding: var(--s3);
+  width: 100%;
+}
+
+.WorkContent {
+  width: 100%;
+}
+
+.WorkTitle {
+  margin-bottom: var(--s5);
+}

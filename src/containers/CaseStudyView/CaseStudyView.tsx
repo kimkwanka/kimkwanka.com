@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 
-import styles from './CaseStudy.module.scss';
+import styles from './CaseStudyView.module.scss';
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 200 },

@@ -3,7 +3,7 @@ import Header from '@common/Header/Header';
 import Footer from '@common/Footer/Footer';
 import TransitionLayout from '@common/TransitionLayout/TransitionLayout';
 
-import CaseStudy from '@containers/CaseStudy/CaseStudy';
+import CaseStudy from '@src/containers/CaseStudyView/CaseStudyView';
 
 export default function devGaidoPage() {
   return (

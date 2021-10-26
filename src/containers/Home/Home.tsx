@@ -181,7 +181,17 @@ const HomeView = () => {
               Hi, I&apos;m an an ex-nurse, ex CS-student, ex-tax officer turned
               web developer.*
             </h4>
-            <div className={styles.AboutImageContainer}>
+            <div
+              className={styles.AboutImageContainer}
+              // style={{
+              //   height: '410px',
+              //   marginBottom: 'var(--s3)',
+              //   margin: '0',
+              //   overflow: 'hidden',
+              //   position: 'relative',
+              //   width: '100%',
+              // }}
+            >
               <Image
                 src="/img/portrait_round.png"
                 alt="Kim Kwanka"

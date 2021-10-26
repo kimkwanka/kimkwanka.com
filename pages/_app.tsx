@@ -1,11 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { AppProps } from 'next/app';
+
 import { AnimatePresence } from 'framer-motion';
 
 import 'modern-css-reset';
 import '@src/styles/global.scss';
 
 import { SectionProvider } from '@hooks/useSections/useSections';
+import useFixPageTransitionCSS from '@hooks/useFixPageTransitionCSS/useFixPageTransitionCSS';
 
 const handleExitComplete = (): void => {
   if (typeof window !== 'undefined') {
@@ -28,6 +30,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   if (typeof window !== 'undefined') {
     window.history.scrollRestoration = 'manual';
   }
+
+  useFixPageTransitionCSS();
+
   return (
     <SectionProvider>
       <AnimatePresence

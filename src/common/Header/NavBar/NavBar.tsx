@@ -96,6 +96,7 @@ const NavBar = () => {
               : styles.HamburgerButton
           }
           type="button"
+          aria-label="menu button"
           onClick={handleClick}
         >
           <span className={styles.HamburgerSpan} />

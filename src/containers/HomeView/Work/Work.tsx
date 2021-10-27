@@ -13,7 +13,7 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
           <ProjectCard
             title="devGaido"
             href="/devgaido"
-            imgSrc="/img/devgaido.png"
+            imgSrc="/img/devgaido.jpg"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
             description=" A platform created to provide a guided learning
         experience for (aspiring) web developers"
@@ -21,7 +21,7 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
           <ProjectCard
             title="myFlix"
             href="/myflix"
-            imgSrc="/img/myflix.png"
+            imgSrc="/img/myflix.jpg"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
             description="A movie database frontend app with a custom backend"
             mirrored
@@ -29,7 +29,7 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
           <ProjectCard
             title="Pokédex"
             href="/pokedex"
-            imgSrc="/img/pokedex.png"
+            imgSrc="/img/pokedex.jpg"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
             description="An app that allows you to learn more about Pokémon"
           />

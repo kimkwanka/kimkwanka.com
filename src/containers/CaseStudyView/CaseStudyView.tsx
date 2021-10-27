@@ -23,7 +23,7 @@ const CaseStudy = () => (
     <div className={styles.CaseStudyImageContainer}>
       <Image
         className={styles.CaseStudyImage}
-        src="/img/devgaido_hero.png"
+        src="/img/devgaido_hero.jpg"
         alt="devGaido hero image"
         placeholder="blur"
         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
@@ -85,7 +85,7 @@ const CaseStudy = () => (
     <div className={styles.CaseStudyImageContainer}>
       <Image
         className={styles.CaseStudyImage}
-        src="/img/firstdesign.png"
+        src="/img/firstdesign.jpg"
         alt="first design of devgaido"
         placeholder="blur"
         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVQImQEnANj/AP7//+ru9cfL07PExADCw8umqLRYZnpGVmoAUFNjAAAbjpantLvK9h8WHxwQlfsAAAAASUVORK5CYII="
@@ -100,7 +100,7 @@ const CaseStudy = () => (
       <div className={styles.TechStackImageContainer}>
         <Image
           className={styles.TechStackImage}
-          src="/img/stack.png"
+          src="/img/stack.jpg"
           alt="icons of our tech stack"
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQImWOY8v8ag42nMwMDQ5kHACDzA/AuVM8zAAAAAElFTkSuQmCC"
@@ -160,7 +160,7 @@ const CaseStudy = () => (
     <div className={styles.CaseStudyImageContainer}>
       <Image
         className={styles.CaseStudyImage}
-        src="/img/seconddesign.png"
+        src="/img/seconddesign.jpg"
         alt="redesigned devgaido styleguide"
         placeholder="blur"
         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AHZ4gQAACOfp9vz//wCwsL3IxdG8wM28wM27jRBFBAzvJgAAAABJRU5ErkJggg=="
@@ -193,7 +193,7 @@ const CaseStudy = () => (
     <div className={styles.CaseStudyImageContainer}>
       <Image
         className={styles.CaseStudyImage}
-        src="/img/library.png"
+        src="/img/library.jpg"
         alt="devgaido's library showing the p1xt guides"
         placeholder="blur"
         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWNgkNFi4JVlEFVm0LNj+Pz+3bIVq/fu3fv/3x8AU3gLDvWJT8AAAAAASUVORK5CYII="
@@ -285,7 +285,7 @@ const CaseStudy = () => (
       <div className={styles.smallCaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
-          src="/img/purify.png"
+          src="/img/purify.jpg"
           alt="screenshot of purifycss"
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAIUlEQVQImWO4eePqujVrZs2YoaioyPD//485c6eDWAwMAL4+C+Nj/xloAAAAAElFTkSuQmCC"
@@ -322,7 +322,7 @@ const CaseStudy = () => (
       <div className={styles.smallCaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
-          src="/img/medium.png"
+          src="/img/medium.jpg"
           alt="screenshot of the medium article"
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAJUlEQVQImQEaAOX/AOj//5+5xavI1N36/wAXAAAeCQA3Jh6zo5rN7gzKe+KU4wAAAABJRU5ErkJggg=="
@@ -370,7 +370,7 @@ const CaseStudy = () => (
       <div className={styles.smallCaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
-          src="/img/sameimage.png"
+          src="/img/sameimage.jpg"
           alt="placeholder images used everywhere in the app"
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVQImWOwTMhn4BBh4BDxKmxg+P/7v544v7G0yP+ffwFaZgkg/16hAwAAAABJRU5ErkJggg=="
@@ -421,7 +421,7 @@ const CaseStudy = () => (
       <div className={styles.smallCaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
-          src="/img/nginx.png"
+          src="/img/nginx.jpg"
           alt="load balancing"
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWP48+0PgxoDgwnD/7//GX69+cygwcAgxfD/138AoPEMV7oKoogAAAAASUVORK5CYII="

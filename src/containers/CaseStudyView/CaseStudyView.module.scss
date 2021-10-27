@@ -80,35 +80,25 @@
 }
 
 .CaseStudyImageContainer {
-  border-radius: 8px;
-  height: 600px;
-  overflow: hidden;
-  position: relative;
+  margin-top: var(--s5);
+  margin-bottom: var(--s3);
+  position: relative; // Just to get rid of Next.js warning
+  width: 100%;
+
+  > span {
+    position: unset !important;
+  }
 }
 
-.smallCaseStudyImageContainer {
-  composes: CaseStudyImageContainer;
-  height: 450px;
-  margin-top: var(--s5);
-}
-.smallCaseStudyImageContainer + small {
+.CaseStudyImageContainer + small {
   margin-bottom: var(--s3);
 }
 
-.TechStackImageContainer {
-  border-radius: 8px;
-  height: 101px;
-  margin-top: var(--s3);
-  overflow: hidden;
-  position: relative;
-}
-
-.TechStackImage {
-  object-fit: contain;
-}
-
 .CaseStudyImage {
-  object-fit: cover;
+  border-radius: 8px;
+  height: unset !important;
+  position: relative !important;
+  width: 100% !important;
 }
 
 .CaseStudyImageCaption {

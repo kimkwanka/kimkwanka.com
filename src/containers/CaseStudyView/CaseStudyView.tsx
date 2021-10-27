@@ -81,7 +81,6 @@ const CaseStudy = () => (
           <span className="icon-embed2" /> Code
         </a>
       </div>
-    </section>
     <div className={styles.CaseStudyImageContainer}>
       <Image
         className={styles.CaseStudyImage}
@@ -95,11 +94,12 @@ const CaseStudy = () => (
     <small className={styles.CaseStudyImageCaption}>
       devGaido - still in all its blue and green glory
     </small>
+    </section>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Tech Stack</h2>
-      <div className={styles.TechStackImageContainer}>
+      <div className={styles.CaseStudyImageContainer}>
         <Image
-          className={styles.TechStackImage}
+          className={styles.CaseStudyImage}
           src="/img/stack.jpg"
           alt="icons of our tech stack"
           placeholder="blur"
@@ -156,7 +156,6 @@ const CaseStudy = () => (
         was utilized here as a reverse proxy to lessen the load on the server
         and allowing it to scale more easily in the future.
       </p>
-    </section>
     <div className={styles.CaseStudyImageContainer}>
       <Image
         className={styles.CaseStudyImage}
@@ -170,6 +169,7 @@ const CaseStudy = () => (
     <small className={styles.CaseStudyImageCaption}>
       The Styleguide after rebranding
     </small>
+    </section>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Purpose and Goal</h2>
       <p>
@@ -189,7 +189,6 @@ const CaseStudy = () => (
         text-only which paired with their flexible curriculum structure made it
         somewhat hard to follow them or track your progress.
       </p>
-    </section>
     <div className={styles.CaseStudyImageContainer}>
       <Image
         className={styles.CaseStudyImage}
@@ -203,6 +202,7 @@ const CaseStudy = () => (
     <small className={styles.CaseStudyImageCaption}>
       The P1XT guides in devGaido&apos;s library
     </small>
+    </section>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Problems</h2>
       <p>
@@ -216,7 +216,7 @@ const CaseStudy = () => (
       <h3 className={styles.CaseStudyProblemTitle}>
         <span>Problem No. 1:</span> Managing and writing CSS
       </h3>
-      <div className={styles.smallCaseStudyImageContainer}>
+      <div className={styles.CaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
           src="/img/css.jpg"
@@ -282,7 +282,7 @@ const CaseStudy = () => (
       <h3 className={styles.CaseStudySolutionTitle}>
         <span>Solution:</span> Custom Fork of PurifyCSS
       </h3>
-      <div className={styles.smallCaseStudyImageContainer}>
+      <div className={styles.CaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
           src="/img/purify.jpg"
@@ -319,7 +319,7 @@ const CaseStudy = () => (
       <h3 className={styles.CaseStudySolutionTitle}>
         <span>Solution:</span> Adding state and lifecycle hooks via HOCs
       </h3>
-      <div className={styles.smallCaseStudyImageContainer}>
+      <div className={styles.CaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
           src="/img/medium.jpg"
@@ -367,7 +367,7 @@ const CaseStudy = () => (
       <h3 className={styles.CaseStudyProblemTitle}>
         <span>Problem No. 4:</span> Lesson images
       </h3>
-      <div className={styles.smallCaseStudyImageContainer}>
+      <div className={styles.CaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
           src="/img/sameimage.jpg"
@@ -418,7 +418,7 @@ const CaseStudy = () => (
       <h3 className={styles.CaseStudySolutionTitle}>
         <span>Solution:</span> NGINX, Cloudflare, Hydration
       </h3>
-      <div className={styles.smallCaseStudyImageContainer}>
+      <div className={styles.CaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
           src="/img/nginx.jpg"
@@ -487,7 +487,7 @@ const CaseStudy = () => (
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Lessons Learned</h2>
       <p>The main takeaway for me from this project is:</p>
-      <div className={styles.smallCaseStudyImageContainer}>
+      <div className={styles.CaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
           src="/img/communication.jpg"

@@ -81,19 +81,19 @@ const CaseStudy = () => (
           <span className="icon-embed2" /> Code
         </a>
       </div>
-    <div className={styles.CaseStudyImageContainer}>
-      <Image
-        className={styles.CaseStudyImage}
-        src="/img/firstdesign.jpg"
-        alt="first design of devgaido"
-        placeholder="blur"
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVQImQEnANj/AP7//+ru9cfL07PExADCw8umqLRYZnpGVmoAUFNjAAAbjpantLvK9h8WHxwQlfsAAAAASUVORK5CYII="
-        layout="fill"
-      />
-    </div>
-    <small className={styles.CaseStudyImageCaption}>
-      devGaido - still in all its blue and green glory
-    </small>
+      <div className={styles.CaseStudyImageContainer}>
+        <Image
+          className={styles.CaseStudyImage}
+          src="/img/firstdesign.jpg"
+          alt="first design of devgaido"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVQImQEnANj/AP7//+ru9cfL07PExADCw8umqLRYZnpGVmoAUFNjAAAbjpantLvK9h8WHxwQlfsAAAAASUVORK5CYII="
+          layout="fill"
+        />
+      </div>
+      <small className={styles.CaseStudyImageCaption}>
+        devGaido - still in all its blue and green glory
+      </small>
     </section>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Tech Stack</h2>
@@ -156,19 +156,19 @@ const CaseStudy = () => (
         was utilized here as a reverse proxy to lessen the load on the server
         and allowing it to scale more easily in the future.
       </p>
-    <div className={styles.CaseStudyImageContainer}>
-      <Image
-        className={styles.CaseStudyImage}
-        src="/img/seconddesign.jpg"
-        alt="redesigned devgaido styleguide"
-        placeholder="blur"
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AHZ4gQAACOfp9vz//wCwsL3IxdG8wM28wM27jRBFBAzvJgAAAABJRU5ErkJggg=="
-        layout="fill"
-      />
-    </div>
-    <small className={styles.CaseStudyImageCaption}>
-      The Styleguide after rebranding
-    </small>
+      <div className={styles.CaseStudyImageContainer}>
+        <Image
+          className={styles.CaseStudyImage}
+          src="/img/seconddesign.jpg"
+          alt="redesigned devgaido styleguide"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AHZ4gQAACOfp9vz//wCwsL3IxdG8wM28wM27jRBFBAzvJgAAAABJRU5ErkJggg=="
+          layout="fill"
+        />
+      </div>
+      <small className={styles.CaseStudyImageCaption}>
+        The Styleguide after rebranding
+      </small>
     </section>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Purpose and Goal</h2>
@@ -189,19 +189,19 @@ const CaseStudy = () => (
         text-only which paired with their flexible curriculum structure made it
         somewhat hard to follow them or track your progress.
       </p>
-    <div className={styles.CaseStudyImageContainer}>
-      <Image
-        className={styles.CaseStudyImage}
-        src="/img/library.jpg"
-        alt="devgaido's library showing the p1xt guides"
-        placeholder="blur"
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWNgkNFi4JVlEFVm0LNj+Pz+3bIVq/fu3fv/3x8AU3gLDvWJT8AAAAAASUVORK5CYII="
-        layout="fill"
-      />
-    </div>
-    <small className={styles.CaseStudyImageCaption}>
-      The P1XT guides in devGaido&apos;s library
-    </small>
+      <div className={styles.CaseStudyImageContainer}>
+        <Image
+          className={styles.CaseStudyImage}
+          src="/img/library.jpg"
+          alt="devgaido's library showing the p1xt guides"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWNgkNFi4JVlEFVm0LNj+Pz+3bIVq/fu3fv/3x8AU3gLDvWJT8AAAAAASUVORK5CYII="
+          layout="fill"
+        />
+      </div>
+      <small className={styles.CaseStudyImageCaption}>
+        The P1XT guides in devGaido&apos;s library
+      </small>
     </section>
     <section>
       <h2 className={styles.CaseStudySectionTitle}>Problems</h2>

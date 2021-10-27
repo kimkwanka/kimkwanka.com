@@ -243,7 +243,7 @@ const CaseStudy = () => (
       </h3>
       <p>
         Even though the idea of functional/atomic CSS frameworks like{' '}
-        <a href="https://tachyons.io/">Tachyons</a> and
+        <a href="https://tachyons.io/">Tachyons</a> and{' '}
         <a href="https://tailwindcss.com/">Tailwind</a> was pretty novel back
         then, we opted to use this approach to compose the brunt of our CSS
         directly in our code.

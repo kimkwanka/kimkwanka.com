@@ -37,16 +37,21 @@
 }
 
 .AboutImageContainer {
-  height: 410px;
-  margin-bottom: var(--s3);
-  margin: 0;
-  overflow: hidden;
-  position: relative;
+  margin: 0 auto var(--s3) auto;
+  max-width: 400px;
+  position: relative; // Just to get rid of Next.js warning
   width: 100%;
+
+  > span {
+    position: unset !important;
+  }
 }
 
 .AboutImage {
-  object-fit: contain;
+  border-radius: 50%;
+  height: unset !important;
+  position: relative !important;
+  width: 100% !important;
 }
 
 .AboutSmall {

@@ -11,12 +11,12 @@ const About = forwardRef<HTMLElement>((_, ref) => {
         <h1 className={styles.AboutTitle}>About Me</h1>
         <div className={styles.AboutLeft}>
           <h2 className={styles.AboutSubtitle}>
-            Hi, I&apos;m an an ex-nurse, ex CS-student, ex-tax officer turned
-            web developer.*
+            Or: &quot;How an ex-nurse, ex CS-student, ex-tax officer became a
+            web developer.&quot;*
           </h2>
           <div className={styles.AboutImageContainer}>
             <Image
-              src="/img/portrait_round.png"
+              src="/img/portrait_square.jpg"
               alt="Kim Kwanka"
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAIAAADETxJQAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAM0lEQVQImQEoANf/ALmSgc6jlFpGQQD//OPqsaCTbWIAopmO/+/Rq4x/AAsAD9iumwMACbjwE7MJq4V2AAAAAElFTkSuQmCC"

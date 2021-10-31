@@ -150,10 +150,12 @@ button,
   display: inline-block;
   font-size: 20px;
   font-weight: bold !important;
+  letter-spacing: 0.2em;
   line-height: 1.6;
   outline: none;
   padding: var(--s1) var(--s3);
   text-decoration: none;
+  text-transform: uppercase;
   transition: all var(--transitionSpeed) var(--transitionTiming);
 
   &:hover {

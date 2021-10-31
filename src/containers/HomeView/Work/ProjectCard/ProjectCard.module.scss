@@ -1,4 +1,5 @@
 .Project {
+  background: var(--gradientDark);
   border-radius: 8px;
   display: flex;
   margin-bottom: var(--s6);
@@ -6,14 +7,14 @@
 }
 
 .ProjectImageContainer {
-  background: var(--gradientDark);
   flex-grow: 1;
-  height: 480px;
+  min-height: 380px;
+  width: 100%;
   position: relative;
 }
 
 .ProjectImage {
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s ease-out, filter 0.3s ease-out;
 }
 
@@ -23,19 +24,13 @@
 
 .ProjectDetails,
 .ProjectDetailsLeft {
-  background: var(--gradientDark);
+  background: rgba(255, 255, 255, 0.03);
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 430px;
-}
-
-.ProjectDetails {
-  padding: var(--s3) var(--s3) var(--s3) 0;
-}
-
-.ProjectDetailsLeft {
-  padding: var(--s3) 0 var(--s3) var(--s3);
+  padding: var(--s5);
+  width: 100%;
 }
 
 .Project button {
@@ -53,4 +48,19 @@
 
 .ProjectDescription {
   margin-bottom: var(--s5);
+}
+
+@media screen and (max-width: 900px){
+  .Project {
+    flex-direction: column;
+  }
+
+  .ProjectImageContainer {
+    order: -1;
+  }
+
+  .ProjectDetails,
+  .ProjectDetailsLeft {
+    align-items: center;
+  }
 }

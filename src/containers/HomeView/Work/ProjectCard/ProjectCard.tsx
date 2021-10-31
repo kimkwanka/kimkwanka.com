@@ -48,7 +48,10 @@ const ProjectCard: FC<IProjectCardProps> = ({
         <h2 className={styles.ProjectTitle}>{title}</h2>
         <p className={styles.ProjectDescription}>{description}</p>
         <button type="button" className={styles.ProjectButton}>
-          View Case Study <span className="icon-chevron-thin-right" />
+          View Case{' '}
+          <span>
+            Study <span className="icon-chevron-thin-right" />
+          </span>
         </button>
       </div>
       {mirrored && (

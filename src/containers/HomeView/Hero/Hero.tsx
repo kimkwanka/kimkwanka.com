@@ -28,7 +28,10 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
             className={`${styles.HeroButton} button`}
             onClick={scrollToSection}
           >
-            Check out my work <span className="icon-chevron-thin-right" />
+            Check out my{' '}
+            <span>
+              work <span className="icon-chevron-thin-right" />
+            </span>
           </a>
         </Link>
         <div className={styles.PortraitImageContainer}>

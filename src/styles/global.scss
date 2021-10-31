@@ -194,7 +194,13 @@ button.secondary,
 // Enable a smooth transition from blurred placeholder to img for next/image
 img {
   transition: filter 0.3s linear;
-  filter: brightness(0.8) contrast(1.1) !important;
+}
+
+// Dim next/image spans to make the <Image /> less bright without breaking placeholder transition
+[class*='ImageContainer'] {
+  span {
+    filter: brightness(0.8) contrast(1.1) !important;
+  }
 }
 
 .gradient {

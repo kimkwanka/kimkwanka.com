@@ -86,11 +86,19 @@ const About = forwardRef<HTMLElement>((_, ref) => {
               </div>
               <p className={styles.TestimonialsCardText}>
                 “I had the pleasure of working on a team in which Kim was the
-                lead Developer. Her technical skill and dedication to the
-                project made it a very rewarding experience. But, even more
-                importantly was her willingness to share her considerable
-                expertise across the team. She brings out not only the best in
-                herself, but also the best in others.”
+                lead Developer.
+              </p>
+              <p className={styles.TestimonialsCardText}>
+                Her technical skill and dedication to the project made it a very
+                rewarding experience.{' '}
+              </p>
+              <p className={styles.TestimonialsCardText}>
+                But, even more importantly was her willingness to share her
+                considerable expertise across the team.
+              </p>
+              <p className={styles.TestimonialsCardText}>
+                She brings out not only the best in herself, but also the best
+                in others.”
               </p>
             </div>
             <div className={styles.TestimonialsCard}>
@@ -115,14 +123,24 @@ const About = forwardRef<HTMLElement>((_, ref) => {
                 </small>
               </div>
               <p className={styles.TestimonialsCardText}>
-                “Efficiency + creativity = Kim! Whether it was creating cool
-                websites, rendering optimization, animation or project
-                management, Kim took care of the job with precision and fine
-                quality. One of her many notable strengths is her ability to
-                deal with several challenging tasks and projects in
-                high-pressure situations. She&quot;s always been reliable and on
-                target when it came to deadlines. I definitely recommend Kim if
-                you need to get the job done!”
+                “Efficiency + creativity = Kim!
+              </p>
+              <p className={styles.TestimonialsCardText}>
+                Whether it was creating cool websites, rendering optimization,
+                animation or project management - Kim took care of the job with
+                precision and fine quality.
+              </p>
+              <p className={styles.TestimonialsCardText}>
+                One of her many notable strengths is her ability to deal with
+                several challenging tasks and projects in high-pressure
+                situations.
+              </p>
+              <p className={styles.TestimonialsCardText}>
+                She&quot;s always been reliable and on target when it came to
+                deadlines.
+              </p>
+              <p className={styles.TestimonialsCardText}>
+                I definitely recommend Kim if you need to get the job done!”
               </p>
             </div>
             <div className={styles.TestimonialsCard}>
@@ -149,11 +167,19 @@ const About = forwardRef<HTMLElement>((_, ref) => {
               <p className={styles.TestimonialsCardText}>
                 “The combination of kindness, resourcefulness, and a love of
                 building is down-right inspiring, and perfectly encapsulates
-                what we’re all about. In short, Kim is the type of person who
-                makes the people around her better. I’ve already learned so much
-                from her, from organizing teams in an excel sheet, to creating
-                awesome project docs, to project management. We’re extremely
-                lucky to have a person like Kim in our zoo.”
+                what we’re all about.{' '}
+              </p>
+              <p className={styles.TestimonialsCardText}>
+                In short, Kim is the type of person who makes the people around
+                her better.{' '}
+              </p>
+              <p className={styles.TestimonialsCardText}>
+                I’ve already learned so much from her, from organizing teams in
+                an excel sheet, to creating awesome project docs, to project
+                management.{' '}
+              </p>
+              <p className={styles.TestimonialsCardText}>
+                We’re extremely lucky to have a person like Kim in our zoo.”
               </p>
             </div>
           </div>

@@ -105,6 +105,7 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   padding: var(--s3);
 }
 
@@ -144,5 +145,4 @@
 
 .TestimonialsCardText {
   margin-top: var(--s3);
-  flex: 1 0 auto;
 }

@@ -1,6 +1,4 @@
 .Footer {
-  background: rgba(0, 0, 0, 0.87);
-  color: rgba(255, 255, 255, 0.87);
   padding: var(--s3) 0;
 }
 
@@ -36,7 +34,7 @@
 }
 
 .ImprintLink {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--textL2Dark);
   text-decoration: none;
 
   &:hover {
@@ -65,5 +63,5 @@
 }
 
 .Copyright {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--textL2Dark);
 }

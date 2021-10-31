@@ -15,7 +15,6 @@
 }
 
 .NavBarLink {
-  color: #fff;
   font-size: 20px;
   font-weight: bold;
   padding: var(--s1) var(--s3);
@@ -58,7 +57,6 @@
 
 .LogoLink {
   display: flex;
-  color: #fff;
   z-index: 301;
   width: 100%;
   &:hover {

@@ -1,5 +1,4 @@
 .About {
-  color: #131313;
   display: flex;
   padding: var(--s6) 0;
   width: 100%;
@@ -55,7 +54,6 @@
 }
 
 .AboutSmall {
-  color: rgba(0, 0, 0, 0.6);
   display: inline-block;
   margin-top: var(--s3);
   margin-bottom: var(--s5);
@@ -63,14 +61,12 @@
 
 .AboutSubtitle {
   composes: h4 from global;
-  color: rgba(0, 0, 0, 0.7);
   margin-bottom: var(--s3);
   max-width: 811px;
 }
 
 .AboutEndText {
   composes: h5 from global;
-  color: rgba(0, 0, 0, 0.7);
   font-weight: bold;
   margin-top: var(--s7);
   max-width: 811px;

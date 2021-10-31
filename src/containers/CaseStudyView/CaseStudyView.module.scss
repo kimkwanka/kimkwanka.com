@@ -17,10 +17,6 @@
     }
   }
 
-  p {
-    color: #292929;
-  }
-
   * + p {
     margin-top: var(--s3);
   }
@@ -42,10 +38,6 @@
 
 .CaseStudyTitle {
   margin: var(--s4) 0 var(--s3) 0;
-}
-
-.CaseStudySubtitle {
-  color: #666;
 }
 
 .CaseStudyProblemTitle,
@@ -102,7 +94,6 @@
 }
 
 .CaseStudyImageCaption {
-  color: rgba(0, 0, 0, 0.4);
   display: inline-block;
   text-align: center;
   width: 100%;
@@ -130,23 +121,3 @@
     padding: 0 0 0 var(--s3);
   }
 }
-
-// .CaseStudySection {
-//   display: grid;
-//   column-gap: var(--s3);
-//   grid-template-columns: 1.618fr 1fr;
-//   grid-template-areas:
-//     ". image"
-//     ". image"
-//     ". image";
-
-//   p {
-//     margin-top: var(--s3);
-//     width: 100%;
-//   }
-
-//   .CaseStudyImageContainer {
-//     margin-top: var(--s3);
-//     grid-area: image;
-//   }
-// }

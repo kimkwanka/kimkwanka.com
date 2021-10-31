@@ -1,6 +1,8 @@
 .Footer {
   background: var(--gradientDark);
+  letter-spacing: 0.3em;
   padding: var(--s3) 0;
+  text-transform: uppercase;
 }
 
 .FooterContainer {
@@ -64,5 +66,5 @@
 }
 
 .Copyright {
-  color: var(--textL2Dark);
+  composes: gradient--secondary from global;
 }

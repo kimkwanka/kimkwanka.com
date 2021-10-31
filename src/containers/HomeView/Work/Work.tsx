@@ -9,28 +9,29 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
     <section className={styles.Work} id="work" ref={ref}>
       <div className={styles.WorkContainer}>
         <div className={styles.WorkContent}>
-          <h1 className={styles.WorkTitle}>Work</h1>
+          <p className={styles.WorkSubTitle}>Projects & Case Studies</p>
+          <h1 className={styles.WorkTitle}>Recent Work</h1>
           <ProjectCard
             title="devGaido"
             href="/devgaido"
-            imgSrc="/img/devgaido.jpg"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
+            imgSrc="/img/devgaido.png"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAACADEzK6Gyuczb4ADLyMTb0878/f3+//+ZFQ/qfgAN+wAAAABJRU5ErkJggg=="
             description=" A platform created to provide a guided learning
         experience for (aspiring) web developers"
           />
           <ProjectCard
             title="myFlix"
             href="/myflix"
-            imgSrc="/img/myflix.jpg"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
+            imgSrc="/img/myflix.png"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPoXHxy2dx1ZiK+8gzuDNf//9ewDRRgUFJksAEAjfUI/oWmZgAAAAAASUVORK5CYII="
             description="A movie database frontend app with a custom backend"
             mirrored
           />
           <ProjectCard
             title="Pokédex"
             href="/pokedex"
-            imgSrc="/img/pokedex.jpg"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
+            imgSrc="/img/pokedex.png"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVQImWPgY2CIDLL2cFb6//8Pg5WRSnFGpKOy2q8PvwBmAgnOEzRdUwAAAABJRU5ErkJggg=="
             description="An app that allows you to learn more about Pokémon"
           />
         </div>

@@ -1,5 +1,5 @@
 .Project {
-  border-radius: 16px;
+  border-radius: 8px;
   display: flex;
   margin-bottom: var(--s6);
   overflow: hidden;
@@ -7,7 +7,7 @@
 }
 
 .ProjectImageContainer {
-  background: var(--backGradient);
+  background: var(--gradientDark);;
   flex-grow: 1;
   height: 500px;
   position: relative;
@@ -24,7 +24,7 @@
 
 .ProjectDetails,
 .ProjectDetailsLeft {
-  background: var(--backCol);
+  background: var(--gradientDark);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -37,21 +37,6 @@
 
 .ProjectDetailsLeft {
   padding: var(--s6) var(--s5) var(--s6) var(--s6);
-}
-
-.devGaido {
-  --backCol: #2e576b;
-  --backGradient: linear-gradient(90deg, #79c4d2, #2e576b);
-}
-
-.myFlix {
-  --backCol: #5d2e6b;
-  --backGradient: linear-gradient(90deg, #5d2e6b, #be79d2);
-}
-
-.Pokédex {
-  --backCol: #6b302e;
-  --backGradient: linear-gradient(90deg, #d28979, #6b302e);
 }
 
 .Project button {

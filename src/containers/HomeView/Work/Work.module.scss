@@ -19,5 +19,9 @@
 
 .WorkTitle {
   composes: gradient__underline from global;
-  margin-bottom: var(--s5);
+  margin-bottom: var(--s10);
+}
+
+.WorkSubTitle {
+  composes: subtitle from global;
 }

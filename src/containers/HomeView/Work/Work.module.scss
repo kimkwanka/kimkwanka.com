@@ -18,5 +18,6 @@
 }
 
 .WorkTitle {
+  composes: gradient__underline from global;
   margin-bottom: var(--s5);
 }

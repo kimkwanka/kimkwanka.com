@@ -211,3 +211,25 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.gradient__underline {
+  background: linear-gradient(
+    to left,
+    var(--tertiaryCol),
+    var(--quaternaryCol)
+  );
+  background-position: 0 100%;
+  background-size: 100% 4px;
+  background-repeat: repeat-x;
+}
+
+.gradient__underline--secondary {
+  background: linear-gradient(
+    to left,
+    var(--primaryCol),
+    var(--secondaryCol)
+  );
+  background-position: 0 100%;
+  background-size: 100% 4px;
+  background-repeat: repeat-x;
+}

@@ -37,7 +37,12 @@
 }
 
 .CaseStudyTitle {
+  composes: gradient__underline from global;
   margin: var(--s4) 0 var(--s3) 0;
+}
+
+.CaseStudySectionTitle {
+  composes: gradient__underline from global;
 }
 
 .CaseStudyProblemTitle,
@@ -50,18 +55,21 @@
 }
 
 .CaseStudyProblemTitle {
+  composes: gradient__underline from global;
   span {
     color: var(--accentCol);
   }
 }
 
 .CaseStudySolutionTitle {
+  composes: gradient__underline--secondary from global;
   span {
     color: var(--primaryCol);
   }
 }
 
 .CaseStudySolutionAndProblemTitle {
+  composes: gradient__underline from global;
   span {
     color: var(--accentCol);
   }

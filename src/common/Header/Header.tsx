@@ -36,7 +36,7 @@ const Header = ({ isHomeHeader = false }) => {
           x: 0,
           y: 0,
           backgroundColor:
-            isHomeHeader && !scrolledDown ? 'rgba(0,0,0,0)' : 'rgba(0,0,0,0.9)',
+            isHomeHeader && !scrolledDown ? 'rgba(0,0,0,0)' : '#121212',
         }}
         exit="exit"
         variants={variants}

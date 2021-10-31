@@ -1,5 +1,4 @@
 .Header {
-  background: rgba(0, 0, 0, 0.9);
   padding: var(--s2) 0;
   position: fixed;
   transition: padding var(--transitionSpeed) var(--transitionTiming),
@@ -26,5 +25,4 @@
 
 .scrolledDown {
   padding: 4px 0;
-  background: rgba(0, 0, 0, 0.9);
 }

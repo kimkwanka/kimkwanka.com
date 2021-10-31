@@ -36,6 +36,7 @@ const CaseStudy = () => (
     </div>
     <section className={styles.Section}>
       <div className={styles.Container}>
+        <small className={styles.CaseStudySubTitle}>How it began</small>
         <h2 className={styles.CaseStudySectionTitle}>Introduction</h2>
         <p>
           When{' '}
@@ -100,6 +101,7 @@ const CaseStudy = () => (
     </section>
     <section className={styles.Section}>
       <div className={styles.Container}>
+        <small className={styles.CaseStudySubTitle}>Technologies used</small>
         <h2 className={styles.CaseStudySectionTitle}>Tech Stack</h2>
         <div className={styles.CaseStudyImageContainer}>
           <Image
@@ -174,6 +176,7 @@ const CaseStudy = () => (
     </section>
     <section className={styles.Section}>
       <div className={styles.Container}>
+        <small className={styles.CaseStudySubTitle}>Why devGaido?</small>
         <h2 className={styles.CaseStudySectionTitle}>Purpose and Goal</h2>
         <p>
           We built devGaido to provide a guided learning experience for people
@@ -206,6 +209,7 @@ const CaseStudy = () => (
     </section>
     <section className={styles.Section}>
       <div className={styles.Container}>
+        <small className={styles.CaseStudySubTitle}>Challenges we faced</small>
         <h2 className={styles.CaseStudySectionTitle}>Problems</h2>
         <p>
           As I can&apos;t possibly cover all the problems we had to deal with,
@@ -216,9 +220,8 @@ const CaseStudy = () => (
       </div>
     </section>
     <section className={styles.Container}>
-      <h3 className={styles.CaseStudyProblemTitle}>
-        <span>Problem No. 1:</span> Managing and writing CSS
-      </h3>
+      <small className={styles.CaseStudySubTitle}>Problem No. 1</small>
+      <h3 className={styles.CaseStudyProblemTitle}>CSS Management</h3>
       <div className={styles.CaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
@@ -241,9 +244,8 @@ const CaseStudy = () => (
       </p>
     </section>
     <section className={styles.Container}>
-      <h3 className={styles.CaseStudySolutionTitle}>
-        <span>Solution:</span> Atomic CSS framework
-      </h3>
+      <small className={styles.CaseStudySubTitle}>Solution</small>
+      <h3 className={styles.CaseStudySolutionTitle}>Atomic CSS framework</h3>
       <p>
         Even though the idea of functional/atomic CSS frameworks like{' '}
         <a href="https://tachyons.io/">Tachyons</a> and{' '}
@@ -258,9 +260,8 @@ const CaseStudy = () => (
       </p>
     </section>
     <section className={styles.Container}>
-      <h3 className={styles.CaseStudyProblemTitle}>
-        <span>Problem No. 2:</span> Bloated CSS
-      </h3>
+      <small className={styles.CaseStudySubTitle}>Problem No. 2</small>
+      <h3 className={styles.CaseStudyProblemTitle}>Bloated CSS</h3>
       <p>
         Using Atomiku made creating new Components and their style much easier
         and - more importantly - much faster. But it came with a huge drawback:
@@ -270,10 +271,10 @@ const CaseStudy = () => (
       </p>
     </section>
     <section className={styles.Container}>
-      <h3 className={styles.CaseStudySolutionAndProblemTitle}>
-        <span>Solution</span> (and new <span>Problem</span>)<span>:</span>{' '}
-        PurifyCSS
-      </h3>
+      <small className={styles.CaseStudySubTitle}>
+        Solution and new Problem
+      </small>
+      <h3 className={styles.CaseStudySolutionAndProblemTitle}>PurifyCSS</h3>
       <p>
         To get rid of the unnecessary CSS, we decided to use PurifyCSS as a
         final build step. This worked great at first glance but when we
@@ -282,8 +283,9 @@ const CaseStudy = () => (
       </p>
     </section>
     <section className={styles.Container}>
+      <small className={styles.CaseStudySubTitle}>Solution</small>
       <h3 className={styles.CaseStudySolutionTitle}>
-        <span>Solution:</span> Custom Fork of PurifyCSS
+        Custom Fork of PurifyCSS
       </h3>
       <div className={styles.CaseStudyImageContainer}>
         <Image
@@ -303,9 +305,8 @@ const CaseStudy = () => (
       </p>
     </section>
     <section className={styles.Container}>
-      <h3 className={styles.CaseStudyProblemTitle}>
-        <span>Problem No. 3:</span> Function Components
-      </h3>
+      <small className={styles.CaseStudySubTitle}>Problem No. 3</small>
+      <h3 className={styles.CaseStudyProblemTitle}>Function Components</h3>
       <p>
         Driven by the promise of (future) performance benefits and the elegance
         of arrow functions, we tried to use function components wherever
@@ -316,8 +317,9 @@ const CaseStudy = () => (
       </p>
     </section>
     <section className={styles.Container}>
+      <small className={styles.CaseStudySubTitle}>Solution</small>
       <h3 className={styles.CaseStudySolutionTitle}>
-        <span>Solution:</span> Adding state and lifecycle hooks via HOCs
+        Add state and lifecycle hooks via HOCs
       </h3>
       <div className={styles.CaseStudyImageContainer}>
         <Image
@@ -364,9 +366,8 @@ const CaseStudy = () => (
       </p>
     </section>
     <section className={styles.Container}>
-      <h3 className={styles.CaseStudyProblemTitle}>
-        <span>Problem No. 4:</span> Lesson images
-      </h3>
+      <small className={styles.CaseStudySubTitle}>Problem No. 4</small>
+      <h3 className={styles.CaseStudyProblemTitle}>Lesson images</h3>
       <div className={styles.CaseStudyImageContainer}>
         <Image
           className={styles.CaseStudyImage}
@@ -386,9 +387,8 @@ const CaseStudy = () => (
       </p>
     </section>
     <section className={styles.Container}>
-      <h3 className={styles.CaseStudySolutionTitle}>
-        <span>Solution:</span> Let the server do it
-      </h3>
+      <small className={styles.CaseStudySubTitle}>Solution</small>
+      <h3 className={styles.CaseStudySolutionTitle}>Let the server do it</h3>
       <p>
         Seeing that devGaido exclusively linked to external resources for its
         learning materials, the idea of just using the URLs of the lesson
@@ -398,9 +398,8 @@ const CaseStudy = () => (
       </p>
     </section>
     <section className={styles.Container}>
-      <h3 className={styles.CaseStudyProblemTitle}>
-        <span>Problem No. 5:</span> Server load
-      </h3>
+      <small className={styles.CaseStudySubTitle}>Problem No. 5</small>
+      <h3 className={styles.CaseStudyProblemTitle}>Server load</h3>
       <p>
         To keep the costs low for our MVP version, our production server was
         running on a &quot;best-bang-for-your-buck&quot; VPS, which was,
@@ -412,8 +411,9 @@ const CaseStudy = () => (
       </p>
     </section>
     <section className={styles.Container}>
+      <small className={styles.CaseStudySubTitle}>Solution</small>
       <h3 className={styles.CaseStudySolutionTitle}>
-        <span>Solution:</span> NGINX, Cloudflare, Hydration
+        NGINX, Cloudflare, Hydration
       </h3>
       <div className={styles.CaseStudyImageContainer}>
         <Image
@@ -483,6 +483,7 @@ const CaseStudy = () => (
     </section>
     <section className={styles.Section}>
       <div className={styles.Container}>
+        <small className={styles.CaseStudySubTitle}>Knowledge Gained</small>
         <h2 className={styles.CaseStudySectionTitle}>Lessons Learned</h2>
         <p>The main takeaway for me from this project is:</p>
         <div className={styles.CaseStudyImageContainer}>
@@ -531,6 +532,7 @@ const CaseStudy = () => (
     </section>
     <section className={styles.Section}>
       <div className={styles.Container}>
+        <small className={styles.CaseStudySubTitle}>Conclusion</small>
         <h2 className={styles.CaseStudySectionTitle}>Closing Thoughts</h2>
         <p>
           I am grateful to have been part of this project and to be able to work

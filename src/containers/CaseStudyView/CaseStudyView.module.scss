@@ -9,20 +9,6 @@
   * + p {
     margin-top: var(--s3);
   }
-
-  h2 {
-    margin-top: var(--s8);
-  }
-
-  h3,
-  h5 {
-    margin-top: var(--s3);
-  }
-
-  h5 {
-    font-weight: 400;
-    line-height: 1.6;
-  }
 }
 
 .Section {
@@ -51,6 +37,7 @@
 
 .CaseStudySectionTitle {
   composes: gradient__underline from global;
+  margin-bottom: var(--s5)
 }
 
 .CaseStudyProblemTitle,
@@ -63,28 +50,15 @@
 }
 
 .CaseStudyProblemTitle {
-  composes: gradient__underline from global;
-  span {
-    color: var(--accentCol);
-  }
+  composes: gradient--secondary from global;
 }
 
 .CaseStudySolutionTitle {
-  composes: gradient__underline--secondary from global;
-  span {
-    color: var(--primaryCol);
-  }
+  composes: gradient from global;
 }
 
 .CaseStudySolutionAndProblemTitle {
-  composes: gradient__underline from global;
-  span {
-    color: var(--accentCol);
-  }
-
-  span:first-child {
-    color: var(--primaryCol);
-  }
+  composes: gradient--secondary from global;
 }
 
 .CaseStudyImageContainer {

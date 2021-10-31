@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { memo, FC } from 'react';
@@ -26,6 +27,7 @@ const ProjectCard: FC<IProjectCardProps> = ({
   mirrored = false,
   disabled = false,
 }) => (
+  // TODO: remove eslint-disable jsx-a11y/anchor-is-valid when deleting disabled cards
   <Link href={!disabled ? href : ''} scroll={false}>
     <a className={styles.Project} href={!disabled ? href : ''}>
       {!mirrored && (

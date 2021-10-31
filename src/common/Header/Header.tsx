@@ -9,7 +9,6 @@ import styles from './Header.module.scss';
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: -200, backgroundColor: '#000' },
-  enter: { opacity: 1, x: 0, y: 0, backgroundColor: 'rgba(0,0,0,0)' },
   exit: { opacity: 0, x: 0, y: -200 },
 };
 

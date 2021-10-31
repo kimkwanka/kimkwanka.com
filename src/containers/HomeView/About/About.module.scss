@@ -109,16 +109,14 @@
 }
 
 .TestimonialsCardUpperContent {
-  flex: 1 0 50%;
-  max-height: 430px;
+  height: 382px;
 }
 
 .TestimonialsCardImageContainer {
   margin: 0 auto var(--s3) auto;
-  max-width: 400px;
+  max-width: 200px !important;
   position: relative; // Just to get rid of Next.js warning
   width: 100%;
-  max-width: 200px !important;
 
   > span {
     position: unset !important;
@@ -146,5 +144,5 @@
 
 .TestimonialsCardText {
   margin-top: var(--s3);
-  flex: 1 0 50%;
+  flex: 1 0 auto;
 }

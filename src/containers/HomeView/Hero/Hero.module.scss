@@ -1,5 +1,8 @@
+
 .Hero {
-  background: linear-gradient(270deg, #473b47, #596666);
+  --gradientCol1: #121212;
+  --gradientCol2: #86445b;
+  background: linear-gradient(0deg, var(--gradientCol1),  var(--gradientCol2));
   display: flex;
   min-height: 100vh;
   padding: var(--s7) 0;

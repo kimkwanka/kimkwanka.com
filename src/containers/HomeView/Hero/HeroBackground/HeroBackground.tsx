@@ -42,7 +42,7 @@ const Plane = () => {
   return (
     <mesh ref={meshRef}>
       <planeGeometry ref={planeGeoRef} args={[200000, 200000, 100, 100]} />
-      <meshBasicMaterial color="#766666" wireframe />
+      <meshBasicMaterial color="#86445b" wireframe />
     </mesh>
   );
 };
@@ -57,7 +57,8 @@ const HeroBackground = () => (
       fov: 55,
     }}
   >
-    <fog attach="fog" args={['#669666', 1, 150000]} />
+    <fog attach="fog" args={['#F9B272', 1, 150000]} />
+
     <Plane />
   </Canvas>
 );

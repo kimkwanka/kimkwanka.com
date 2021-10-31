@@ -19,200 +19,203 @@ const CaseStudy = () => (
     transition={{ type: 'tween', ease: 'anticipate', duration: 0.5 }}
     className={styles.CaseStudy}
   >
-    <h1 className={styles.CaseStudyTitle}>devGaido</h1>
-    <div className={styles.CaseStudyImageContainer}>
-      <Image
-        className={styles.CaseStudyImage}
-        src="/img/devgaido_hero.jpg"
-        alt="devGaido hero image"
-        placeholder="blur"
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
-        layout="fill"
-        priority
-      />
+    <div className={styles.Container}>
+      <small className={styles.CaseStudySubTitle}>Case Study</small>
+      <h1 className={styles.CaseStudyTitle}>devGaido</h1>
+      <div className={styles.CaseStudyImageContainer}>
+        <Image
+          className={styles.CaseStudyImage}
+          src="/img/devgaido_hero.jpg"
+          alt="devGaido hero image"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AAAcIAAEAJSjqmuBiwCdra/Uxb7+//+UoKZ4fwy/eXMlXgAAAABJRU5ErkJggg=="
+          layout="fill"
+          priority
+        />
+      </div>
     </div>
-    <section>
-      <h2 className={styles.CaseStudySectionTitle}>Introduction</h2>
-      <p>
-        When{' '}
-        <a
-          href="https://www.linkedin.com/in/jdmedlock/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Jim Medlock
-        </a>
-        , Co-Founder of{' '}
-        <a href="https://chingu.io/" target="_blank" rel="noreferrer">
-          Chingu
-        </a>
-        , asked me if I wanted to join his team to develop an application that
-        would try to streamline the learning experience of new and experienced
-        web developers alike, accepting was a no-brainer. Not having much remote
-        working experience under my belt, I felt a bit nervous, but the prospect
-        of a such a great learning opportunity was just too good to pass up.
-      </p>
-      <p className={styles.CaseStudyDescription}>
-        devGaido is a platform that helps (aspiring) web developers effienctly
-        locate learning resources and simplifies studying by combining
-        &quot;lessons&quot; into &quot;paths&quot; that follow different
-        learning goals.
-      </p>
-      <p>
-        Lessons and paths can each be bookmarked, progress towards completion is
-        tracked and paths tangential to your completed lessons are recommended
-        automatically.
-      </p>
-      <div className={styles.CaseStudyLinkContainer}>
-        <a
-          className={styles.CaseStudyLink}
-          target="_blank"
-          href="https://devgaido.cardinalzero.com"
-          rel="noreferrer"
-        >
-          <span className="icon-external-link" /> Live
-        </a>
-        <a
-          className={styles.CaseStudyLink}
-          target="_blank"
-          href="https://github.com/Chingu-cohorts/devgaido"
-          rel="noreferrer"
-        >
-          <span className="icon-embed2" /> Code
-        </a>
+    <section className={styles.Section}>
+      <div className={styles.Container}>
+        <h2 className={styles.CaseStudySectionTitle}>Introduction</h2>
+        <p>
+          When{' '}
+          <a
+            href="https://www.linkedin.com/in/jdmedlock/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Jim Medlock
+          </a>
+          , Co-Founder of{' '}
+          <a href="https://chingu.io/" target="_blank" rel="noreferrer">
+            Chingu
+          </a>
+          , asked me if I wanted to join his team to develop an application that
+          would try to streamline the learning experience of new and experienced
+          web developers alike, accepting was a no-brainer. Not having much
+          remote working experience under my belt, I felt a bit nervous, but the
+          prospect of a such a great learning opportunity was just too good to
+          pass up.
+        </p>
+        <p className={styles.CaseStudyDescription}>
+          devGaido is a platform that helps (aspiring) web developers effienctly
+          locate learning resources and simplifies studying by combining
+          &quot;lessons&quot; into &quot;paths&quot; that follow different
+          learning goals.
+        </p>
+        <p>
+          Lessons and paths can each be bookmarked, progress towards completion
+          is tracked and paths tangential to your completed lessons are
+          recommended automatically.
+        </p>
+        <div className={styles.CaseStudyLinkContainer}>
+          <a
+            className={styles.CaseStudyLink}
+            target="_blank"
+            href="https://devgaido.cardinalzero.com"
+            rel="noreferrer"
+          >
+            <span className="icon-external-link" /> Live
+          </a>
+          <a
+            className={styles.CaseStudyLink}
+            target="_blank"
+            href="https://github.com/Chingu-cohorts/devgaido"
+            rel="noreferrer"
+          >
+            <span className="icon-embed2" /> Code
+          </a>
+        </div>
+        <div className={styles.CaseStudyImageContainer}>
+          <Image
+            className={styles.CaseStudyImage}
+            src="/img/firstdesign.jpg"
+            alt="first design of devgaido"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVQImQEnANj/AP7//+ru9cfL07PExADCw8umqLRYZnpGVmoAUFNjAAAbjpantLvK9h8WHxwQlfsAAAAASUVORK5CYII="
+            layout="fill"
+          />
+        </div>
       </div>
-      <div className={styles.CaseStudyImageContainer}>
-        <Image
-          className={styles.CaseStudyImage}
-          src="/img/firstdesign.jpg"
-          alt="first design of devgaido"
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVQImQEnANj/AP7//+ru9cfL07PExADCw8umqLRYZnpGVmoAUFNjAAAbjpantLvK9h8WHxwQlfsAAAAASUVORK5CYII="
-          layout="fill"
-        />
-      </div>
-      <small className={styles.CaseStudyImageCaption}>
-        devGaido - still in all its blue and green glory
-      </small>
     </section>
-    <section>
-      <h2 className={styles.CaseStudySectionTitle}>Tech Stack</h2>
-      <div className={styles.CaseStudyImageContainer}>
-        <Image
-          className={styles.CaseStudyImage}
-          src="/img/stack.jpg"
-          alt="icons of our tech stack"
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQImWOY8v8ag42nMwMDQ5kHACDzA/AuVM8zAAAAAElFTkSuQmCC"
-          layout="fill"
-        />
+    <section className={styles.Section}>
+      <div className={styles.Container}>
+        <h2 className={styles.CaseStudySectionTitle}>Tech Stack</h2>
+        <div className={styles.CaseStudyImageContainer}>
+          <Image
+            className={styles.CaseStudyImage}
+            src="/img/stack.jpg"
+            alt="icons of our tech stack"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQImWOY8v8ag42nMwMDQ5kHACDzA/AuVM8zAAAAAElFTkSuQmCC"
+            layout="fill"
+          />
+        </div>
+        <small className={styles.CaseStudyImageCaption}>
+          MongoDB, React, Node.js, Redux, Stylus, Auth0, Docker, NGINX
+        </small>
+        <p>
+          The tried and true MERN stack ({' '}
+          <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
+            MongoDB
+          </a>
+          ,{' '}
+          <a href="https://expressjs.com/" target="_blank" rel="noreferrer">
+            Express
+          </a>
+          ,{' '}
+          <a href="https://reactjs.org" target="_blank" rel="noreferrer">
+            React
+          </a>
+          ,{' '}
+          <a href="https://nodejs.org/" target="_blank" rel="noreferrer">
+            Node.js
+          </a>
+          ) and{' '}
+          <a href="https://redux.js.org/" target="_blank" rel="noreferrer">
+            Redux
+          </a>{' '}
+          were obvious choices because of their ease of use and reliability.{' '}
+          <a href="https://stylus-lang.com/" target="_blank" rel="noreferrer">
+            Stylus
+          </a>{' '}
+          was chosen so we could use the much terser indented syntax, but still
+          paste in snippets in regular syntax.
+        </p>
+        <p>
+          As we didn&apos;t want to risk leaking private data, we let{' '}
+          <a href="https://auth0.com/" target="_blank" rel="noreferrer">
+            Auth0
+          </a>{' '}
+          handle authentication and only saved the user id for identification.
+        </p>
+        <p>
+          <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
+            Docker
+          </a>{' '}
+          was used to orchestrate the server deployment and{' '}
+          <a href="https://www.nginx.com/" target="_blank" rel="noreferrer">
+            NGINX
+          </a>{' '}
+          was utilized here as a reverse proxy to lessen the load on the server
+          and allowing it to scale more easily in the future.
+        </p>
+        <div className={styles.CaseStudyImageContainer}>
+          <Image
+            className={styles.CaseStudyImage}
+            src="/img/seconddesign.jpg"
+            alt="redesigned devgaido styleguide"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AHZ4gQAACOfp9vz//wCwsL3IxdG8wM28wM27jRBFBAzvJgAAAABJRU5ErkJggg=="
+            layout="fill"
+          />
+        </div>
       </div>
-      <small className={styles.CaseStudyImageCaption}>
-        MongoDB, React, Node.js, Redux, Stylus, Auth0, Docker, NGINX
-      </small>
-      <p>
-        The tried and true MERN stack ({' '}
-        <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
-          MongoDB
-        </a>
-        ,{' '}
-        <a href="https://expressjs.com/" target="_blank" rel="noreferrer">
-          Express
-        </a>
-        ,{' '}
-        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          React
-        </a>
-        ,{' '}
-        <a href="https://nodejs.org/" target="_blank" rel="noreferrer">
-          Node.js
-        </a>
-        ) and{' '}
-        <a href="https://redux.js.org/" target="_blank" rel="noreferrer">
-          Redux
-        </a>{' '}
-        were obvious choices because of their ease of use and reliability.{' '}
-        <a href="https://stylus-lang.com/" target="_blank" rel="noreferrer">
-          Stylus
-        </a>{' '}
-        was chosen so we could use the much terser indented syntax, but still
-        paste in snippets in regular syntax.
-      </p>
-      <p>
-        As we didn&apos;t want to risk leaking private data, we let{' '}
-        <a href="https://auth0.com/" target="_blank" rel="noreferrer">
-          Auth0
-        </a>{' '}
-        handle authentication and only saved the user id for identification.
-      </p>
-      <p>
-        <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
-          Docker
-        </a>{' '}
-        was used to orchestrate the server deployment and{' '}
-        <a href="https://www.nginx.com/" target="_blank" rel="noreferrer">
-          NGINX
-        </a>{' '}
-        was utilized here as a reverse proxy to lessen the load on the server
-        and allowing it to scale more easily in the future.
-      </p>
-      <div className={styles.CaseStudyImageContainer}>
-        <Image
-          className={styles.CaseStudyImage}
-          src="/img/seconddesign.jpg"
-          alt="redesigned devgaido styleguide"
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQImQEaAOX/AHZ4gQAACOfp9vz//wCwsL3IxdG8wM28wM27jRBFBAzvJgAAAABJRU5ErkJggg=="
-          layout="fill"
-        />
+    </section>
+    <section className={styles.Section}>
+      <div className={styles.Container}>
+        <h2 className={styles.CaseStudySectionTitle}>Purpose and Goal</h2>
+        <p>
+          We built devGaido to provide a guided learning experience for people
+          wanting to learn web development, especially those using the excellent{' '}
+          <a
+            href="https://github.com/P1xt/p1xt-guides"
+            target="_blank"
+            rel="noreferrer"
+          >
+            P1xt Guides
+          </a>
+          .
+        </p>
+        <p>
+          The problem we wanted to address was that the guides by their nature
+          are text-only which paired with their flexible curriculum structure
+          made it somewhat hard to follow them or track your progress.
+        </p>
+        <div className={styles.CaseStudyImageContainer}>
+          <Image
+            className={styles.CaseStudyImage}
+            src="/img/library.jpg"
+            alt="devgaido's library showing the p1xt guides"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWNgkNFi4JVlEFVm0LNj+Pz+3bIVq/fu3fv/3x8AU3gLDvWJT8AAAAAASUVORK5CYII="
+            layout="fill"
+          />
+        </div>
       </div>
-      <small className={styles.CaseStudyImageCaption}>
-        The Styleguide after rebranding
-      </small>
     </section>
-    <section>
-      <h2 className={styles.CaseStudySectionTitle}>Purpose and Goal</h2>
-      <p>
-        We built devGaido to provide a guided learning experience for people
-        wanting to learn web development, especially those using the excellent{' '}
-        <a
-          href="https://github.com/P1xt/p1xt-guides"
-          target="_blank"
-          rel="noreferrer"
-        >
-          P1xt Guides
-        </a>
-        .
-      </p>
-      <p>
-        The problem we wanted to address was that the guides by their nature are
-        text-only which paired with their flexible curriculum structure made it
-        somewhat hard to follow them or track your progress.
-      </p>
-      <div className={styles.CaseStudyImageContainer}>
-        <Image
-          className={styles.CaseStudyImage}
-          src="/img/library.jpg"
-          alt="devgaido's library showing the p1xt guides"
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWNgkNFi4JVlEFVm0LNj+Pz+3bIVq/fu3fv/3x8AU3gLDvWJT8AAAAAASUVORK5CYII="
-          layout="fill"
-        />
+    <section className={styles.Section}>
+      <div className={styles.Container}>
+        <h2 className={styles.CaseStudySectionTitle}>Problems</h2>
+        <p>
+          As I can&apos;t possibly cover all the problems we had to deal with,
+          and since frankly no one would actually want to read about all of them
+          - I tried to boil this section down to the most interesting challenges
+          we faced.
+        </p>
       </div>
-      <small className={styles.CaseStudyImageCaption}>
-        The P1XT guides in devGaido&apos;s library
-      </small>
     </section>
-    <section>
-      <h2 className={styles.CaseStudySectionTitle}>Problems</h2>
-      <p>
-        As I can&apos;t possibly cover all the problems we had to deal with, and
-        since frankly no one would actually want to read about all of them - I
-        tried to boil this section down to the most interesting challenges we
-        faced.
-      </p>
-    </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudyProblemTitle}>
         <span>Problem No. 1:</span> Managing and writing CSS
       </h3>
@@ -237,7 +240,7 @@ const CaseStudy = () => (
         Component&apos;s code and its CSS and it becomes a major problem.
       </p>
     </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudySolutionTitle}>
         <span>Solution:</span> Atomic CSS framework
       </h3>
@@ -254,7 +257,7 @@ const CaseStudy = () => (
         (aptly named &quot;Atomiku&quot;).
       </p>
     </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudyProblemTitle}>
         <span>Problem No. 2:</span> Bloated CSS
       </h3>
@@ -266,7 +269,7 @@ const CaseStudy = () => (
         only used a fraction of the classes in our code.
       </p>
     </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudySolutionAndProblemTitle}>
         <span>Solution</span> (and new <span>Problem</span>)<span>:</span>{' '}
         PurifyCSS
@@ -278,7 +281,7 @@ const CaseStudy = () => (
         like &quot;width-50&quot; did, in fact, NOT get removed at all.
       </p>
     </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudySolutionTitle}>
         <span>Solution:</span> Custom Fork of PurifyCSS
       </h3>
@@ -292,9 +295,6 @@ const CaseStudy = () => (
           layout="fill"
         />
       </div>
-      <small className={styles.CaseStudyImageCaption}>
-        &quot;Purification&quot; was successful
-      </small>
       <p>
         Luckily, the fix was pretty easy to implement as all I had to do was
         fork PurifyCSS, edit some regex (and adjust the tests for good measure)
@@ -302,7 +302,7 @@ const CaseStudy = () => (
         CSS classes remained in the production CSS.
       </p>
     </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudyProblemTitle}>
         <span>Problem No. 3:</span> Function Components
       </h3>
@@ -315,7 +315,7 @@ const CaseStudy = () => (
         where it wasn&apos;t.
       </p>
     </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudySolutionTitle}>
         <span>Solution:</span> Adding state and lifecycle hooks via HOCs
       </h3>
@@ -363,7 +363,7 @@ const CaseStudy = () => (
         I wrote about this.
       </p>
     </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudyProblemTitle}>
         <span>Problem No. 4:</span> Lesson images
       </h3>
@@ -377,9 +377,6 @@ const CaseStudy = () => (
           layout="fill"
         />
       </div>
-      <small className={styles.CaseStudyImageCaption}>
-        Placeholder images used everywhere
-      </small>
       <p>
         Throughout the app, we wanted to show images relating to the paths and
         lessons to spice up the visuals, but with such a large number of
@@ -388,7 +385,7 @@ const CaseStudy = () => (
         appropriate images when adding more lessons in the future.
       </p>
     </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudySolutionTitle}>
         <span>Solution:</span> Let the server do it
       </h3>
@@ -400,7 +397,7 @@ const CaseStudy = () => (
         but it was a great time saver and worked fine for our use case.
       </p>
     </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudyProblemTitle}>
         <span>Problem No. 5:</span> Server load
       </h3>
@@ -414,7 +411,7 @@ const CaseStudy = () => (
         in the future if left unaddressed.
       </p>
     </section>
-    <section>
+    <section className={styles.Container}>
       <h3 className={styles.CaseStudySolutionTitle}>
         <span>Solution:</span> NGINX, Cloudflare, Hydration
       </h3>
@@ -484,60 +481,64 @@ const CaseStudy = () => (
         capabilities via load balancing.
       </p>
     </section>
-    <section>
-      <h2 className={styles.CaseStudySectionTitle}>Lessons Learned</h2>
-      <p>The main takeaway for me from this project is:</p>
-      <div className={styles.CaseStudyImageContainer}>
-        <Image
-          className={styles.CaseStudyImage}
-          src="/img/communication.jpg"
-          alt="word cloud around communication"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAdEAABBAIDAAAAAAAAAAAAAAAEAAECAwUGEVJj/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABgRAAMBAQAAAAAAAAAAAAAAAAASUQEC/9oADAMBAAIRAxEAPwC243QNetiVOwc6UnJt5d8kT3f0RES20E5h/9k="
-          layout="fill"
-        />
+    <section className={styles.Section}>
+      <div className={styles.Container}>
+        <h2 className={styles.CaseStudySectionTitle}>Lessons Learned</h2>
+        <p>The main takeaway for me from this project is:</p>
+        <div className={styles.CaseStudyImageContainer}>
+          <Image
+            className={styles.CaseStudyImage}
+            src="/img/communication.jpg"
+            alt="word cloud around communication"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAdEAABBAIDAAAAAAAAAAAAAAAEAAECAwUGEVJj/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABgRAAMBAQAAAAAAAAAAAAAAAAASUQEC/9oADAMBAAIRAxEAPwC243QNetiVOwc6UnJt5d8kT3f0RES20E5h/9k="
+            layout="fill"
+          />
+        </div>
+        <small className={styles.CaseStudyImageCaption}>
+          Source: https://pros-blog.padi.com/
+        </small>
+        <h3>Communication is key.</h3>
+        <p>
+          It doesn&apos;t matter if it&apos;s between team members or with your
+          users - the way you communicate can make or break a project.
+        </p>
+        <p>
+          We had numerous, sometimes heated discussions about various aspects of
+          devGaido - direction, UI/UX, app architecture, and countless other
+          details - more than enough potential for controversy. But even in the
+          most passionate of debates, we always made sure to be respectful and
+          willing to listen and give careful consideration to opposing views.
+        </p>
+        <p>
+          That doesn&apos;t mean that we compromised on the product just for
+          sake of &quot;getting along&quot; - sharing opinions and arguing for
+          one&apos;s beliefs was equally as important - but we took great care
+          to keep it all professional.
+        </p>
+        <p>
+          It&apos;s not about winning a popularity contest but about trying to
+          create an environment where everyone feels heard and where ideas can
+          blossom.
+        </p>
+        <p>
+          That extended to communication with our userbase as well: <br />
+          Though we couldn&apos;t possibly fix every issue instantly or answer
+          every question thoroughly on the spot, we always made sure to respond
+          in <i>some</i> way - no one likes to feel being ignored.
+        </p>
       </div>
-      <small className={styles.CaseStudyImageCaption}>
-        Source: https://pros-blog.padi.com/
-      </small>
-      <h3>Communication is key.</h3>
-      <p>
-        It doesn&apos;t matter if it&apos;s between team members or with your
-        users - the way you communicate can make or break a project.
-      </p>
-      <p>
-        We had numerous, sometimes heated discussions about various aspects of
-        devGaido - direction, UI/UX, app architecture, and countless other
-        details - more than enough potential for controversy. But even in the
-        most passionate of debates, we always made sure to be respectful and
-        willing to listen and give careful consideration to opposing views.
-      </p>
-      <p>
-        That doesn&apos;t mean that we compromised on the product just for sake
-        of &quot;getting along&quot; - sharing opinions and arguing for
-        one&apos;s beliefs was equally as important - but we took great care to
-        keep it all professional.
-      </p>
-      <p>
-        It&apos;s not about winning a popularity contest but about trying to
-        create an environment where everyone feels heard and where ideas can
-        blossom.
-      </p>
-      <p>
-        That extended to communication with our userbase as well: <br />
-        Though we couldn&apos;t possibly fix every issue instantly or answer
-        every question thoroughly on the spot, we always made sure to respond in{' '}
-        <i>some</i> way - no one likes to feel being ignored.
-      </p>
     </section>
-    <section>
-      <h2 className={styles.CaseStudySectionTitle}>Closing Thoughts</h2>
-      <p>
-        I am grateful to have been part of this project and to be able to work
-        with these great people. The amount and quality of things I learned on
-        this journey are immeasurable - I thank everyone involved for this
-        opportunity.
-      </p>
+    <section className={styles.Section}>
+      <div className={styles.Container}>
+        <h2 className={styles.CaseStudySectionTitle}>Closing Thoughts</h2>
+        <p>
+          I am grateful to have been part of this project and to be able to work
+          with these great people. The amount and quality of things I learned on
+          this journey are immeasurable - I thank everyone involved for this
+          opportunity.
+        </p>
+      </div>
     </section>
   </motion.div>
 );

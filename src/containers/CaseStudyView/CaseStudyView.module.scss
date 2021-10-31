@@ -2,20 +2,9 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin: 0 auto;
   margin-top: var(--s6);
-  max-width: var(--contentMaxWidth);
-  padding: var(--s3);
+  margin: var(--s6) auto 0 auto;
   width: 100%;
-
-  section {
-    margin: var(--s5) auto;
-    max-width: 762px;
-
-    &:last-of-type {
-      padding-bottom: var(--s8);
-    }
-  }
 
   * + p {
     margin-top: var(--s3);
@@ -36,9 +25,28 @@
   }
 }
 
+.Section {
+  background: var(--gradientDark);
+
+  &:last-of-type {
+    background: none;
+    padding-bottom: var(--s8);
+  }
+}
+
+.Container {
+  margin: 0 auto;
+  max-width: var(--contentMaxWidth);
+  padding: var(--s6) var(--s3);
+  width: 100%;
+}
+
 .CaseStudyTitle {
   composes: gradient__underline from global;
-  margin: var(--s4) 0 var(--s3) 0;
+}
+
+.CaseStudySubTitle {
+  composes: subtitle from global;
 }
 
 .CaseStudySectionTitle {
@@ -102,6 +110,7 @@
 }
 
 .CaseStudyImageCaption {
+  composes: subtitle from global;
   display: inline-block;
   text-align: center;
   width: 100%;

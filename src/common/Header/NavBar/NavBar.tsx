@@ -26,14 +26,16 @@ const NavBar = () => {
         }
       >
         <ul className={styles.HamburgerNavItems}>
-          <li>
+          <li
+            className={
+              currentSection === '#work'
+                ? styles.activeListItem
+                : styles.ListItem
+            }
+          >
             <Link href="/#work" scroll={false}>
               <a
-                className={
-                  currentSection === '#work'
-                    ? styles.activeNavBarLink
-                    : styles.NavBarLink
-                }
+                className={styles.NavBarLink}
                 href="#work"
                 onClick={scrollToSection}
               >
@@ -41,14 +43,16 @@ const NavBar = () => {
               </a>
             </Link>
           </li>
-          <li>
+          <li
+            className={
+              currentSection === '#about'
+                ? styles.activeListItem
+                : styles.ListItem
+            }
+          >
             <Link href="/#about" scroll={false}>
               <a
-                className={
-                  currentSection === '#about'
-                    ? styles.activeNavBarLink
-                    : styles.NavBarLink
-                }
+                className={styles.NavBarLink}
                 href="#about"
                 onClick={scrollToSection}
               >
@@ -56,14 +60,16 @@ const NavBar = () => {
               </a>
             </Link>
           </li>
-          <li>
+          <li
+            className={
+              currentSection === '#contact'
+                ? styles.activeListItem
+                : styles.ListItem
+            }
+          >
             <Link href="/#contact" scroll={false}>
               <a
-                className={
-                  currentSection === '#contact'
-                    ? styles.activeNavBarLink
-                    : styles.NavBarLink
-                }
+                className={styles.NavBarLink}
                 href="#contact"
                 onClick={scrollToSection}
               >
@@ -104,14 +110,16 @@ const NavBar = () => {
           <span className={styles.HamburgerSpan} />
         </button>
         <ul className={styles.NavBarNavItems}>
-          <li>
+          <li
+            className={
+              currentSection === '#work'
+                ? styles.activeListItem
+                : styles.ListItem
+            }
+          >
             <Link href="/#work" scroll={false}>
               <a
-                className={
-                  currentSection === '#work'
-                    ? styles.activeNavBarLink
-                    : styles.NavBarLink
-                }
+                className={styles.NavBarLink}
                 href="#work"
                 onClick={scrollToSection}
               >
@@ -119,14 +127,16 @@ const NavBar = () => {
               </a>
             </Link>
           </li>
-          <li>
+          <li
+            className={
+              currentSection === '#about'
+                ? styles.activeListItem
+                : styles.ListItem
+            }
+          >
             <Link href="/#about" scroll={false}>
               <a
-                className={
-                  currentSection === '#about'
-                    ? styles.activeNavBarLink
-                    : styles.NavBarLink
-                }
+                className={styles.NavBarLink}
                 href="#about"
                 onClick={scrollToSection}
               >
@@ -134,14 +144,16 @@ const NavBar = () => {
               </a>
             </Link>
           </li>
-          <li>
+          <li
+            className={
+              currentSection === '#contact'
+                ? styles.activeListItem
+                : styles.ListItem
+            }
+          >
             <Link href="/#contact" scroll={false}>
               <a
-                className={
-                  currentSection === '#contact'
-                    ? styles.activeNavBarLink
-                    : styles.NavBarLink
-                }
+                className={styles.NavBarLink}
                 href="#contact"
                 onClick={scrollToSection}
               >

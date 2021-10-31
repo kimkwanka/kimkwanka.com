@@ -80,18 +80,21 @@ a {
 }
 
 a:not([class]) {
-  // Fat underline link style:
   background: linear-gradient(
-    to left,
-    var(--linkUnderlineCol),
-    var(--linkUnderlineCol)
+    135deg,
+    var(--tertiaryCol),
+    var(--quaternaryCol),
+    var(--primaryCol),
+    var(--secondaryCol)
   );
-  background-position: 0 100%;
-  background-size: 100% 0.4em;
-  background-repeat: repeat-x;
+  background-size: 400% 100%;
+  background-position-x: -1px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   &:hover {
-    color: var(--accentCol);
+    background-position: 100% 0%;
   }
 }
 

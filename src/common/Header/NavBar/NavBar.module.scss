@@ -15,9 +15,22 @@
 }
 
 .NavBarLink {
-  background-position: left 100%;
-  background-repeat: no-repeat;
-  background-size: 0px 2px;
+  background: linear-gradient(
+    135deg,
+    var(--textL1Dark),
+    var(--textL1Dark),
+    var(--tertiaryCol),
+    var(--quaternaryCol)
+  );
+  background-size: 400% 100%;
+  background-position-x: -1px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:hover {
+    background-position: 100% 0%;
+  }
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 0.3em;
@@ -30,25 +43,20 @@
   }
 }
 
-.NavBarLinkButton {
-  margin-left: var(--s3);
+.ListItem {
+  padding: var(--s1) 0;
+  background-position: left 100%;
+  background-repeat: no-repeat;
+  background-size: 0px 2px;
+  transition: all var(--transitionSpeed) var(--transitionTiming);
 }
 
-.activeNavBarLink {
-  composes: NavBarLink;
-  background: linear-gradient(
-    to right,
-    var(--primaryCol),
-    var(--secondaryCol)
-  );
+.activeListItem {
+  composes: ListItem;
+  background: linear-gradient(to right, var(--primaryCol), var(--secondaryCol));
   background-position: left 100%;
   background-repeat: no-repeat;
   background-size: 100% 2px;
-
-
-  &:hover {
-    background-size: 100% 2px;
-  }
 }
 
 .NavBarLeftSide,
@@ -65,7 +73,7 @@
 .LogoImageContainer {
   position: relative;
   height: 38px; //58px
-  width: 58px;  //90px
+  width: 58px; //90px
 }
 
 .LogoImage {

@@ -3,13 +3,12 @@
   display: flex;
   margin-bottom: var(--s6);
   overflow: hidden;
-  text-decoration: none;
 }
 
 .ProjectImageContainer {
   background: var(--gradientDark);;
   flex-grow: 1;
-  height: 500px;
+  height: 480px;
   position: relative;
 }
 
@@ -32,11 +31,11 @@
 }
 
 .ProjectDetails {
-  padding: var(--s6) var(--s6) var(--s6) var(--s5);
+  padding: var(--s3) var(--s3) var(--s3) 0;
 }
 
 .ProjectDetailsLeft {
-  padding: var(--s6) var(--s5) var(--s6) var(--s6);
+  padding: var(--s3) 0 var(--s3) var(--s3);
 }
 
 .Project button {
@@ -48,11 +47,10 @@
 }
 
 .ProjectTitle {
-  opacity: 0.9;
+  composes: gradient from global;
   margin-bottom: var(--s3);
 }
 
 .ProjectDescription {
-  opacity: 0.8;
   margin-bottom: var(--s5);
 }

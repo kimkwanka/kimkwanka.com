@@ -57,6 +57,107 @@ const About = forwardRef<HTMLElement>((_, ref) => {
             </small>
           </div>
         </div>
+        <div className={styles.Testimonials}>
+          <p className={styles.TestimonialsSubTitle}>
+            Nice Things People Have Said
+          </p>
+          <h2 className={styles.TestimonialsTitle}>Testimonials</h2>
+          <div className={styles.TestimonialsContainer}>
+            <div className={styles.TestimonialsCard}>
+              <div className={styles.TestimonialsCardUpperContent}>
+                <div className={styles.TestimonialsCardImageContainer}>
+                  <Image
+                    src="/img/medlock.jpg"
+                    alt="Jim Medlock"
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAIAAADETxJQAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAM0lEQVQImQEoANf/ALmSgc6jlFpGQQD//OPqsaCTbWIAopmO/+/Rq4x/AAsAD9iumwMACbjwE7MJq4V2AAAAAElFTkSuQmCC"
+                    className={styles.TestimonialsCardImage}
+                    layout="fill"
+                  />
+                </div>
+                <h4 className={styles.TestimonialsCardName}>
+                  Jim
+                  <br />
+                  Medlock
+                </h4>
+                <small className={styles.TestimonialsCardSubTitle}>
+                  Co-Founder Chingu
+                </small>
+              </div>
+              <p className={styles.TestimonialsCardText}>
+                “I had the pleasure of working on a team in which Kim was the
+                lead Developer. Her technical skill and dedication to the
+                project made it a very rewarding experience. But, even more
+                importantly was her willingness to share her considerable
+                expertise across the team. She brings out not only the best in
+                herself, but also the best in others.”
+              </p>
+            </div>
+            <div className={styles.TestimonialsCard}>
+              <div className={styles.TestimonialsCardUpperContent}>
+                <div className={styles.TestimonialsCardImageContainer}>
+                  <Image
+                    src="/img/ferreira.jpg"
+                    alt="Thiago Ferreira"
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAIAAADETxJQAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAM0lEQVQImQEoANf/ALmSgc6jlFpGQQD//OPqsaCTbWIAopmO/+/Rq4x/AAsAD9iumwMACbjwE7MJq4V2AAAAAElFTkSuQmCC"
+                    className={styles.TestimonialsCardImage}
+                    layout="fill"
+                  />
+                </div>
+                <h4 className={styles.TestimonialsCardName}>
+                  Thiago
+                  <br />
+                  Ferreira
+                </h4>
+                <small className={styles.TestimonialsCardSubTitle}>
+                  Co-Founder Virtual Dawn
+                </small>
+              </div>
+              <p className={styles.TestimonialsCardText}>
+                “Efficiency + creativity = Kim! Whether it was creating cool
+                websites, rendering optimization, animation or project
+                management, Kim took care of the job with precision and fine
+                quality. One of her many notable strengths is her ability to
+                deal with several challenging tasks and projects in
+                high-pressure situations. She&quot;s always been reliable and on
+                target when it came to deadlines. I definitely recommend Kim if
+                you need to get the job done!”
+              </p>
+            </div>
+            <div className={styles.TestimonialsCard}>
+              <div className={styles.TestimonialsCardUpperContent}>
+                <div className={styles.TestimonialsCardImageContainer}>
+                  <Image
+                    src="/img/mcallister.jpg"
+                    alt="Chance McAllister"
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAIAAADETxJQAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAM0lEQVQImQEoANf/ALmSgc6jlFpGQQD//OPqsaCTbWIAopmO/+/Rq4x/AAsAD9iumwMACbjwE7MJq4V2AAAAAElFTkSuQmCC"
+                    className={styles.TestimonialsCardImage}
+                    layout="fill"
+                  />
+                </div>
+                <h4 className={styles.TestimonialsCardName}>
+                  Chance
+                  <br />
+                  McAllister
+                </h4>
+                <small className={styles.TestimonialsCardSubTitle}>
+                  Founder Chingu & Experience Associate @On Deck
+                </small>
+              </div>
+              <p className={styles.TestimonialsCardText}>
+                “The combination of kindness, resourcefulness, and a love of
+                building is down-right inspiring, and perfectly encapsulates
+                what we’re all about. In short, Kim is the type of person who
+                makes the people around her better. I’ve already learned so much
+                from her, from organizing teams in an excel sheet, to creating
+                awesome project docs, to project management. We’re extremely
+                lucky to have a person like Kim in our zoo.”
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

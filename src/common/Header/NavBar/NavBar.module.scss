@@ -15,9 +15,9 @@
 }
 
 .NavBarLink {
-  background-position: left 85%;
+  background-position: left 100%;
   background-repeat: no-repeat;
-  background-size:0px 2px;
+  background-size: 0px 2px;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 0.3em;
@@ -41,13 +41,13 @@
     var(--primaryCol),
     var(--secondaryCol)
   );
-  background-position: left 85%;
+  background-position: left 100%;
   background-repeat: no-repeat;
-  background-size:100% 2px;
+  background-size: 100% 2px;
 
 
   &:hover {
-    background-size:100% 2px;
+    background-size: 100% 2px;
   }
 }
 

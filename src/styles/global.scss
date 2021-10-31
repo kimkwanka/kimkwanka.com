@@ -105,6 +105,7 @@ input,
 textarea {
   border-radius: var(--s1);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  color:var(--textL1Dark);
   font-weight: normal;
   margin-bottom: var(--s2);
   margin-top: var(--s1);
@@ -114,10 +115,10 @@ textarea {
   transition: all var(--transitionSpeed) var(--transitionTiming);
 
   &:hover {
-    border: 1px solid var(--textCol);
+    border: 1px solid var(--textL3Dark);
   }
   &:focus {
-    border: 1px solid var(--textCol);
+    border: 1px solid var(--primaryCol);
   }
 }
 

@@ -15,7 +15,7 @@
   align-content: center;
   align-items: center;
   display: grid;
-  gap: var(--s3);
+  column-gap: var(--s3);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   justify-items: flex-start;
@@ -29,6 +29,11 @@
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   margin-left: -2px;
+
+  small {
+    color: var(--textL1Dark) !important;
+    letter-spacing: 0.4em;
+  }
 }
 
 .HeroText {

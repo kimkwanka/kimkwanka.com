@@ -15,14 +15,11 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
       <HeroBackground />
       <div className={styles.HeroContainer}>
         <h1 className={styles.HeroTitle}>
-          Hi, I&apos;m Kim:
-          <br />
-          <span className={`${styles.HeroSpan} gradient`}>Full-Stack</span> Web
-          Developer.
+          <small>Hi there, my name is</small> <br /> Kim Kwanka
         </h1>
         <p className={styles.HeroText}>
-          Anyone can learn to code but you can&apos;t teach someone how to enjoy
-          what they&apos;re doing.
+          Berlin-based Full-Stack Web Developer that specializes in React and
+          <span className={`${styles.HeroSpan} gradient`}> loves coffee</span>.
         </p>
         <Link href="/#work" scroll={false}>
           <a

@@ -22,18 +22,33 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
           specializes in React and
           <span className={`${styles.HeroSpan} gradient`}> loves coffee</span>.
         </p>
-        <Link href="/#work" scroll={false}>
-          <a
-            href="#work"
-            className={`${styles.HeroButton} button`}
-            onClick={scrollToSection}
-          >
-            Check out my{' '}
-            <span>
-              work <span className="icon-chevron-thin-right" />
-            </span>
-          </a>
-        </Link>
+        <div className={styles.HeroButtonContainer}>
+          <Link href="/#work" scroll={false}>
+            <a
+              href="#work"
+              className={`${styles.HeroButton} button`}
+              onClick={scrollToSection}
+            >
+              Check out my{' '}
+              <span>
+                work <span className="icon-chevron-thin-right" />
+              </span>
+            </a>
+          </Link>
+          <Link href="/files/Kim_Kwanka_Resume.pdf" scroll={false}>
+            <a
+              href="/files/Kim_Kwanka_Resume.pdf"
+              className={`${styles.HeroButtonSecondary}`}
+              target="_blank"
+              download
+            >
+              <span>
+                <span className="icon-file-pdf" /> Download
+              </span>{' '}
+              Resume
+            </a>
+          </Link>
+        </div>
         <div className={styles.PortraitImageContainer}>
           <Image
             src="/img/retro.svg"

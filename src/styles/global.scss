@@ -183,15 +183,34 @@ button,
 }
 
 button.secondary,
-.button.secondary {
+.button--secondary {
   background: linear-gradient(
     135deg,
-    var(--gradientCol1),
     var(--primaryCol),
-    var(--buttonGradientCol1),
-    var(--buttonGradientCol2)
+    #383838,
+    var(--primaryCol),
+    var(--secondaryCol)
   );
-  background-size: 300% 100%;
+  background-size: 400% 100%;
+  background-position-x: -1px;
+
+  &:hover {
+    background-position: 100% 0%;
+  }
+}
+
+button.clear,
+.button--clear {
+  background: linear-gradient(
+    135deg,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0),
+    var(--primaryCol),
+    var(--secondaryCol)
+  );
+  background-size: 400% 100%;
+  background-position-x: -1px;
+  border: 1px solid var(--textL1Dark);
 
   &:hover {
     background-position: 100% 0%;

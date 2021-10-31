@@ -82,7 +82,7 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
         className={styles.ContactContainer}
         ref={observe({ id: '#contact-container', unobserveOnEnter: true })}
       >
-        <p className={styles.ContactSubTitle}>Get In Touch</p>
+        <small className={styles.ContactSubTitle}>Get In Touch</small>
         <h1 className={styles.ContactTitle}>Contact</h1>
         <div className={styles.Contact2ColumnContainer}>
           <div className={styles.ContactContent}>

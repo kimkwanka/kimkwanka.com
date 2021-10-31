@@ -9,7 +9,7 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
     <section className={styles.Work} id="work" ref={ref}>
       <div className={styles.WorkContainer}>
         <div className={styles.WorkContent}>
-          <p className={styles.WorkSubTitle}>Projects & Case Studies</p>
+          <small className={styles.WorkSubTitle}>Projects & Case Studies</small>
           <h1 className={styles.WorkTitle}>Recent Work</h1>
           <ProjectCard
             title="devGaido"

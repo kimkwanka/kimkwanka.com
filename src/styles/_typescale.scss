@@ -1,6 +1,6 @@
 html {
   font-size: 125%;
-} /*18px*/
+} /*20px*/
 
 body {
   font-weight: 400;
@@ -46,9 +46,115 @@ h5,
 }
 small,
 .text_small {
+  display: inline-block;
   font-size: 0.8rem;
+  width: 100%;
 }
 
+@media screen and (max-width: 564px) {
+  h1,
+  .h1 {
+    font-size: 2.441rem;
+  }
+  h2,
+  .h2 {
+    font-size: 1.953rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.563rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.25rem;
+  }
+
+  @media screen and (max-width: 564px) {
+    h1,
+    .h1 {
+      font-size: 2.441rem;
+    }
+    h2,
+    .h2 {
+      font-size: 1.953rem;
+    }
+    h3,
+    .h3 {
+      font-size: 1.563rem;
+    }
+    h4,
+    .h4 {
+      font-size: 1.25rem;
+    }
+    h5,
+    .h5 {
+      font-size: 1.0rem;
+    }
+    small,
+    .text_small {
+      font-size: 0.6rem;
+    }
+  }
+  small,
+  .text_small {
+    font-size: 0.6rem;
+  }
+}
+
+
+@media screen and (max-width: 464px) {
+  h1,
+  .h1 {
+    font-size: 1.953rem;
+  }
+  h2,
+  .h2 {
+    font-size: 1.563rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.25rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.0rem;
+  }
+  h5,
+  .h5 {
+    font-size: 0.9rem;
+  }
+  small,
+  .text_small {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  h1,
+  .h1 {
+    font-size: 1.563rem;
+  }
+  h2,
+  .h2 {
+    font-size: 1.25rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.0rem;
+  }
+  h4,
+  .h4 {
+    font-size: 0.9rem;
+  }
+  h5,
+  .h5 {
+    font-size: 0.8rem;
+  }
+  small,
+  .text_small {
+    font-size: 0.6rem;
+  }
+}
 //Perfect Fourth Type Scale on larger screens
 // @media screen and (min-width: 1080px) {
 //   h1,

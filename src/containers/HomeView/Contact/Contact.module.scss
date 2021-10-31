@@ -96,6 +96,12 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
   }
+
+  // Make reCAPTCHA adjust size on smaller screens
+  div:not([class]) , iframe {
+    max-width: 304px;
+    width: 100% !important;
+  }
 }
 
 .ContactButtonContainer {

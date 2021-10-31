@@ -8,7 +8,7 @@ const About = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section className={styles.About} id="about" ref={ref}>
       <div className={styles.AboutContainer}>
-        <p className={styles.AboutSubTitle}>My Story</p>
+        <small className={styles.AboutSubTitle}>My Story</small>
         <h1 className={styles.AboutTitle}>About</h1>
         <div className={styles.About2ColumnContainer}>
           <div className={styles.AboutImageContainer}>
@@ -58,9 +58,9 @@ const About = forwardRef<HTMLElement>((_, ref) => {
           </div>
         </div>
         <div className={styles.Testimonials}>
-          <p className={styles.TestimonialsSubTitle}>
+          <small className={styles.TestimonialsSubTitle}>
             Nice Things People Have Said
-          </p>
+          </small>
           <h2 className={styles.TestimonialsTitle}>Testimonials</h2>
           <div className={styles.TestimonialsContainer}>
             <div className={styles.TestimonialsCard}>

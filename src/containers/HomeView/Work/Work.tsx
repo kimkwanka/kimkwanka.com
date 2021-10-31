@@ -26,6 +26,7 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPoXHxy2dx1ZiK+8gzuDNf//9ewDRRgUFJksAEAjfUI/oWmZgAAAAAASUVORK5CYII="
             description="A movie database frontend app with a custom backend"
             mirrored
+            disabled
           />
           <ProjectCard
             title="Pokédex"
@@ -33,6 +34,7 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
             imgSrc="/img/pokedex.png"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVQImWPgY2CIDLL2cFb6//8Pg5WRSnFGpKOy2q8PvwBmAgnOEzRdUwAAAABJRU5ErkJggg=="
             description="An app that allows you to learn more about Pokémon"
+            disabled
           />
         </div>
       </div>

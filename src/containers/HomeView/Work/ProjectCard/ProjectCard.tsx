@@ -14,6 +14,7 @@ interface IProjectCardProps {
   imgSrc: string;
   blurDataURL: string;
   mirrored?: boolean;
+  disabled?: boolean;
 }
 
 const ProjectCard: FC<IProjectCardProps> = ({
@@ -23,9 +24,10 @@ const ProjectCard: FC<IProjectCardProps> = ({
   imgSrc,
   blurDataURL,
   mirrored = false,
+  disabled = false,
 }) => (
-  <Link href={href} scroll={false}>
-    <a className={styles.Project} href={href}>
+  <Link href={!disabled ? href : ''} scroll={false}>
+    <a className={styles.Project} href={!disabled ? href : ''}>
       {!mirrored && (
         <div className={`${styles.ProjectImageContainer} ${styles[title]}`}>
           <Image
@@ -47,12 +49,26 @@ const ProjectCard: FC<IProjectCardProps> = ({
       >
         <h2 className={styles.ProjectTitle}>{title}</h2>
         <p className={styles.ProjectDescription}>{description}</p>
-        <button type="button" className={styles.ProjectButton}>
-          View Case{' '}
-          <span>
-            Study <span className="icon-chevron-thin-right" />
-          </span>
-        </button>
+        {!disabled ? (
+          <button
+            type="button"
+            className={styles.ProjectButton}
+            disabled={disabled}
+          >
+            View Case{' '}
+            <span>
+              Study <span className="icon-chevron-thin-right" />
+            </span>
+          </button>
+        ) : (
+          <button
+            type="button"
+            className={styles.ProjectButton}
+            disabled={disabled}
+          >
+            Coming Soon
+          </button>
+        )}
       </div>
       {mirrored && (
         <div className={styles.ProjectImageContainer}>

@@ -22,10 +22,10 @@ const About = forwardRef<HTMLElement>((_, ref) => {
             />
           </div>
           <div className={styles.AboutRight}>
-            <h3 className={styles.AboutTitle2}>
+            <h5 className={styles.AboutTitle2}>
               “Anyone can learn how to code, but you can’t teach someone to
               enjoy what they’re doing.”
-            </h3>
+            </h5>
             <p>
               Ever since I saw my uncle play NES when I was 7, I wanted to
               understand how things work and create them myself.
@@ -51,9 +51,9 @@ const About = forwardRef<HTMLElement>((_, ref) => {
               people&apos;s lives by turning ideas into reality.*
             </p>
             <small className={styles.AboutSmall}>
-              *When I’m not coding, I’m probably hanging out with my family or
-              friends, cuddling with my cute little dog, playing a video game or
-              messing around with some geeky gadget.
+              *But sometimes I’m just hanging out with my family or friends,
+              cuddling with my cute little dog, playing a video game or messing
+              around with some geeky gadget.
             </small>
           </div>
         </div>

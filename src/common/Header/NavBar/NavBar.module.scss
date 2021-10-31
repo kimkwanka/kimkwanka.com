@@ -37,7 +37,7 @@
 .activeNavBarLink {
   composes: NavBarLink;
   background: linear-gradient(
-    to left,
+    to right,
     var(--primaryCol),
     var(--secondaryCol)
   );

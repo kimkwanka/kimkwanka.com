@@ -231,7 +231,7 @@ img {
 
 .gradient__underline {
   background: linear-gradient(
-    to left,
+    to right,
     var(--tertiaryCol),
     var(--quaternaryCol)
   );
@@ -242,7 +242,7 @@ img {
 
 .gradient__underline--secondary {
   background: linear-gradient(
-    to left,
+    to right,
     var(--primaryCol),
     var(--secondaryCol)
   );

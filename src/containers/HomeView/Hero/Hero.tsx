@@ -18,7 +18,8 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
           <small>Hi there, my name is</small> <br /> Kim Kwanka
         </h1>
         <p className={styles.HeroText}>
-          Berlin-based Full-Stack Web Developer that specializes in React and
+          Berlin-based <strong>Full-Stack Web Developer</strong> that
+          specializes in React and
           <span className={`${styles.HeroSpan} gradient`}> loves coffee</span>.
         </p>
         <Link href="/#work" scroll={false}>

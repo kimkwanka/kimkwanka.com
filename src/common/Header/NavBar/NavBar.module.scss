@@ -103,7 +103,7 @@
 }
 
 .HamburgerSpan {
-  background: #fff;
+  background: var(--textL1Dark);
   border-radius: 4px;
   display: block;
   height: 6px;
@@ -144,7 +144,7 @@
 }
 
 .HamburgerMenu {
-  background: rgba(0, 0, 0, 0.9);
+  background: #121212;
   left: 0;
   overflow: hidden;
   position: fixed;
@@ -171,16 +171,10 @@
   * + * {
     margin-top: var(--s3);
   }
-
-  .NavBarLink,
-  .NavBarLinkButton {
-    font-size: 1.953rem;
-  }
 }
 
 .HamburgerMenu .HamburgerNavItems {
-  margin-top: var(--s8);
-  padding: var(--s5);
+  padding: var(--s3);
 }
 
 @media screen and (max-width: 1080px) {

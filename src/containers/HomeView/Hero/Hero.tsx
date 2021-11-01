@@ -92,10 +92,13 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
           />
         </div>
         <Link href="/#work" scroll={false}>
-          <a href="#work" onClick={scrollToSection} aria-label="work">
-            <h2 className={styles.DownArrow}>
-              <span className="icon-arrow-down2" />
-            </h2>
+          <a
+            className={styles.DownArrow}
+            href="#work"
+            onClick={scrollToSection}
+            aria-label="work"
+          >
+            <span className="icon-arrow-down2" />
           </a>
         </Link>
       </div>

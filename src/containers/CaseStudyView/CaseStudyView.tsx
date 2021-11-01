@@ -22,9 +22,9 @@ const CaseStudy = () => (
     <div className={styles.Container}>
       <small className={styles.CaseStudySubTitle}>Case Study</small>
       <h1 className={styles.CaseStudyTitle}>devGaido</h1>
-      <div className={styles.CaseStudyImageContainer}>
+      <div className={styles.AboveFoldImageContainer}>
         <Image
-          className={styles.CaseStudyImage}
+          className={styles.AboveFoldImage}
           src="/img/devgaido_hero.jpg"
           alt="devGaido hero image"
           placeholder="blur"

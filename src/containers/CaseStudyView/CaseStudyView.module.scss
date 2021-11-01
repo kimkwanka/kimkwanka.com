@@ -61,6 +61,28 @@
   composes: gradient--secondary from global;
 }
 
+// The "fixed" next/images don't specifiy initial dimensions and therefore suffer
+// from a considerable amount of Cumulative Layout Shift.
+
+// That's why we specify dimensions for images above the fold.
+// With a fixed height or width howeer, the images wouldn't be responsive, so instead we set height: 0 and
+// a padding-bottom percentage to get an image that always has a certain aspect ratio.
+
+.AboveFoldImageContainer {
+  margin-top: var(--s5);
+  margin-bottom: var(--s3);
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 60%;
+}
+
+.AboveFoldImage {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 .CaseStudyImageContainer {
   margin-top: var(--s5);
   margin-bottom: var(--s3);

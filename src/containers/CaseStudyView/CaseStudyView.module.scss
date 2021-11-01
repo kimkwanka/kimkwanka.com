@@ -113,12 +113,12 @@
 }
 
 .CaseStudyLinkContainer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  justify-content: center;
   margin: var(--s4) 0 var(--s8) 0;
-  text-align: center;
-
-  * + a {
-    margin-left: var(--s3);
-  }
 }
 
 .CaseStudyLink {

@@ -26,7 +26,7 @@ interface IObserveOptions {
 }
 
 const useScrollSpy = (options: IIntersectionObserverOptions = {}) => {
-  const { root = null, rootMargin = '', threshold = 0 } = options;
+  const { root = null, rootMargin = undefined, threshold = 0 } = options;
   const observedElementsMapRef = useRef<Map<string, IObserved>>(new Map());
   const lookupMapRef = useRef<WeakMap<Element, IObserved>>(new WeakMap());
 

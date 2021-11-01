@@ -42,8 +42,19 @@
 .HeroText {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
-  text-transform: uppercase;
   letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+
+.HeroSpanContainer {
+  display: grid;
+}
+
+.HeroSpan {
+  composes: gradient from global;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
 }
 
 .HeroButtonContainer {
@@ -89,6 +100,12 @@
   .HeroText {
     grid-column: 1 / 4;
     grid-row: 3 / 4;
+    text-align: center;
+  }
+
+  .HeroSpanContainer {
+    align-items: center;
+    text-align: center;
   }
 
   .HeroButtonContainer {

@@ -1,7 +1,9 @@
-import { forwardRef } from 'react';
+import { forwardRef, useEffect } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { AnimatePresence, motion, useCycle } from 'framer-motion';
 
 import { scrollToSection } from '@hooks/useSections/useSections';
 
@@ -10,6 +12,20 @@ import HeroBackground from './HeroBackground/HeroBackground';
 import styles from './Hero.module.scss';
 
 const Hero = forwardRef<HTMLElement>((_, ref) => {
+  const [heroText, cycleHeroText] = useCycle(
+    'loves to solve problems.',
+    'drinks too much coffee.',
+    'has a knack for UI/UX.',
+    'is scared of spiders.',
+    'creates awesome things with code.',
+    'enjoys baking cakes.',
+  );
+
+  useEffect(() => {
+    const timeOut = setTimeout(cycleHeroText, 5000);
+    return () => clearTimeout(timeOut);
+  }, [heroText, cycleHeroText]);
+
   return (
     <section className={styles.Hero} id="home" ref={ref}>
       <HeroBackground />
@@ -18,9 +34,26 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
           <small>Hi there, my name is</small> <br /> Kim Kwanka
         </h1>
         <p className={styles.HeroText}>
-          Berlin-based <strong>Full-Stack Web Developer</strong> that
+          I&apos;m a Berlin-based <strong>Full-Stack Web Developer</strong> that
           specializes in React and
-          <span className={`${styles.HeroSpan} gradient`}> loves coffee</span>.
+          <span className={styles.HeroSpanContainer}>
+            <AnimatePresence>
+              <motion.span
+                className={styles.HeroSpan}
+                key={heroText}
+                initial={{ opacity: 0, y: -20 }}
+                exit={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 1,
+                  type: 'tween',
+                  ease: 'anticipate',
+                }}
+              >
+                {heroText}
+              </motion.span>
+            </AnimatePresence>
+          </span>
         </p>
         <div className={styles.HeroButtonContainer}>
           <Link href="/#work" scroll={false}>

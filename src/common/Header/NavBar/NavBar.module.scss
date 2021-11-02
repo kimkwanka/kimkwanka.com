@@ -73,9 +73,14 @@
 }
 
 .LogoImageContainer {
-  position: relative;
   height: 38px; //58px
+  position: relative;
+  transition: all var(--transitionSpeed) var(--transitionTiming);
   width: 58px; //90px
+
+  &:hover {
+    transform: scale(1.1)
+  }
 }
 
 .LogoImage {
@@ -86,9 +91,8 @@
   display: flex;
   z-index: 301;
   width: 100%;
-  &:hover {
-    color: var(--primaryCol);
-  }
+
+
 }
 
 .HamburgerButton {

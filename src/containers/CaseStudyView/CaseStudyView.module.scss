@@ -173,14 +173,8 @@
   composes: button from global;
 }
 
-.CaseStudyTechStackContainer {
-  justify-content: center;
-  display: flex;
-
-  ul {
-    margin: 0 var(--s3) 0 0;
-    padding: 0 0 0 var(--s3);
-  }
+.CaseStudyImageCaption + p {
+  margin-top: var(--s6);
 }
 
 @media screen and (max-width: 979px) {

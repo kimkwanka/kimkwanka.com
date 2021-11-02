@@ -122,10 +122,10 @@ const CaseStudy = () => (
         <div className={styles.CaseStudyImageContainer}>
           <Image
             className={styles.CaseStudyImage}
-            src="/img/stack.jpg"
+            src="/img/stack.png"
             alt="icons of our tech stack"
             placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQImWOY8v8ag42nMwMDQ5kHACDzA/AuVM8zAAAAAElFTkSuQmCC"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQImWMIuzGXQUDq/8MXDIGGACOHBUAqcVhlAAAAAElFTkSuQmCC"
             layout="fill"
           />
         </div>

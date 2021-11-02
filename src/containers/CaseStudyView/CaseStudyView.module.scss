@@ -187,7 +187,9 @@
   .CaseStudyColumnImageContainer {
     margin-top: var(--s5);
   }
+}
 
+@media screen and (max-width: 450px) {
   .ColumnSmall {
     min-width: 160px;
   }

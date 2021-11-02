@@ -20,7 +20,6 @@
 
 .Section {
   background: var(--gradientDark);
-  padding: 0 var(--s3);
 
   &:last-of-type {
     background: none;
@@ -187,5 +186,9 @@
 @media screen and (max-width: 979px) {
   .CaseStudyColumnImageContainer {
     margin-top: var(--s5);
+  }
+
+  .ColumnSmall {
+    min-width: 160px;
   }
 }

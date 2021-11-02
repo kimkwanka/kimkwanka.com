@@ -101,7 +101,7 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
                 onClick={() => unCryptMailTo('thps{vArptr~hurhGnthps5jvt', 7)}
                 aria-label="Email"
               >
-                <span className="h1 icon-mail2" />
+                <span className="h1 hover-gradient icon-mail2" />
               </a>
               <a
                 className={styles.SocialIcon}
@@ -110,7 +110,7 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
                 rel="noreferrer"
                 aria-label="Linkedin"
               >
-                <span className="h1 icon-linkedin2" />
+                <span className="h1 hover-gradient icon-linkedin2" />
               </a>
               <a
                 className={styles.SocialIcon}
@@ -119,7 +119,7 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
                 rel="noreferrer"
                 aria-label="Twitter"
               >
-                <span className="h1 icon-twitter" />
+                <span className="h1 hover-gradient icon-twitter" />
               </a>
             </div>
           </div>

@@ -27,7 +27,7 @@ const Footer = () => {
             rel="noreferrer"
             aria-label="Github"
           >
-            <span className="h2 icon-github" />
+            <span className="h2 hover-gradient icon-github" />
           </a>
           <a
             className={styles.SocialIcon}
@@ -36,7 +36,7 @@ const Footer = () => {
             rel="noreferrer"
             aria-label="Linkedin"
           >
-            <span className="h2 icon-linkedin2" />
+            <span className="h2 hover-gradient icon-linkedin2" />
           </a>
           <a
             className={styles.SocialIcon}
@@ -45,7 +45,7 @@ const Footer = () => {
             rel="noreferrer"
             aria-label="Twitter"
           >
-            <span className="h2 icon-twitter" />
+            <span className="h2 hover-gradient icon-twitter" />
           </a>
         </div>
         <a className={styles.ImprintLink} href="#imprint" onClick={handleClick}>

@@ -273,6 +273,25 @@ img {
   background-repeat: repeat-x;
 }
 
+.hover-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primaryCol),
+    var(--secondaryCol),
+    var(--tertiaryCol),
+    var(--quaternaryCol)
+  );
+  background-size: 400% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all var(--transitionSpeed) var(--transitionTiming);
+
+  &:hover {
+    background-position: 100% 0%;
+  }
+}
+
 .subtitle {
   color: var(--textL2Dark);
   text-transform: uppercase;

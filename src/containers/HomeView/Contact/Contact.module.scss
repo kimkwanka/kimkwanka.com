@@ -67,16 +67,11 @@
 .SocialIcon {
   background: var(--gradientDark);
   border-radius: 8px;
-  color: var(--primaryCol);
   padding: var(--s1);
 
   span {
     display: inline-block;
     transform: translateX(0.15em);
-  }
-
-  &:hover {
-    color: var(--accentCol);
   }
 }
 
@@ -98,7 +93,8 @@
   }
 
   // Make reCAPTCHA adjust size on smaller screens
-  div:not([class]) , iframe {
+  div:not([class]),
+  iframe {
     max-width: 304px;
     width: 100% !important;
   }

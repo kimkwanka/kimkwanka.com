@@ -1,5 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import { useState, useEffect } from 'react';
+
 import { AppProps } from 'next/app';
+import Router from 'next/router';
 
 import { AnimatePresence } from 'framer-motion';
 
@@ -8,6 +11,8 @@ import '@src/styles/global.scss';
 
 import { SectionProvider } from '@hooks/useSections/useSections';
 import useFixPageTransitionCSS from '@hooks/useFixPageTransitionCSS/useFixPageTransitionCSS';
+
+import LoadingSpinner from '@common/LoadingSpinner/LoadingSpinner';
 
 const handleExitComplete = (): void => {
   if (typeof window !== 'undefined') {
@@ -26,6 +31,8 @@ const handleExitComplete = (): void => {
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [isLoading, setIsLoading] = useState(false);
+
   // Disable automatic scroll restoration
   if (typeof window !== 'undefined') {
     window.history.scrollRestoration = 'manual';
@@ -33,16 +40,25 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useFixPageTransitionCSS();
 
+  useEffect(() => {
+    Router.events.on('routeChangeStart', () => setIsLoading(true));
+    Router.events.on('routeChangeComplete', () => setIsLoading(false));
+    Router.events.on('routeChangeError', () => setIsLoading(false));
+  }, []);
+
   return (
-    <SectionProvider>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter
-        onExitComplete={handleExitComplete}
-      >
-        <Component {...pageProps} key={Component.name} />
-      </AnimatePresence>
-    </SectionProvider>
+    <>
+      <LoadingSpinner isLoading={isLoading} />
+      <SectionProvider>
+        <AnimatePresence
+          initial={false}
+          exitBeforeEnter
+          onExitComplete={handleExitComplete}
+        >
+          <Component {...pageProps} key={Component.name} />
+        </AnimatePresence>
+      </SectionProvider>
+    </>
   );
 }
 

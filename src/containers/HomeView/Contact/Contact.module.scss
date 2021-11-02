@@ -54,23 +54,22 @@
 }
 
 .SocialIconContainer {
+  column-gap: var(--s3);
   display: flex;
   justify-content: center;
   margin: var(--s8) auto var(--s8) auto;
   padding: var(--s1);
-
-  * + * {
-    margin-left: var(--s5);
-  }
 }
 
 .SocialIcon {
   background: var(--gradientDark);
   border-radius: 8px;
-  padding: var(--s1);
+  padding: 0.3em;
 
   span {
     display: inline-block;
+    // Since we're inheriting the 0.3em letter-spacing from h2, we need to translate back to center the icon.
+    // (letter-spacing adds the specified amount as whitespace after the last "letter")
     transform: translateX(0.15em);
   }
 }

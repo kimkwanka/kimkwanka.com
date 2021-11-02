@@ -76,7 +76,7 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
               download
             >
               <span>
-                <span className="icon-file-pdf" /> Download
+                <span className="icon-download" /> Download
               </span>{' '}
               Resume
             </a>

@@ -136,7 +136,7 @@ const About = forwardRef<HTMLElement>((_, ref) => {
                 situations.
               </p>
               <p className={styles.TestimonialsCardText}>
-                She&quot;s always been reliable and on target when it came to
+                She&apos;s always been reliable and on target when it came to
                 deadlines.
               </p>
               <p className={styles.TestimonialsCardText}>

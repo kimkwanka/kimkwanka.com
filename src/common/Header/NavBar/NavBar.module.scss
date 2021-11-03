@@ -10,10 +10,6 @@
   }
 }
 
-.NavBarNavItems {
-  margin: 0;
-}
-
 .NavBarLink {
   background: linear-gradient(
     135deg,
@@ -48,7 +44,6 @@
   background-position: left 100%;
   background-repeat: no-repeat;
   background-size: 0px 2px;
-  margin-left: var(--s5);
   padding: var(--s1) 0;
   transition: all var(--transitionSpeed) var(--transitionTiming);
 }
@@ -59,6 +54,14 @@
   background-position: left 100%;
   background-repeat: no-repeat;
   background-size: 100% 2px;
+}
+
+.NavBarNavItems {
+  margin: 0;
+
+  .ListItem {
+    margin-left: var(--s5);
+  }
 }
 
 .NavBarLeftSide,
@@ -79,7 +82,7 @@
   width: 58px; //90px
 
   &:hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
   }
 }
 
@@ -91,8 +94,6 @@
   display: flex;
   z-index: 301;
   width: 100%;
-
-
 }
 
 .HamburgerButton {

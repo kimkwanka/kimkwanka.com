@@ -34,7 +34,7 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
           <small>Hi there, my name is</small> <br /> Kim Kwanka
         </h1>
         <p className={styles.HeroText}>
-          I&apos;m a Berlin-based <strong>Full-Stack Web Developer</strong> that
+          I&apos;m a Berlin-based <strong>Full Stack Developer</strong> that
           specializes in React and
           <span className={styles.HeroSpanContainer}>
             <AnimatePresence>

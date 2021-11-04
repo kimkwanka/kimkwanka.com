@@ -42,7 +42,7 @@ const About = forwardRef<HTMLElement>((_, ref) => {
               to create, so it felt natural to transition back into IT.
             </p>
             <p>
-              Consequently, I became a Full-Stack Developer and have since got
+              Consequently, I became a Full Stack Developer and have since got
               my hands dirty in VR and educational software projects, and also
               dipped my toes into UI/UX design on the side.
             </p>

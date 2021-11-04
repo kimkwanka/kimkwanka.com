@@ -12,7 +12,7 @@ export default function devGaidoPage() {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kim Kwanka - Case Study: devGaido</title>
+        <title>Kim Kwanka | Case Study: devGaido</title>
         <meta
           name="description"
           content="Case Study: devGaido - A platform created to streamline the learning experience of new and experienced web developers alike."

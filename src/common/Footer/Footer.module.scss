@@ -39,6 +39,7 @@
 
 .ImprintLink {
   color: var(--textL2Dark);
+  font-size: 16px;
   text-decoration: none;
 
   &:hover {
@@ -60,10 +61,6 @@
 
 .Imprint {
   object-fit: contain;
-}
-
-.ImprintLink {
-  font-size: 16px;
 }
 
 .Copyright {

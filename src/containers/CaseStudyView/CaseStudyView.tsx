@@ -10,7 +10,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: 200 },
 };
 
-const CaseStudy = () => (
+const CaseStudyView = () => (
   <motion.div
     initial="hidden"
     animate="enter"
@@ -258,7 +258,7 @@ const CaseStudy = () => (
         <div className={styles.ColumnBig}>
           <p>
             While we tried our best to adhere to{' '}
-            <a href="http://getbem.com/introduction/">BEM</a>, coming up with
+            <a href="https://css-tricks.com/bem-101/">BEM</a>, coming up with
             CSS class names for a new Component was still pretty time consuming.
             Add to that the time spent constantly flipping back and forth
             between the Component&apos;s code and its CSS and it becomes a major
@@ -617,4 +617,4 @@ const CaseStudy = () => (
   </motion.div>
 );
 
-export default CaseStudy;
+export default CaseStudyView;

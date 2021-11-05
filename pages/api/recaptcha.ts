@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 // Proposed solution didn't work:
 // https://github.com/babel/babel-eslint/issues/799#issuecomment-533951967
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+const recaptcha = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { response } = req.body;
     const recaptchaRes = await fetch(
@@ -28,4 +28,4 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 };
 
-export default handler;
+export default recaptcha;

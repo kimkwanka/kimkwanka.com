@@ -4,7 +4,7 @@ import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+const contact = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message } = req.body;
 
   try {
@@ -25,4 +25,4 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 };
 
-export default handler;
+export default contact;

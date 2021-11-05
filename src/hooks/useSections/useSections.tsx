@@ -38,8 +38,6 @@ const scrollToSection = (e: MouseEvent<HTMLAnchorElement>) => {
   document
     .querySelector(e.currentTarget.hash)
     ?.scrollIntoView({ behavior: 'smooth' });
-
-  // window.history.replaceState(null, '', e.currentTarget.hash);
 };
 
 const useSections = () => {

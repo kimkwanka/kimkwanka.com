@@ -7,6 +7,58 @@ import { useSections, scrollToSection } from '@hooks/useSections/useSections';
 
 import styles from './NavBar.module.scss';
 
+const NavBarItems = ({
+  currentSection,
+  className,
+}: {
+  currentSection: string | undefined;
+  className: string;
+}) => (
+  <ul className={className}>
+    <li
+      className={
+        currentSection === '#work' ? styles.activeListItem : styles.ListItem
+      }
+    >
+      <Link href="/#work" scroll={false}>
+        <a className={styles.NavBarLink} href="#work" onClick={scrollToSection}>
+          Work
+        </a>
+      </Link>
+    </li>
+    <li
+      className={
+        currentSection === '#about' ? styles.activeListItem : styles.ListItem
+      }
+    >
+      <Link href="/#about" scroll={false}>
+        <a
+          className={styles.NavBarLink}
+          href="#about"
+          onClick={scrollToSection}
+        >
+          About
+        </a>
+      </Link>
+    </li>
+    <li
+      className={
+        currentSection === '#contact' ? styles.activeListItem : styles.ListItem
+      }
+    >
+      <Link href="/#contact" scroll={false}>
+        <a
+          className={styles.NavBarLink}
+          href="#contact"
+          onClick={scrollToSection}
+        >
+          Contact
+        </a>
+      </Link>
+    </li>
+  </ul>
+);
+
 const NavBar = () => {
   const { currentSection } = useSections();
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
@@ -25,59 +77,10 @@ const NavBar = () => {
             : styles.hiddenHamburgerMenu
         }
       >
-        <ul className={styles.HamburgerNavItems}>
-          <li
-            className={
-              currentSection === '#work'
-                ? styles.activeListItem
-                : styles.ListItem
-            }
-          >
-            <Link href="/#work" scroll={false}>
-              <a
-                className={styles.NavBarLink}
-                href="#work"
-                onClick={scrollToSection}
-              >
-                Work
-              </a>
-            </Link>
-          </li>
-          <li
-            className={
-              currentSection === '#about'
-                ? styles.activeListItem
-                : styles.ListItem
-            }
-          >
-            <Link href="/#about" scroll={false}>
-              <a
-                className={styles.NavBarLink}
-                href="#about"
-                onClick={scrollToSection}
-              >
-                About
-              </a>
-            </Link>
-          </li>
-          <li
-            className={
-              currentSection === '#contact'
-                ? styles.activeListItem
-                : styles.ListItem
-            }
-          >
-            <Link href="/#contact" scroll={false}>
-              <a
-                className={styles.NavBarLink}
-                href="#contact"
-                onClick={scrollToSection}
-              >
-                Contact
-              </a>
-            </Link>
-          </li>
-        </ul>
+        <NavBarItems
+          currentSection={currentSection}
+          className={styles.HamburgerNavItems}
+        />
       </div>
       <div className={styles.NavBarLeftSide}>
         <Link href="/#home" scroll={false}>
@@ -109,59 +112,10 @@ const NavBar = () => {
           <span className={styles.HamburgerSpan} />
           <span className={styles.HamburgerSpan} />
         </button>
-        <ul className={styles.NavBarNavItems}>
-          <li
-            className={
-              currentSection === '#work'
-                ? styles.activeListItem
-                : styles.ListItem
-            }
-          >
-            <Link href="/#work" scroll={false}>
-              <a
-                className={styles.NavBarLink}
-                href="#work"
-                onClick={scrollToSection}
-              >
-                Work
-              </a>
-            </Link>
-          </li>
-          <li
-            className={
-              currentSection === '#about'
-                ? styles.activeListItem
-                : styles.ListItem
-            }
-          >
-            <Link href="/#about" scroll={false}>
-              <a
-                className={styles.NavBarLink}
-                href="#about"
-                onClick={scrollToSection}
-              >
-                About
-              </a>
-            </Link>
-          </li>
-          <li
-            className={
-              currentSection === '#contact'
-                ? styles.activeListItem
-                : styles.ListItem
-            }
-          >
-            <Link href="/#contact" scroll={false}>
-              <a
-                className={styles.NavBarLink}
-                href="#contact"
-                onClick={scrollToSection}
-              >
-                Contact
-              </a>
-            </Link>
-          </li>
-        </ul>
+        <NavBarItems
+          currentSection={currentSection}
+          className={styles.NavBarNavItems}
+        />
       </div>
     </nav>
   );

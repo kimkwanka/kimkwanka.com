@@ -10,7 +10,7 @@ export default function IndexPage() {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kim Kwanka | FullStack Web Developer</title>
+        <title>Kim Kwanka | Full Stack Web Developer</title>
         <meta
           name="description"
           content="Full Stack Developer based in Berlin. Experienced with React.js, MongoDB, Node.js, Express, Redux, Docker, Next.js"

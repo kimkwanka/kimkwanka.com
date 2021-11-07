@@ -22,10 +22,10 @@ const About = forwardRef<HTMLElement>((_, ref) => {
             />
           </div>
           <div className={styles.AboutRight}>
-            <h5 className={styles.AboutTitle2}>
+            <p className={styles.AboutTitle2}>
               “Anyone can learn how to code, but you can’t teach someone to
               enjoy what they’re doing.”
-            </h5>
+            </p>
             <p>
               Ever since I saw my uncle play NES when I was 7, I wanted to
               understand how things work and create them myself.
@@ -75,11 +75,11 @@ const About = forwardRef<HTMLElement>((_, ref) => {
                     layout="fill"
                   />
                 </div>
-                <h4 className={styles.TestimonialsCardName}>
+                <h3 className={styles.TestimonialsCardName}>
                   Jim
                   <br />
                   Medlock
-                </h4>
+                </h3>
                 <small className={styles.TestimonialsCardSubTitle}>
                   Co-Founder Chingu
                 </small>
@@ -113,11 +113,11 @@ const About = forwardRef<HTMLElement>((_, ref) => {
                     layout="fill"
                   />
                 </div>
-                <h4 className={styles.TestimonialsCardName}>
+                <h3 className={styles.TestimonialsCardName}>
                   Thiago
                   <br />
                   Ferreira
-                </h4>
+                </h3>
                 <small className={styles.TestimonialsCardSubTitle}>
                   Co-Founder Virtual Dawn
                 </small>
@@ -155,11 +155,11 @@ const About = forwardRef<HTMLElement>((_, ref) => {
                     layout="fill"
                   />
                 </div>
-                <h4 className={styles.TestimonialsCardName}>
+                <h3 className={styles.TestimonialsCardName}>
                   Chance
                   <br />
                   McAllister
-                </h4>
+                </h3>
                 <small className={styles.TestimonialsCardSubTitle}>
                   Founder Chingu & Experience Associate @On Deck
                 </small>

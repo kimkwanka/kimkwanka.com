@@ -39,6 +39,7 @@
 }
 
 .AboutTitle2 {
+  composes: h5 from global;
   letter-spacing: 0;
   text-align: center;
   text-transform: none;
@@ -132,6 +133,7 @@
 }
 
 .TestimonialsCardName {
+  composes: h4 from global;
   composes: gradient from global;
   text-align: center;
 }

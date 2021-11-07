@@ -84,6 +84,11 @@
   &:hover {
     transform: scale(1.1);
   }
+
+  // Disable dark mode adjustment for ImageContainers
+  span {
+    filter: none !important;
+  }
 }
 
 .LogoImage {

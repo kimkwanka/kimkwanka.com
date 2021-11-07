@@ -87,6 +87,7 @@ const NavBar = () => {
           <a className={styles.LogoLink} href="#home" onClick={scrollToSection}>
             <div className={styles.LogoImageContainer}>
               <Image
+                unoptimized
                 src="/img/logo.svg"
                 alt="Kim Kwanka logo"
                 className={styles.LogoImage}

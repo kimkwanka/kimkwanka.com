@@ -84,6 +84,7 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
         </div>
         <div className={styles.PortraitImageContainer}>
           <Image
+            unoptimized
             src="/img/retro.svg"
             alt="Kim Kwanka"
             className={styles.PortraitImage}

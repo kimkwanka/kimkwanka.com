@@ -140,7 +140,7 @@
 
 .openHamburgerButton {
   composes: HamburgerButton;
-  transform: rotate(360deg) translate(8px, 0px);
+  transform: rotate(-360deg) translate(8px, 0px);
 
   .HamburgerSpan:first-child {
     transform: rotate(45deg) translate(-2px, -1px);

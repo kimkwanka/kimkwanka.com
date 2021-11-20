@@ -176,7 +176,7 @@ const CaseStudyView = () => (
             NGINX
           </a>{' '}
           was utilized here as a reverse proxy to lessen the load on the server
-          and allowing it to scale more easily in the future.
+          and to allow it to scale more easily in the future.
         </p>
       </div>
     </section>

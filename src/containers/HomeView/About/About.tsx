@@ -52,8 +52,8 @@ const About = forwardRef<HTMLElement>((_, ref) => {
             </p>
             <small className={styles.AboutSmall}>
               *But sometimes I’m just hanging out with my family or friends,
-              cuddling with my cute little dog, playing a video game or messing
-              around with some geeky gadget.
+              cuddling with my cute little dog, playing a video game or
+              tinkering with some geeky gadget.
             </small>
           </div>
         </div>

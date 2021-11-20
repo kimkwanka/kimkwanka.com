@@ -19,7 +19,7 @@ export default function devGaidoPage() {
         />
         <meta
           name="keywords"
-          content="Kim Kwanka, Berlin, Full Stack, developer, React, CSS, HTML, JavaScript"
+          content="Kim Kwanka, Berlin, Full Stack,web, developer, React.js, MongoDB, Node.js, Express, Redux, Docker, Next.js, CSS, HTML, JavaScript"
         />
         <meta name="author" content="Kim Kwanka" />
       </Head>

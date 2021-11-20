@@ -13,11 +13,11 @@ export default function IndexPage() {
         <title>Kim Kwanka | Full Stack Web Developer</title>
         <meta
           name="description"
-          content="Full Stack Developer based in Berlin. Experienced with React.js, MongoDB, Node.js, Express, Redux, Docker, Next.js"
+          content="Full Stack React Developer based in Berlin. Brings 20+ years of passion for coding and creating software, paired with a knack for UI/UX and DevOps."
         />
         <meta
           name="keywords"
-          content="Kim Kwanka, Berlin, Full Stack, developer, React, CSS, HTML, JavaScript"
+          content="Kim Kwanka, Berlin, Full Stack,web, developer, React.js, MongoDB, Node.js, Express, Redux, Docker, Next.js, CSS, HTML, JavaScript"
         />
         <meta name="author" content="Kim Kwanka" />
       </Head>

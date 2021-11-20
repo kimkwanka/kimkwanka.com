@@ -76,10 +76,12 @@
 }
 
 .LogoImageContainer {
-  height: 38px; //58px
-  position: relative;
+  composes: AspectRatioImageContainer from global;
+  padding-bottom: calc(
+    (1 / (180 / 108)) * 100%
+  ); // Adjust aspect ratio to original image dimensions of 180px x 108px
+
   transition: all var(--transitionSpeed) var(--transitionTiming);
-  width: 58px; //90px
 
   &:hover {
     transform: scale(1.1);
@@ -96,7 +98,7 @@
 }
 
 .LogoLink {
-  display: flex;
+  width: 65px;
   z-index: 301;
 }
 

@@ -16,11 +16,10 @@
   // --secondaryCol: #B04BBF;
 
   --backgroundDark: #121212;
-  --gradientDark: linear-gradient(#373737, rgba(0,0,0,0));
+  --gradientDark: linear-gradient(#373737, rgba(0, 0, 0, 0));
   --textL1Dark: rgba(255, 255, 255, 0.87);
   --textL2Dark: rgba(255, 255, 255, 0.6);
   --textL3Dark: rgba(255, 255, 255, 0.38);
-
 
   --primaryCol: #00d1ca;
   --secondaryCol: #c8ffbe;
@@ -108,7 +107,7 @@ input,
 textarea {
   border-radius: var(--s1);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  color:var(--textL1Dark);
+  color: var(--textL1Dark);
   font-weight: normal;
   margin-bottom: var(--s2);
   margin-top: var(--s1);
@@ -167,7 +166,7 @@ button,
   &:hover {
     background-position: 100% 0%;
     border: 1px solid var(--textL1Dark);
-    color: rgba(0,0,0,0.87);
+    color: rgba(0, 0, 0, 0.87);
   }
 
   &:disabled {
@@ -202,8 +201,8 @@ button.clear,
 .button--clear {
   background: linear-gradient(
     135deg,
-    rgba(0,0,0,0),
-    rgba(0,0,0,0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
     var(--primaryCol),
     var(--secondaryCol)
   );
@@ -225,6 +224,32 @@ img {
 [class*='ImageContainer'] {
   span {
     filter: brightness(0.8) contrast(1.1) !important;
+  }
+}
+
+.AspectRatioImageContainer {
+  height: 0;
+  padding-bottom: calc((1 / (16 / 9)) * 100%);
+  position: relative !important;
+  width: 100% !important;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.UnboundImageContainer {
+  position: relative; // Just to get rid of Next.js warning
+  width: 100%;
+
+  > span {
+    position: unset !important;
+  }
+
+  img {
+    height: unset !important;
+    position: relative !important;
+    width: 100% !important;
   }
 }
 
@@ -262,11 +287,7 @@ img {
 }
 
 .gradient__underline--secondary {
-  background: linear-gradient(
-    to right,
-    var(--primaryCol),
-    var(--secondaryCol)
-  );
+  background: linear-gradient(to right, var(--primaryCol), var(--secondaryCol));
   background-position: 0 100%;
   background-size: 100% 4px;
   background-repeat: repeat-x;

@@ -109,46 +109,20 @@
 // With a fixed height or width howeer, the images wouldn't be responsive, so instead we set height: 0 and
 // a padding-bottom percentage to get an image that always has a certain aspect ratio.
 
-.AboveFoldImageContainer {
-  margin-top: var(--s5);
-  margin-bottom: var(--s3);
-  overflow: hidden;
-  position: relative;
-  height: 0;
-  width: 100%;
-  padding-bottom: 60%;
-}
+.ImageContainer {
+  composes: AspectRatioImageContainer from global;
 
-.AboveFoldImage {
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.CaseStudyColumnImageContainer {
-  position: relative; // Just to get rid of Next.js warning
-  width: 100%;
-
-  > span {
-    position: unset !important;
+  img {
+    border-radius: 8px;
   }
 }
 
-.CaseStudyImageContainer {
-  margin-top: var(--s5);
-  margin-bottom: var(--s3);
-  position: relative; // Just to get rid of Next.js warning
-  width: 100%;
+.TechStackImageContainer {
+  composes: ImageContainer;
 
-  > span {
-    position: unset !important;
-  }
-}
-
-.CaseStudyImage {
-  border-radius: 8px;
-  height: unset !important;
-  position: relative !important;
-  width: 100% !important;
+  padding-bottom: calc(
+    (1 / (1232 / 148)) * 100%
+  ); // Adjust aspect ratio to original image dimensions of 1232px x 148px
 }
 
 .CaseStudyImageCaption {
@@ -178,7 +152,7 @@
 }
 
 @media screen and (max-width: 979px) {
-  .CaseStudyColumnImageContainer {
+  .ImageContainer {
     margin-top: var(--s5);
   }
 }

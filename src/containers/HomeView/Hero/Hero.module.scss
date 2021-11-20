@@ -79,10 +79,10 @@
   position: relative;
   height: 500px;
   width: 100%;
-}
 
-.PortraitImage {
-  object-fit: contain;
+  img {
+    object-fit: contain;
+  }
 }
 
 @media screen and (max-width: 1080px) {

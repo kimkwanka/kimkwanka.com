@@ -90,7 +90,6 @@ const NavBar = () => {
                 unoptimized
                 src="/img/logo.svg"
                 alt="Kim Kwanka logo"
-                className={styles.LogoImage}
                 layout="fill"
                 priority
               />

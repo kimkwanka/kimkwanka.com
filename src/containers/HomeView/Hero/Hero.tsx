@@ -87,7 +87,6 @@ const Hero = forwardRef<HTMLElement>((_, ref) => {
             unoptimized
             src="/img/retro.svg"
             alt="Kim Kwanka"
-            className={styles.PortraitImage}
             layout="fill"
             priority
           />

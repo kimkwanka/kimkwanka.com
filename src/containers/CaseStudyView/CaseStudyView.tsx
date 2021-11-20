@@ -22,9 +22,8 @@ const CaseStudyView = () => (
     <section className={styles.Container}>
       <small className={styles.CaseStudySubTitle}>Case Study</small>
       <h1 className={styles.CaseStudyTitle}>devGaido</h1>
-      <div className={styles.AboveFoldImageContainer}>
+      <div className={styles.ImageContainer}>
         <Image
-          className={styles.AboveFoldImage}
           src="/img/devgaido_hero.jpg"
           alt="devGaido hero image"
           placeholder="blur"
@@ -73,9 +72,8 @@ const CaseStudyView = () => (
             </p>
           </div>
           <div className={styles.ColumnSmall}>
-            <div className={styles.CaseStudyColumnImageContainer}>
+            <div className={styles.ImageContainer}>
               <Image
-                className={styles.CaseStudyImage}
                 src="/img/firstdesign.jpg"
                 alt="first design of devgaido"
                 placeholder="blur"
@@ -83,9 +81,8 @@ const CaseStudyView = () => (
                 layout="fill"
               />
             </div>
-            <div className={styles.CaseStudyColumnImageContainer}>
+            <div className={styles.ImageContainer}>
               <Image
-                className={styles.CaseStudyImage}
                 src="/img/seconddesign.jpg"
                 alt="redesigned devgaido styleguide"
                 placeholder="blur"
@@ -119,9 +116,8 @@ const CaseStudyView = () => (
       <div className={styles.Container}>
         <small className={styles.CaseStudySubTitle}>Technologies used</small>
         <h2 className={styles.CaseStudySectionTitle}>Tech Stack</h2>
-        <div className={styles.CaseStudyImageContainer}>
+        <div className={styles.TechStackImageContainer}>
           <Image
-            className={styles.CaseStudyImage}
             src="/img/stack.png"
             alt="icons of our tech stack"
             placeholder="blur"
@@ -207,9 +203,8 @@ const CaseStudyView = () => (
             </p>
           </div>
           <div className={styles.ColumnBig}>
-            <div className={styles.CaseStudyColumnImageContainer}>
+            <div className={styles.ImageContainer}>
               <Image
-                className={styles.CaseStudyImage}
                 src="/img/library.jpg"
                 alt="devgaido's library showing the p1xt guides"
                 placeholder="blur"
@@ -238,9 +233,8 @@ const CaseStudyView = () => (
     <div className={styles.Container}>
       <small className={styles.CaseStudySubTitle}>Problem No. 1</small>
       <h2 className={styles.CaseStudySectionTitle}>CSS Management</h2>
-      <div className={styles.CaseStudyImageContainer}>
+      <div className={styles.ImageContainer}>
         <Image
-          className={styles.CaseStudyImage}
           src="/img/css.jpg"
           alt="piechart showing coming up with CSS class names takes too much time"
           placeholder="blur"
@@ -289,9 +283,8 @@ const CaseStudyView = () => (
     <div className={styles.Container}>
       <small className={styles.CaseStudySubTitle}>Problem No. 2</small>
       <h2 className={styles.CaseStudySectionTitle}>Bloated CSS</h2>
-      <div className={styles.CaseStudyImageContainer}>
+      <div className={styles.ImageContainer}>
         <Image
-          className={styles.CaseStudyImage}
           src="/img/purify.jpg"
           alt="screenshot of purifycss"
           placeholder="blur"
@@ -344,9 +337,8 @@ const CaseStudyView = () => (
     <div className={styles.Container}>
       <small className={styles.CaseStudySubTitle}>Problem No. 3</small>
       <h2 className={styles.CaseStudySectionTitle}>Function Components</h2>
-      <div className={styles.CaseStudyImageContainer}>
+      <div className={styles.ImageContainer}>
         <Image
-          className={styles.CaseStudyImage}
           src="/img/medium.jpg"
           alt="screenshot of the medium article"
           placeholder="blur"
@@ -414,9 +406,8 @@ const CaseStudyView = () => (
     <div className={styles.Container}>
       <small className={styles.CaseStudySubTitle}>Problem No. 4</small>
       <h2 className={styles.CaseStudySectionTitle}>Lesson images</h2>
-      <div className={styles.CaseStudyImageContainer}>
+      <div className={styles.ImageContainer}>
         <Image
-          className={styles.CaseStudyImage}
           src="/img/sameimage.jpg"
           alt="placeholder images used everywhere in the app"
           placeholder="blur"
@@ -457,9 +448,8 @@ const CaseStudyView = () => (
     <div className={styles.Container}>
       <small className={styles.CaseStudySubTitle}>Problem No. 5</small>
       <h2 className={styles.CaseStudySectionTitle}>Server load</h2>
-      <div className={styles.CaseStudyImageContainer}>
+      <div className={styles.ImageContainer}>
         <Image
-          className={styles.CaseStudyImage}
           src="/img/nginx.jpg"
           alt="load balancing"
           placeholder="blur"
@@ -555,9 +545,8 @@ const CaseStudyView = () => (
       <div className={styles.Container}>
         <small className={styles.CaseStudySubTitle}>Knowledge Gained</small>
         <h2 className={styles.CaseStudySectionTitle}>Lessons Learned</h2>
-        <div className={styles.CaseStudyImageContainer}>
+        <div className={styles.ImageContainer}>
           <Image
-            className={styles.CaseStudyImage}
             src="/img/communication.jpg"
             alt="word cloud around communication"
             placeholder="blur"

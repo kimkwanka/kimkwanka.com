@@ -52,19 +52,6 @@
 
 .AboutImageContainer {
   margin: 0 auto var(--s3) auto;
-  max-width: 400px;
-  position: relative; // Just to get rid of Next.js warning
-  width: 100%;
-
-  > span {
-    position: unset !important;
-  }
-}
-
-.AboutImage {
-  height: unset !important;
-  position: relative !important;
-  width: 100% !important;
 }
 
 .AboutSmall {
@@ -115,21 +102,14 @@
 }
 
 .TestimonialsCardImageContainer {
+  composes: UnboundImageContainer from global;
   margin: 0 auto var(--s3) auto;
   max-width: 200px !important;
-  position: relative; // Just to get rid of Next.js warning
-  width: 100%;
 
-  > span {
-    position: unset !important;
+  img {
+
+    border-radius: 50%;
   }
-}
-
-.TestimonialsCardImage {
-  border-radius: 50%;
-  height: unset !important;
-  position: relative !important;
-  width: 100% !important;
 }
 
 .TestimonialsCardName {

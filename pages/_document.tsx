@@ -32,6 +32,7 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
           />
+          <link rel="shortcut icon" href="/favicon.ico"></link>
         </Head>
         <body>
           <Main />

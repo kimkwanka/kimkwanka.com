@@ -30,7 +30,7 @@ const handleExitComplete = (): void => {
   }
 };
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const [isLoading, setIsLoading] = useState(false);
 
   // Disable automatic scroll restoration
@@ -60,6 +60,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       </SectionProvider>
     </>
   );
-}
+};
 
 export default MyApp;

@@ -56,12 +56,12 @@ const CaseStudyView = () => (
               that would try to streamline the learning experience of new and
               experienced web developers alike, accepting was a no-brainer. Not
               having much remote working experience under my belt, I felt a bit
-              nervous, but the prospect of a such a great learning opportunity
+              nervous, but the prospect of such a great learning opportunity
               was just too good to pass up.
             </p>
             <p className={styles.CaseStudyDescription}>
               devGaido is a platform that helps (aspiring) web developers
-              effienctly locate learning resources and simplifies studying by
+              efficiently locate learning resources and simplifies studying by
               combining &quot;lessons&quot; into &quot;paths&quot; that follow
               different learning goals.
             </p>
@@ -253,7 +253,7 @@ const CaseStudyView = () => (
           <p>
             While we tried our best to adhere to{' '}
             <a href="https://css-tricks.com/bem-101/">BEM</a>, coming up with
-            CSS class names for a new Component was still pretty time consuming.
+            CSS class names for a new Component was still pretty time-consuming.
             Add to that the time spent constantly flipping back and forth
             between the Component&apos;s code and its CSS and it becomes a major
             problem.

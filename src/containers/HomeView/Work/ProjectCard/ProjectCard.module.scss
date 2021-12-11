@@ -40,14 +40,16 @@
 .ProjectButton {
   composes: button from global;
   border: 1px solid transparent;
+  text-align: center;
 }
 
 .ProjectButtonDisabled {
   composes: button from global;
-  border: 1px solid transparent;
   background: var(--buttonBGDisabled);
+  border: 1px solid transparent;
   color: var(--textColDisabled);
   cursor: default;
+  text-align: center;
 }
 
 .Project:hover .ProjectButton {

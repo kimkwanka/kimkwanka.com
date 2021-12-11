@@ -1,6 +1,7 @@
 import {
   useEffect,
   useState,
+  useMemo,
   useContext,
   createContext,
   MouseEvent,
@@ -21,8 +22,13 @@ const SectionContext = createContext<Partial<IContextProps>>({});
 const SectionProvider: FC = ({ children }) => {
   const [currentSection, setCurrentSection] = useState<string>('');
 
+  const contextValue = useMemo(
+    () => ({ currentSection, setCurrentSection }),
+    [currentSection],
+  );
+
   return (
-    <SectionContext.Provider value={{ currentSection, setCurrentSection }}>
+    <SectionContext.Provider value={contextValue}>
       {children}
     </SectionContext.Provider>
   );

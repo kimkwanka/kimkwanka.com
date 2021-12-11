@@ -106,7 +106,7 @@ const CaseStudyView = () => (
               href="https://github.com/Chingu-cohorts/devgaido"
               rel="noreferrer"
             >
-              <span className="icon-embed2" /> View
+              <span className="icon-embed2" /> Code
             </a>
           </div>
         </div>

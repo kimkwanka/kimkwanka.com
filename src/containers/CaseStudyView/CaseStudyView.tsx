@@ -56,8 +56,8 @@ const CaseStudyView = () => (
               that would try to streamline the learning experience of new and
               experienced web developers alike, accepting was a no-brainer. Not
               having much remote working experience under my belt, I felt a bit
-              nervous, but the prospect of such a great learning opportunity
-              was just too good to pass up.
+              nervous, but the prospect of such a great learning opportunity was
+              just too good to pass up.
             </p>
             <p className={styles.CaseStudyDescription}>
               devGaido is a platform that helps (aspiring) web developers

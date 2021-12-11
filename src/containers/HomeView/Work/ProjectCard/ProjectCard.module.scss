@@ -37,11 +37,20 @@
   width: 100%;
 }
 
-.Project button {
+.ProjectButton {
+  composes: button from global;
   border: 1px solid transparent;
 }
 
-.Project:hover button {
+.ProjectButtonDisabled {
+  composes: button from global;
+  border: 1px solid transparent;
+  background: var(--buttonBGDisabled);
+  color: var(--textColDisabled);
+  cursor: default;
+}
+
+.Project:hover .ProjectButton {
   border: 1px solid white;
 }
 
@@ -50,8 +59,51 @@
   margin-bottom: var(--s3);
 }
 
-.ProjectDescription {
-  margin-bottom: var(--s5);
+.ProjectStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+  margin-bottom: var(--s3);
+}
+
+.ProjectStackItem {
+  composes: gradient--secondary from global;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 0 var(--s1);
+  position: relative;
+  width: fit-content;
+}
+
+.ProjectStackItem::before {
+  background: rgb(91, 68, 105);
+  border-radius: 8px;
+  bottom: 0;
+  content: ' ';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.ProjectLinkContainer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  justify-content: center;
+  width: 100%;
+}
+
+* + .ProjectLinkContainer {
+  margin-top: var(--s5);
+}
+
+.ProjectLink {
+  composes: button from global;
+  composes: button--clear from global;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 900px){

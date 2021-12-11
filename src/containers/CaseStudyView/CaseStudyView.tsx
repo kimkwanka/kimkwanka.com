@@ -98,7 +98,7 @@ const CaseStudyView = () => (
               href="https://devgaido.cardinalzero.com"
               rel="noreferrer"
             >
-              <span className="icon-external-link" /> Live Version
+              <span className="icon-external-link" /> Live
             </a>
             <a
               className={styles.CaseStudyLink}
@@ -106,7 +106,7 @@ const CaseStudyView = () => (
               href="https://github.com/Chingu-cohorts/devgaido"
               rel="noreferrer"
             >
-              <span className="icon-embed2" /> View Code
+              <span className="icon-embed2" /> View
             </a>
           </div>
         </div>

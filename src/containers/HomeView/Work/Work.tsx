@@ -44,7 +44,7 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
           <ProjectCard
             title="RESTFlix & GraphFlix"
             href="/flix"
-            imgSrc="/img/myflix.png"
+            imgSrc="/img/flix.png"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPoXHxy2dx1ZiK+8gzuDNf//9ewDRRgUFJksAEAjfUI/oWmZgAAAAAASUVORK5CYII="
             description="A movie database app that pits modern Redux and a REST API against Apollo and GraphQL"
             stack={[
@@ -66,17 +66,27 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
             ]}
             links={[
               {
-                text: 'Live',
+                text: 'RESTFlix Live',
                 href: 'https://restflix.netlify.app/',
                 icon: 'icon-external-link',
               },
               {
-                text: 'Code',
+                text: 'RESTFlix Code',
                 href: 'https://github.com/kimkwanka/RESTFlix',
                 icon: 'icon-embed2',
               },
               {
-                text: 'Backend Code',
+                text: 'GraphFlix Live',
+                href: 'https://graphflix.netlify.app/',
+                icon: 'icon-external-link',
+              },
+              {
+                text: 'GraphFlix Code',
+                href: 'https://github.com/kimkwanka/GraphFlix',
+                icon: 'icon-embed2',
+              },
+              {
+                text: 'Flix Backend Code',
                 href: 'https://github.com/kimkwanka/flix-backend',
                 icon: 'icon-embed2',
               },

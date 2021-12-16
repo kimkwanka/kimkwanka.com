@@ -114,7 +114,7 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
             links={[
               {
                 text: 'Live',
-                href: 'https://chingugamedev.herokuapp.com/',
+                href: 'https://gamedev.kimkwanka.io',
                 icon: 'icon-external-link',
               },
               {

@@ -95,7 +95,7 @@ const CaseStudyView = () => (
             <a
               className={styles.CaseStudyLink}
               target="_blank"
-              href="https://devgaido.cardinalzero.com"
+              href="https://devgaido.kimkwanka.io"
               rel="noreferrer"
             >
               <span className="icon-external-link" /> Live

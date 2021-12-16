@@ -31,7 +31,7 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
             links={[
               {
                 text: 'Live',
-                href: 'https://devgaido.cardinalzero.com',
+                href: 'https://devgaido.kimkwanka.io',
                 icon: 'icon-external-link',
               },
               {

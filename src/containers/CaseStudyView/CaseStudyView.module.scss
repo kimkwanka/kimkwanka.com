@@ -145,6 +145,7 @@
 
 .CaseStudyLink {
   composes: button from global;
+  composes: button--clear from global;
 }
 
 .CaseStudyImageCaption + p {

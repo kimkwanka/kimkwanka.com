@@ -46,7 +46,7 @@ const Work = forwardRef<HTMLElement>((_, ref) => {
             href="/flix"
             imgSrc="/img/flix.png"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPoXHxy2dx1ZiK+8gzuDNf//9ewDRRgUFJksAEAjfUI/oWmZgAAAAAASUVORK5CYII="
-            description="A movie database app that pits modern Redux and a REST API against Apollo and GraphQL"
+            description="Twin movie database apps powered by the same backend that pit modern Redux and a REST API against Apollo and GraphQL"
             stack={[
               'React.js',
               'Redux',

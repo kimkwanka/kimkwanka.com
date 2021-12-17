@@ -7,7 +7,7 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "npx eslint \"pages/**/*.{ts,tsx}\"; npx eslint \"src/**/*.{ts,tsx}\"; npx tsc --noEmit",
+    "lint": "npx eslint \"src/**/*.{ts,tsx}\"; npx tsc --noEmit",
     "export": "next build && next export"
   },
   "dependencies": {

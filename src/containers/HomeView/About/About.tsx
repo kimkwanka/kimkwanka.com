@@ -48,9 +48,10 @@ const About = forwardRef<HTMLElement>((_, ref) => {
               my hands dirty in VR and educational software projects, and also
               dipped my toes into UI/UX design on the side.
             </p>
-            <p className={styles.AboutEndText}>
-              I&apos;m now on the lookout for the next opportunity to enrich
-              people&apos;s lives by turning ideas into reality.*
+            <p>
+              I&apos;m currently working on creating and further enhancing
+              solutions that allow everyone easy access to &quot;honest and
+              simple insurance&quot;.*
             </p>
             <small className={styles.AboutSmall}>
               *But sometimes I’m just hanging out with my family or friends,
